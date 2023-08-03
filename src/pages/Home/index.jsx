@@ -1,5 +1,11 @@
-function Home() {
-  return <h1>Hello, world!</h1>;
-}
+const Home = () => {
+  return (
+    <div>
+      <header>
+        <h1></h1>
+      </header>
+    </div>
+  );
+};
 
 export default Home;
