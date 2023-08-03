@@ -62,25 +62,7 @@ button {
     text-decoration: none;
     color: #ce332d;
   }
-  
-  .content-container {
-    display: flex;
-  }
-  
-  .main-content {
-    background-color: whitesmoke;
-    flex: 1;
-    padding: 20px;
-    margin-left: 7rem;
-  }
-  
-  .navigation {
-    background-color: whitesmoke;
-    flex: 1;
-    padding: 10px;
-    text-align: center;
-  }
-  
+
   .utilizando {
     color: #ce332d;
     border: #ce332d;

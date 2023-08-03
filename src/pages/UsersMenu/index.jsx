@@ -1,25 +1,38 @@
+import {useState} from 'react';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Siderbar';
 import sinoImage from './assets/sino.png'
+import SubTitle from '../../components/subtitle';
+import { AdminMenu, ContentContainer, MainContent, Navigation, NavigationButton } from './styles.ts'
 
-const UsersMenu = ()=> {
+export default function UsersMenu() {
+  const [isActive, setIsActive] = useState(false)
+
+  const handleIsActive = () => {
+    setIsActive(!isActive)
+  } 
+
   return (
-    <div className='AdminMenu'>
+    <AdminMenu>
       <Navbar/>
-      <div className='content-container'>
+      <ContentContainer>
         <Sidebar /> {/* Exiba o menu lateral */}
-      </div>
-      <div className='main-content'>
-        <div className='main-content'>
-          <h3>Olá, Usuário. Configure a Jornada Gamificada dos seus colaboradores.</h3>
-        </div>
-        <div className='navigation'>
-          <button className='utilizando'>GERAL</button> <button>CULTURA</button> <button>PRINCÍPIOS</button>
-        </div>
-      </div>
-      </div>
+      </ContentContainer>
+      <MainContent>
+        <MainContent>
+          <SubTitle>Olá, Usuário. Configure a Jornada Gamificada dos seus colaboradores.</SubTitle>
+        </MainContent>
+        <Navigation>
+          <NavigationButton onClick={handleIsActive} active={isActive}>    GERAL
+          </NavigationButton> 
+          <NavigationButton onClick={handleIsActive} active={isActive}>
+            CULTURA
+          </NavigationButton> 
+          <NavigationButton onClick={handleIsActive} active={isActive}>
+            PRINCÍPIOS
+          </NavigationButton>
+        </Navigation>
+      </MainContent>
+    </AdminMenu>
   );
 };
-
-export default UsersMenu;
- 
