@@ -31,3 +31,17 @@ export const NavigationButton = styled.button<{ active: boolean }>`
     background-color: red;
   `}
 `;
+
+export const FerramentasEdicao = styled.div`
+background-color: whitesmoke;
+flex: 1;
+padding: 20px;
+margin-left: 7rem;
+
+`;
+
+export const Ferramentas = styled.div`
+
+
+
+`

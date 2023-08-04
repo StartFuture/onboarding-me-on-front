@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
 import UsersMenu from "./pages/UsersMenu";
 import Gamifield from "./pages/Gamifield";
 import MiniGame from "./pages/MiniGame";
