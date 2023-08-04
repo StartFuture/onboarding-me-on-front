@@ -8,7 +8,6 @@ const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/seila" element={<Componente />} />
         <Route path="/menu" element={<UsersMenu />} />
         <Route path="/gamified" element={<Gamifield />} />
         <Route path="/minigame" element={<MiniGame />} />
