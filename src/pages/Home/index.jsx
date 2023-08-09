@@ -194,7 +194,7 @@ function Home() {
                   <input type="text" id="answer-a" name="answer-a" required placeholder="Digite aqui"/>
                 </div>
                 <div className={styles["form-group-label"]}>
-                  <label htmlFor="radio-a">Resposta correta:</label>
+                  <label htmlFor="radio-a">Resposta correta</label>
                   <input type="radio" id="radio-a" name="answer" required placeholder="Digite aqui"/>
                 </div>
               </div>
@@ -207,7 +207,7 @@ function Home() {
                   <input type="text" id="answer-b" name="answer-b" required placeholder="Digite aqui"/>
                 </div>
                 <div className={styles["form-group-label"]}>
-                  <label htmlFor="radio-b">Resposta correta:</label>
+                  <label htmlFor="radio-b">Resposta correta</label>
                   <input type="radio" id="radio-b" name="answer" required placeholder="Digite aqui"/>
                 </div>
               </div>
@@ -220,7 +220,7 @@ function Home() {
                   <input type="text" id="answer-c" name="answer-c" required placeholder="Digite aqui"/>
                 </div>
                 <div className={styles["form-group-label"]}>
-                  <label htmlFor="radio-c">Resposta correta:</label>
+                  <label htmlFor="radio-c">Resposta correta</label>
                   <input type="radio" id="radio-c" name="answer" required placeholder="Digite aqui"/>
                 </div>
               </div>
@@ -233,7 +233,7 @@ function Home() {
                   <input type="text" id="answer-d" name="answer-d" required placeholder="Digite aqui"/>
                 </div>
                 <div className={styles["form-group-label"]}>
-                  <label htmlFor="radio-a">Resposta correta:</label>
+                  <label htmlFor="radio-a">Resposta correta</label>
                   <input type="radio" id="radio-d" name="answer" required placeholder="Digite aqui"/>
                 </div>
               </div>
@@ -314,7 +314,7 @@ function Home() {
                 setShowFourthSection(true);
               }}
             >
-              Next
+              Confirmar
             </button>
           </div>
         </div>
@@ -344,7 +344,7 @@ function Home() {
               setShowFifthSection(true);
             }}
           >
-            Next
+            Iniciar
           </button>
 
             </div>
@@ -361,7 +361,7 @@ function Home() {
               setShowFifthSection(true);
             }}
           >
-            Next
+            Iniciar
           </button>
 
             </div>
