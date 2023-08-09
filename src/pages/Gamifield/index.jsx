@@ -1,5 +1,5 @@
 import React from "react";
-import './assets/css/style1.css';
+import './assets/css/style.css';
 
 const Gamifield = () => {
  return(
