@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-interface SidebarProps {
-  open: boolean;
-}
-
-export const SidebarContainer = styled.div<SidebarProps>`
+export const SidebarContainer = styled.div<{ open: boolean }>`
   width: 250px;
   height: 100%;
   background: white;
@@ -27,8 +23,22 @@ export const SidebarContainer = styled.div<SidebarProps>`
   }
 `;
 
+export const CloseButton = styled.button`
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none;
+
+  @media (max-width: 1023px) {
+    display: block;
+  }
+`;
+
 export const SidebarHeader = styled.div`
-  background: red;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -57,8 +67,7 @@ export const MenuItem = styled.div`
 `;
 
 export const HamburgerButton = styled.button`
-  background: red;
-  color: white;
+  color: black;
   border: none;
   font-size: 30px;
   padding: 10px;
@@ -69,4 +78,5 @@ export const HamburgerButton = styled.button`
     display: block;
   }
 `;
+
 

@@ -5,6 +5,12 @@ export const AdminMenu = styled.div`
   flex-direction: column;
 `;
 
+export const Stick = styled.div`
+width: 4px;
+height: 80px;
+flex-shrink: 0;
+`
+
 export const ContentContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -64,7 +70,10 @@ export const NavigationButton = styled.button<{ active: boolean }>`
 `;
 
 export const FerramentasEdicao = styled.div`
-  background-color: whitesmoke;
+  width: 20%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
   flex: 1;
   padding: 20px;
   margin-left: 1rem;
@@ -79,9 +88,12 @@ export const FerramentasEdicao = styled.div`
 `;
 
 export const Ferramentas = styled.div`
+  width: %;
+  background: white;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  flex: 1;
+  padding: 20px;
   margin-left: 1rem;
 
   @media (max-width: 1024px) {
@@ -95,3 +107,22 @@ export const Ferramentas = styled.div`
     align-items: center;
   }
 `;
+
+export const RedButton = styled.button`
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 0 0 auto;
+  align-self:flex-end;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+`;
+
+export const Alinhar = styled.div`
+display:flex;
+`;
+
+export const EdicaoFerramentas = styled.div`
+display:flex
+`
