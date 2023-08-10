@@ -14,7 +14,7 @@ const Sidebar = () => {
       <HamburgerButton onClick={handleToggle}>&#9776;</HamburgerButton>
       <SidebarContainer open={open}>
         <SidebarHeader>
-          <img src="" alt="ON/me" />
+          
         </SidebarHeader>
         <MenuItem>Item 1</MenuItem>
         <MenuItem>Item 2</MenuItem>
