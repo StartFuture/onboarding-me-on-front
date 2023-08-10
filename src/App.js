@@ -3,7 +3,7 @@ import AppRoutes from './AppRoutes';
 import {BrowserRouter} from "react-router-dom"
 
 
-function App() {
+const App = () =>{
   return (
     <BrowserRouter>
     <AppRoutes/> 
