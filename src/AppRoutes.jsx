@@ -1,16 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UsersMenu from "./pages/UsersMenu";
-import Gamifield from "./pages/Gamifield";
-import MiniGame from "./pages/MiniGame";
-import Componente from "./pages/Componente";
+import MenuHeader from "./components/MenuHeader/MenuHeader";
+
+
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/menu" element={<UsersMenu />} />
-        <Route path="/gamified" element={<Gamifield />} />
-        <Route path="/minigame" element={<MiniGame />} />
+        <Route path="/lateral" elemente={<MenuHeader />} />
       </Routes>
     </BrowserRouter>
   );
