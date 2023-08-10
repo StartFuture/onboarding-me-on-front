@@ -1,9 +1,14 @@
 import React from "react";
 import './assets/css/style.css';
+import Sidebar from "../../components/sidebar/Sidebar";
+import Navbar from "../../components/Navbar";
+
 
 const Gamifield = () => {
  return(
-
+   <>
+   <Sidebar/>
+   <Navbar/>
     <div className="video-container">
       <div className="title-with-bar">
         <div className="bar"></div>
@@ -25,6 +30,7 @@ const Gamifield = () => {
       <button className="button">Continuar</button>
       </div>
       </div>
+      </>
  ); 
 };
 
