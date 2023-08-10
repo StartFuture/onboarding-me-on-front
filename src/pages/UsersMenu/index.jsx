@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import Navbar from '../../components/Navbar';
-import Sidebar from '../../components/Siderbar';
+import Sidebar from '../../components/sidebar/Sidebar';
 import SubTitle from '../../components/subtitle';
 import { AdminMenu, ContentContainer, FerramentasEdicao, MainContent, Navigation, NavigationButton, Ferramentas  } from './styles.ts'
 
