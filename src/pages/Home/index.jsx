@@ -64,7 +64,7 @@ function Home() {
           <form onSubmit={handleFormSubmit}>
             <div className={styles["form-group"]}>
               <label htmlFor="name">Nome:</label>
-              <input type="text" id="name" name="name" required placeholder="Digite aqui"/>
+              <input type="text" id="name" name="name" required />
             </div>
             <div className={styles["form-group"]}>
               <div className={styles["form-group-inline"]}>
@@ -76,28 +76,29 @@ function Home() {
                     type="text"
                     id="video-link"
                     name="video-link"
-                    required placeholder="Digite aqui"                  />
+                    required
+                  />
                 </div>
                 <div className={styles["form-group "]}>
                   <label htmlFor="points">Pontos:</label>
-                  <input type="number" id="points" name="points" required placeholder="Digite aqui"/>
+                  <input type="number" id="points" name="points" required />
                 </div>
               </div>
             </div>
             <div className={styles["form-frame"]}></div>
             <div className={styles["form-group"]}>
               <label htmlFor="question">Pergunta:</label>
-              <input type="text" id="question" name="question" required placeholder="Digite aqui"/>
+              <input type="text" id="question" name="question" required />
             </div>
             <div className={styles["form-group"]}>
               <div className={styles["form-group-inline"]}>
                 <div className={styles["form-group-long"]}>
                   <label htmlFor="answer-a">Resposta - Alternativa A:</label>
-                  <input type="text" id="answer-a" name="answer-a" required placeholder="Digite aqui"/>
+                  <input type="text" id="answer-a" name="answer-a" required />
                 </div>
                 <div className={styles["form-group-label"]}>
-                  <label htmlFor="radio-a">Resposta correta</label>
-                  <input type="radio" id="radio-a" name="answer" required placeholder="Digite aqui"/>
+                  <label htmlFor="radio-a">Alternativa A:</label>
+                  <input type="radio" id="radio-a" name="answer" required />
                 </div>
               </div>
             </div>
@@ -106,11 +107,11 @@ function Home() {
               <div className={styles["form-group-inline"]}>
                 <div className={styles["form-group-long"]}>
                   <label htmlFor="answer-a">Resposta - Alternativa B:</label>
-                  <input type="text" id="answer-b" name="answer-b" required placeholder="Digite aqui" />
+                  <input type="text" id="answer-b" name="answer-b" required />
                 </div>
                 <div className={styles["form-group-label"]}>
-                  <label htmlFor="radio-b">Resposta correta</label>
-                  <input type="radio" id="radio-b" name="answer" required placeholder="Digite aqui"/>
+                  <label htmlFor="radio-b">Alternativa B:</label>
+                  <input type="radio" id="radio-b" name="answer" required />
                 </div>
               </div>
             </div>
@@ -119,11 +120,11 @@ function Home() {
               <div className={styles["form-group-inline"]}>
                 <div className={styles["form-group-long"]}>
                   <label htmlFor="answer-a">Resposta - Alternativa C:</label>
-                  <input type="text" id="answer-c" name="answer-c" required placeholder="Digite aqui"/>
+                  <input type="text" id="answer-c" name="answer-c" required />
                 </div>
                 <div className={styles["form-group-label"]}>
-                  <label htmlFor="radio-c">Resposta correta</label>
-                  <input type="radio" id="radio-c" name="answer" required placeholder="Digite aqui"/>
+                  <label htmlFor="radio-c">Alternativa C:</label>
+                  <input type="radio" id="radio-c" name="answer" required />
                 </div>
               </div>
             </div>
@@ -132,11 +133,11 @@ function Home() {
               <div className={styles["form-group-inline"]}>
                 <div className={styles["form-group-long"]}>
                   <label htmlFor="answer-d">Resposta - Alternativa D:</label>
-                  <input type="text" id="answer-d" name="answer-d" required placeholder="Digite aqui" />
+                  <input type="text" id="answer-d" name="answer-d" required />
                 </div>
                 <div className={styles["form-group-label"]}>
-                  <label htmlFor="radio-a">Resposta correta</label>
-                  <input type="radio" id="radio-d" name="answer" required placeholder="Digite aqui"/>
+                  <label htmlFor="radio-a">Alternativa D:</label>
+                  <input type="radio" id="radio-d" name="answer" required />
                 </div>
               </div>
             </div>
@@ -148,7 +149,7 @@ function Home() {
               </button>
 
               <button type="submit" className={styles["submit-button"]}>
-                Salvar
+                Enviar
               </button>
             </div>
             {/* Fim do Formulário */}
@@ -158,11 +159,11 @@ function Home() {
 
       {showSecondForm && (
         <div className={styles.container}>
-          <h1>Adicionar Princípio</h1>
+          <h1>Formulário de Exemplo</h1>
           <form onSubmit={handleSecondFormSubmit}>
             <div className={styles["form-group"]}>
               <label htmlFor="name">Nome:</label>
-              <input type="text" id="name" name="name" required placeholder="Digite aqui"/>
+              <input type="text" id="name" name="name" required />
             </div>
             <div className={styles["form-group"]}>
               <div className={styles["form-group-inline"]}>
@@ -174,28 +175,29 @@ function Home() {
                     type="text"
                     id="video-link"
                     name="video-link"
-                    required placeholder="Digite aqui"                  />
+                    required
+                  />
                 </div>
                 <div className={styles["form-group "]}>
                   <label htmlFor="points">Pontos:</label>
-                  <input type="number" id="points" name="points" required placeholder="Digite aqui"/>
+                  <input type="number" id="points" name="points" required />
                 </div>
               </div>
             </div>
             <div className={styles["form-frame"]}></div>
             <div className={styles["form-group"]}>
               <label htmlFor="question">Pergunta:</label>
-              <input type="text" id="question" name="question" required placeholder="Digite aqui"/>
+              <input type="text" id="question" name="question" required />
             </div>
             <div className={styles["form-group"]}>
               <div className={styles["form-group-inline"]}>
                 <div className={styles["form-group-long"]}>
                   <label htmlFor="answer-a">Resposta - Alternativa A:</label>
-                  <input type="text" id="answer-a" name="answer-a" required placeholder="Digite aqui"/>
+                  <input type="text" id="answer-a" name="answer-a" required />
                 </div>
                 <div className={styles["form-group-label"]}>
-                  <label htmlFor="radio-a">Resposta correta</label>
-                  <input type="radio" id="radio-a" name="answer" required placeholder="Digite aqui"/>
+                  <label htmlFor="radio-a">Alternativa A:</label>
+                  <input type="radio" id="radio-a" name="answer" required />
                 </div>
               </div>
             </div>
@@ -204,11 +206,11 @@ function Home() {
               <div className={styles["form-group-inline"]}>
                 <div className={styles["form-group-long"]}>
                   <label htmlFor="answer-a">Resposta - Alternativa B:</label>
-                  <input type="text" id="answer-b" name="answer-b" required placeholder="Digite aqui"/>
+                  <input type="text" id="answer-b" name="answer-b" required />
                 </div>
                 <div className={styles["form-group-label"]}>
-                  <label htmlFor="radio-b">Resposta correta</label>
-                  <input type="radio" id="radio-b" name="answer" required placeholder="Digite aqui"/>
+                  <label htmlFor="radio-b">Alternativa B:</label>
+                  <input type="radio" id="radio-b" name="answer" required />
                 </div>
               </div>
             </div>
@@ -217,11 +219,11 @@ function Home() {
               <div className={styles["form-group-inline"]}>
                 <div className={styles["form-group-long"]}>
                   <label htmlFor="answer-a">Resposta - Alternativa C:</label>
-                  <input type="text" id="answer-c" name="answer-c" required placeholder="Digite aqui"/>
+                  <input type="text" id="answer-c" name="answer-c" required />
                 </div>
                 <div className={styles["form-group-label"]}>
-                  <label htmlFor="radio-c">Resposta correta</label>
-                  <input type="radio" id="radio-c" name="answer" required placeholder="Digite aqui"/>
+                  <label htmlFor="radio-c">Alternativa C:</label>
+                  <input type="radio" id="radio-c" name="answer" required />
                 </div>
               </div>
             </div>
@@ -230,11 +232,11 @@ function Home() {
               <div className={styles["form-group-inline"]}>
                 <div className={styles["form-group-long"]}>
                   <label htmlFor="answer-d">Resposta - Alternativa D:</label>
-                  <input type="text" id="answer-d" name="answer-d" required placeholder="Digite aqui"/>
+                  <input type="text" id="answer-d" name="answer-d" required />
                 </div>
                 <div className={styles["form-group-label"]}>
-                  <label htmlFor="radio-a">Resposta correta</label>
-                  <input type="radio" id="radio-d" name="answer" required placeholder="Digite aqui"/>
+                  <label htmlFor="radio-a">Alternativa D:</label>
+                  <input type="radio" id="radio-d" name="answer" required />
                 </div>
               </div>
             </div>
@@ -244,7 +246,7 @@ function Home() {
               <button className={styles["cancel-button"]}>Cancelar</button>
 
               <button type="submit" className={styles["submit-button"]}>
-                Salvar
+                Enviar
               </button>
             </div>
             {/* Fim do Formulário */}
@@ -314,7 +316,7 @@ function Home() {
                 setShowFourthSection(true);
               }}
             >
-              Confirmar
+              Next
             </button>
           </div>
         </div>
@@ -344,7 +346,7 @@ function Home() {
               setShowFifthSection(true);
             }}
           >
-            Iniciar
+            Next
           </button>
 
             </div>
@@ -361,7 +363,7 @@ function Home() {
               setShowFifthSection(true);
             }}
           >
-            Iniciar
+            Next
           </button>
 
             </div>
@@ -376,8 +378,23 @@ function Home() {
       )}
 
       {showFifthSection && (
-        <div className={styles.container}>
-          {/* ... your fifth section content ... */}
+        <div className={styles.containerFifthSection}>
+        <div className={styles.fifthSectionFlex}>
+          <div className={styles.fifthSectionFlexContent}>
+            <div>
+              <h1>Parabéns <br /> Game concluído :)</h1>
+              <p>Você ganhou a medalha <br /> Mestre das ferramentas</p>
+            </div>
+
+            <button>Receber Medalha</button>
+
+          </div>
+
+          <div className={styles.fifthSectionFlexImgWrapper}>
+
+          </div>
+
+        </div>
         </div>
       )}
     </>
