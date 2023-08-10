@@ -41,7 +41,8 @@ margin-left: 7rem;
 `;
 
 export const Ferramentas = styled.div`
+  margin-left: 10rem;
 
 
 
-`
+`;

@@ -1,9 +1,8 @@
 import {useState} from 'react';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Siderbar';
-import sinoImage from './assets/sino.png'
 import SubTitle from '../../components/subtitle';
-import { AdminMenu, ContentContainer, FerramentasEdicao, MainContent, Navigation, NavigationButton, FerramentasEdicao } from './styles.ts'
+import { AdminMenu, ContentContainer, FerramentasEdicao, MainContent, Navigation, NavigationButton, Ferramentas  } from './styles.ts'
 
 export default function UsersMenu() {
   const [isActive, setIsActive] = useState(false)
@@ -35,12 +34,12 @@ export default function UsersMenu() {
         <MainContent>
           <SubTitle>Olá, Usuário. Configure a Jornada Gamificada dos seus colaboradores.</SubTitle>
         </MainContent>
-        <span className="">
+        <Ferramentas>
           <img src="youtube" alt="logo youtube" />
           <p>youtube link</p> 
           <img src="" alt="editar" />
           <img src="" alt="remover" />
-        </span>
+        </Ferramentas>
         <div className='Ferramentas'>
           <FerramentasEdicao />
           <FerramentasEdicao />
