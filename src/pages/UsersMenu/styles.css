@@ -1,3 +1,4 @@
+/* Estilos Básicos e Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,16 +6,23 @@
 }
 
 .Maincontent {
-    margin-left: 250px; /* Ajuste para corresponder à largura do menu lateral */
+    background: #F9F9F9;
+    margin-left: 250px;
     padding: 20px;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .conteudo {
-      margin-left: 0;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .Maincontent {
+        margin-left: 150px;
     }
-  }
+}
+
+@media (max-width: 768px) {
+    .Maincontent {
+        margin-left: 0;
+    }
+}
 
 .Title-with-Bar {
     display: flex;
@@ -39,7 +47,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-top: 80px;
 }
 
 .Navegation-Button {
@@ -52,13 +60,13 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap; /* Permite que os itens se ajustem à nova linha */
+    flex-wrap: wrap;
 }
 
 .Navegation-Button ul li {
     text-align: center;
-    flex: 1; /* Divide igualmente o espaço disponível */
-    min-width: 150px; /* Largura mínima para cada item */
+    flex: 1;
+    min-width: 150px;
 }
 
 .Navegation-Button ul li a {
@@ -85,12 +93,122 @@
 
 @media screen and (max-width: 768px) {
     .Navegation-Button ul {
-        flex-direction: column; /* Coloca os itens em uma coluna em dispositivos menores */
-        align-items: center; /* Centraliza os itens */
+        flex-direction: column;
+        align-items: center;
     }
 
     .Navegation-Button ul li a {
         padding: 10px 2%;
-        width: 80%; /* Aumenta a largura dos itens em dispositivos menores */
+        width: 80%;
+    }
+}
+
+.Subtitle {
+    margin-top: 30px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.YoutubeEdit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+}
+
+.YoutubeEdit img {
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+.YoutubeEdit p {
+    margin: 0;
+}
+
+.YoutubeEdit p.UrlYoutube {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.YoutubeEdit > div {
+    display: flex;
+    align-items: center;
+}
+
+.YoutubeEdit .icons-container {
+    display: flex;
+}
+
+.YoutubeEdit .icons-container img {
+    margin-left: 10px;
+}
+
+.ToolsTitle{
+    display: flex;
+    margin-top: 2%;
+    justify-content: space-between;
+}
+
+.RedButton{
+    padding: 5px 50px;
+    background: #ff0000;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    display: block; 
+}
+
+.Tools {
+    display: flex;
+    margin-top: 2%;
+    justify-content: space-between;
+}
+
+.ToolsEdit {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+}
+
+.ToolsEdit img {
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+.ToolsEdit p {
+    margin: 0;
+}
+
+.ToolsEdit p.Points {
+    font-size: 1rem;
+    color: #2D94CE;
+}
+
+.ToolsEdit > div {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Para telas muito pequenas (menores que 480px) */
+@media (max-width: 480px) {
+    .Navegation-Button ul li {
+        min-width: 100px;
+    }
+
+    .Subtitle {
+        font-size: 20px;
+    }
+
+    .YoutubeEdit img, .ToolsEdit img {
+        max-height: 30px;
     }
 }

@@ -47,6 +47,68 @@ export default function UsersMenu() {
             </ul>
           </div>
         </div>
+        <div className="Subtitle">
+          <p>Informe o vídeo de apresentação da empresa. O colaborador irá assistir assim que iniciar o processo.</p>
+        </div>
+        <div className="YoutubeEdit">
+          <div>
+            <img src={Youtube} alt="Youtube Logo" />
+            <div>
+              <p>Youtube</p>
+              <p className="UrlYoutube">www.youtube.com/onboardme/new</p>
+            </div>
+          </div>
+          <div className="icons-container">
+            <img src={Edicao} alt="Editar" />
+            <img src={Lixeira} alt="Lixeira" />
+          </div>
+        </div>
+        <div className="ToolsTitle">
+          <div className="Subtitle">Ferramentas do dia a dia.</div>
+          <button className="RedButton">adicionar</button>
+        </div>
+        <div className="Tools">
+          <div className="ToolsEdit">
+            <div>
+              <img src={Discord} alt="Discord" />
+              <div>
+                <p>Discord</p>
+                <p className="Points">10pt</p>
+              </div>
+            </div>
+            <div className="icons-container">
+              <img src={Edicao} alt="Editar" />
+              <img src={Lixeira} alt="Lixeira" />
+            </div>
+          </div>
+          
+          <div className="ToolsEdit">
+            <div>
+              <img src={Discord} alt="Discord" />
+              <div>
+                <p>Discord</p>
+                <p className="Points">10pt</p>
+              </div>
+            </div>
+            <div className="icons-container">
+              <img src={Edicao} alt="Editar" />
+              <img src={Lixeira} alt="Lixeira" />
+            </div>
+          </div>
+          <div className="ToolsEdit">
+            <div>
+              <img src={Discord} alt="Discord" />
+              <div>
+                <p>Discord</p>
+                <p className="Points">10pt</p>
+              </div>
+            </div>
+            <div className="icons-container">
+              <img src={Edicao} alt="Editar" />
+              <img src={Lixeira} alt="Lixeira" />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
