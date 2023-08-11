@@ -1,219 +1,247 @@
 .container {
-    width: 45rem;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    margin-bottom: 30px;
-    margin-top: 30px;
-    font-weight: 400;
-    border-left: solid 3px #c51700;
-    padding-left: 50px;
+  width: 45rem;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  }
-  
-  form {
+h1 {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-weight: 400;
+  border-left: solid 3px #c51700;
+  padding-left: 50px;
+}
 
-  
-    .form-group {
-      margin-bottom: 20px;
+form {
+  .form-group {
+    margin-bottom: 20px;
 
-      
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
 
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
 
-  
-      label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
+      &:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px #007bff;
       }
-  
-      input[type="text"],
-      input[type="email"],
-      input[type="number"],
-      textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-  
-        &:focus {
-          border-color: #007bff;
-          box-shadow: 0 0 5px #007bff;
-        }
-      }
-  
-      textarea {
-        resize: vertical;
-      }
-  
-      .form-group-inline {
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .form-group-inline {
+      display: flex;
+      justify-content: space-between;
+
+      .form-group-label {
+        margin-top: 1rem;
         display: flex;
-        justify-content: space-between;
-        gap: 30px;
-        .form-group-label {
-            margin-top: 1rem;
-            display: flex;
-            gap: 1rem;
-            flex-direction: row-reverse;
-            align-items: center;
-            width: 20rem;
-            flex: 3;
+        gap: 1rem;
+        flex-direction: row-reverse;
+        align-items: center;
 
-            label {
-                color: grey;
-            }
-        }
-
-
-        .form-group-long {
-            flex: 8;
-            gap: 0;
-
-        }
-  
-        .form-group {
-          flex: 1;
-          
-         
-
-          
+        label {
+          color: grey;
         }
       }
+
+      .form-group-long {
+        width: 30rem;
+      }
+
+      .form-group {
+        flex: 1;
+        margin-right: 10px;
+      }
     }
-  
-    .form-frame {
-      height: 2px;
-      background-color: #007bff;
-      margin: 20px auto;
-      width: 33%;
+  }
+
+  .form-frame {
+    height: 2px;
+    background-color: #007bff;
+    margin: 20px auto;
+    width: 33%;
+  }
+
+  .submit-button {
+    background-color: #c51700;
+    color: #fff;
+    padding: 13px 70px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken(#c51700, 10%);
     }
-  
-    .submit-button {
+  }
+
+  .cancel-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 13px 70px;
+    border: solid 1px #c51700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken(#ffffff, 10%);
+    }
+  }
+
+  .form-group-button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 3rem;
+  }
+}
+
+.containerThirdSection,
+.containerFourthSection {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+
+  .thirdSectionContent {
+    width: 60%;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+
+    button {
       background-color: #c51700;
       color: #fff;
       padding: 13px 70px;
       border: none;
       border-radius: 5px;
+      width: 30%;
       cursor: pointer;
       transition: background-color 0.2s ease;
-  
+      margin: 0 auto;
+
       &:hover {
         background-color: darken(#c51700, 10%);
       }
     }
-
-
-    .cancel-button {
-        background-color: #ffffff;
-        color: #000000;
-        padding: 13px 70px;
-        border: solid 1px #c51700;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-    
-        &:hover {
-          background-color: darken(#ffffff, 10%);
-        }
-      }
-
-      .form-group-button {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 3rem;
-    }
   }
-  
-.containerThirdSection, .containerFourthSection { 
-        width: 100%;
-        margin: 0 auto;
-        padding: 20px;
-
-        .thirdSectionContent {
-            width: 60%;
-            margin: 5rem auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 50px;
-
-            button {
-                background-color: #c51700;
-                color: #fff;
-                padding: 13px 70px;
-                border: none;
-                border-radius: 5px;
-                width: 30%;
-                cursor: pointer;
-                transition: background-color 0.2s ease;
-                margin: 0 auto;
-            
-                &:hover {
-                  background-color: darken(#c51700, 10%);
-                }
-            }
-
-
-            
-        }
-      
-      
 }
 
 .containerFourthSection {
-    .fourthSectionFlex {
+  .fourthSectionFlex {
+    width: 100%;
+    display: flex;
+    margin-top: 5rem;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .fourthSectionCard {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .imageWrapper {
+      position: relative;
+      width: 20rem;
+      height: 300px;
+      border-radius: 8px;
+      background-color: rgb(190, 190, 190);
+
+      .cardImageLoader {
+        position: absolute;
         width: 100%;
-        display: flex;
-        margin-top: 5rem;
-        justify-content: center;
-        gap: 30px;
+        height: 4px;
+        background-color: #007bff;
+        bottom: 0;
+      }
     }
 
-    .fourthSectionCard {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
+    button {
+      background-color: #c51700;
+      color: #fff;
+      padding: 13px 9rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      margin: 0 auto;
 
-    
-         .imageWrapper {
-        position: relative;
-        width: 20rem;
-        height: 300px;
-        border-radius: 8px;
-        background-color: rgb(190, 190, 190);
+      &:hover {
+        background-color: darken(#c51700, 10%);
+      }
+    }
+  }
+}
 
-
-        .cardImageLoader {
-            position: absolute;
-            width: 100%;
-            height: 4px;
-            background-color: #007bff;
-            bottom: 0;
-        }
-    
-       }
+.containerFifthSection {
+margin-left: 5rem;
+margin-top: 15rem;
 
 
+  .fifthSectionFlex {
+    display: flex;
+    gap: 12rem;
+
+    .fifthSectionFlexContent {
+      display: flex;
+      flex-direction: column;
+      gap: 110px;
+
+      div {
+        border-left: solid 3px #c51700;
+        padding: 0 20px;
+      }
 
 
-       button {
+      h1 {
+        padding: 0;
+        font-weight: bold;
+        border: none;
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+      
+      button {
         background-color: #c51700;
         color: #fff;
-        padding: 13px 8rem;
+        padding: 13px 9rem;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.2s ease;
         margin: 0 auto;
-    
+
         &:hover {
           background-color: darken(#c51700, 10%);
         }
-    }
+      }
+
+
+      
+
+
+
 
     }
 

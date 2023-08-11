@@ -1,16 +1,19 @@
-import {Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import UsersMenu from "./pages/UsersMenu";
+import Gamifield from "./pages/Gamifield";
+import MiniGame from "./pages/MiniGame";
 import Home from "./pages/Home";
-import WelcomeKit from "./pages/WelcomeKit";
-import Layout from "./layouts/Layout";
 
 const AppRoutes = () => {
+const location = useLocation()
   return (
-      <Routes>
-      <Route path="/" element={<Layout/>}>
-        <Route path="/" element={<Home />} />
-        <Route path="/welcomekit" element={<WelcomeKit />}/>
-      </Route>
+ 
+      <Routes location={location} key={location.pathname}>
+        <Route path="/menu" element={<UsersMenu />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/minigame" element={<MiniGame />} />
       </Routes>
+
   );
 };
 
