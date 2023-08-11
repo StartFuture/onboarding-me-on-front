@@ -1,17 +1,13 @@
 import React from 'react';
-import Sino from '../../assets/svg/Sino.svg'
-import { NavbarContainer, NavList, NavItem, NavDivider, NavLink } from './StyledNavbar'; // Importe os componentes estilizados a partir do caminho correto
+import { FaBars } from 'react-icons/fa';
+import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ sidebarOpen, openSidebar }) => {
   return (
-    <NavbarContainer>
-      <NavList>
-        <NavItem><img src={Sino}alt="alertas" /></NavItem>
-        <NavDivider /> {/* Barra de divisão */}
-        <NavItem><NavLink href="#">Usuário Logado</NavLink></NavItem>
-        <NavItem><span>I</span></NavItem>
-      </NavList>
-    </NavbarContainer>
+    <nav className="navbar">
+      
+      <div className="navbar-left">My App</div>
+    </nav>
   );
 };
 

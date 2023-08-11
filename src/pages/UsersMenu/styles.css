@@ -1,30 +1,90 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.Maincontent{
-    max-width: 800px;
+.Maincontent {
+    max-width: 100%;
     margin: 0 auto;
     padding: 30px 10px;
 }
 
-.Title-with-Bar{
+.Title-with-Bar {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
 
-.Bar{
+.Bar {
     width: 5px;
     height: 60px;
-    background-color: #ff0000; /* Vermelho */
-    margin-right: 10px
+    background-color: #ff0000;
+    margin-right: 10px;
 }
 
-.Title{
+.Title {
     font-size: 24px;
     font-weight: bold;
     color: #000000;
+}
+
+.Navegation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.Navegation-Button {
+    width: 100%;
+}
+
+.Navegation-Button ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /* Permite que os itens se ajustem à nova linha */
+}
+
+.Navegation-Button ul li {
+    text-align: center;
+    flex: 1; /* Divide igualmente o espaço disponível */
+    min-width: 150px; /* Largura mínima para cada item */
+}
+
+.Navegation-Button ul li a {
+    padding: 15px 10px;
+    text-decoration: none;
+    color: black;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+.Navegation-Button ul li a.Geral {
+    background: #ff0000;
+    color: white;
+}
+
+.Navegation-Button ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+.Navegation-Button ul li a.Geral:hover {
+    background-color: #d60000;
+}
+
+@media screen and (max-width: 768px) {
+    .Navegation-Button ul {
+        flex-direction: column; /* Coloca os itens em uma coluna em dispositivos menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .Navegation-Button ul li a {
+        padding: 10px 2%;
+        width: 80%; /* Aumenta a largura dos itens em dispositivos menores */
+    }
 }

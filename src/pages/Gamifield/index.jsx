@@ -1,7 +1,7 @@
 import React from "react";
 import './assets/css/style.css';
 import Sidebar from "../../components/sidebar/Sidebar";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/navbar/Navbar";
 
 
 const Gamifield = () => {
