@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
 import React, { useState } from "react";
 
-function Home() {
+function Minigame() {
   const [showFirstForm, setShowFirstForm] = useState(true);
   const [showSecondForm, setShowSecondForm] = useState(false);
   const [showThirdSection, setShowThirdSection] = useState(false);
@@ -401,5 +401,5 @@ function Home() {
   );
 }
 
-export default Home;
+export default Minigame;
 
