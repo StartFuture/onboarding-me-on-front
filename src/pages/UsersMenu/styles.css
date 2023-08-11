@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Maincontent{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 10px;
+}
+
+.Title-with-Bar{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.Bar{
+    width: 5px;
+    height: 60px;
+    background-color: #ff0000; /* Vermelho */
+    margin-right: 10px
+}
+
+.Title{
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
