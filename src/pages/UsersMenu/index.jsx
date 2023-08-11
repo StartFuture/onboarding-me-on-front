@@ -8,21 +8,17 @@ import Lixeira from "../../assets/svg/Lixeira.svg";
 import Discord from "../../assets/svg/Discord.svg";
 
 export default function UsersMenu() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const openSidebar = () => {
-    setSidebarOpen(true);
-  };
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
 
-  const closeSidebar = () => {
-    setSidebarOpen(false);
-  };
-
-
+    };
   return (
     <>
-      <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
-      <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
+      <Navbar />
+      <button onClick={toggleMenu}>Menu</button>
+      <Sidebar isOpen={isOpen} toggle={toggleMenu} />
       <div className="Maincontent">
         <div className="Title-with-Bar">
           <div className="Bar" />

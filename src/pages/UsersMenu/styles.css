@@ -5,10 +5,16 @@
 }
 
 .Maincontent {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 30px 10px;
-}
+    margin-left: 250px; /* Ajuste para corresponder à largura do menu lateral */
+    padding: 20px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .conteudo {
+      margin-left: 0;
+    }
+  }
 
 .Title-with-Bar {
     display: flex;
