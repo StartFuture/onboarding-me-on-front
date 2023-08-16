@@ -2,23 +2,29 @@ import { useState } from "react";
 import "./styles.css";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
+import Modal from "../../components/modal/Modal";
 import Edicao from "../../assets/svg/Edição.svg";
 import Youtube from "../../assets/svg/Youtube.svg";
 import Lixeira from "../../assets/svg/Lixeira.svg";
 import Discord from "../../assets/svg/Discord.svg";
 
+
 export default function UsersMenu() {
-  const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
+  const [showModal, setShowModal] = useState(false);
 
-    };
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <>
       <Navbar />
-      <button onClick={toggleMenu}>Menu</button>
-      <Sidebar isOpen={isOpen} toggle={toggleMenu} />
+      <Sidebar />
       <div className="Maincontent">
         <div className="Title-with-Bar">
           <div className="Bar" />
@@ -76,24 +82,11 @@ export default function UsersMenu() {
                 <p className="Points">10pt</p>
               </div>
             </div>
-            <div className="icons-container">
-              <img src={Edicao} alt="Editar" />
+            <div className="icons-container" onClick={handleOpenModal}>
+              <img  src={Edicao} alt="Editar" />
               <img src={Lixeira} alt="Lixeira" />
             </div>
-          </div>
-          
-          <div className="ToolsEdit">
-            <div>
-              <img src={Discord} alt="Discord" />
-              <div>
-                <p>Discord</p>
-                <p className="Points">10pt</p>
-              </div>
-            </div>
-            <div className="icons-container">
-              <img src={Edicao} alt="Editar" />
-              <img src={Lixeira} alt="Lixeira" />
-            </div>
+            <Modal show={showModal} onClose={handleCloseModal} />
           </div>
           <div className="ToolsEdit">
             <div>
@@ -103,8 +96,22 @@ export default function UsersMenu() {
                 <p className="Points">10pt</p>
               </div>
             </div>
-            <div className="icons-container">
+            <div className="icons-container" onClick={handleOpenModal}>
               <img src={Edicao} alt="Editar" />
+              <img src={Lixeira} alt="Lixeira" />
+            </div>
+          </div>
+          <div className="ToolsEdit">
+            <div>
+              <img src={Discord} alt="Discord" />
+              <div>
+                <p>Discord</p>
+                <p className="Points">10pt</p>
+              </div>
+            </div>
+            <div className="icons-container" onClick={handleOpenModal}>
+              <img src={Edicao} alt="Editar" />
+                <Modal show={showModal} onClose={handleCloseModal} />
               <img src={Lixeira} alt="Lixeira" />
             </div>
           </div>
