@@ -1,3 +1,5 @@
+import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Sidebar";
 import styles from "./styles.module.scss";
 import React, { useState } from "react";
 
@@ -58,7 +60,10 @@ function Minigame() {
 
   return (
     <>
+      <Navbar />
+      <Sidebar />
       {showFirstForm && (
+    
         <div className={styles.container}>
           <h1>Adicionar Cultura</h1>
           <form onSubmit={handleFormSubmit}>

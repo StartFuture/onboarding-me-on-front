@@ -1,28 +1,19 @@
-import React, { useState } from 'react';
-import Logo from '../../assets/svg/Logo.svg'
-import { SidebarContainer, SidebarHeader, MenuItem, HamburgerButton } from './styles.ts';
+import React from 'react';
+import './Sidebar.css';
+import Logo from '../../assets/svg/Logo.svg';
 
-const Sidebar = () => {
-  const [open, setOpen] = useState(false);
-
-  const handleToggle = () => {
-    setOpen(!open);
-  };
-
+const SideMenu = () => {
   return (
-    <>
-      <HamburgerButton onClick={handleToggle}>&#9776;</HamburgerButton>
-      <SidebarContainer open={open}>
-        <SidebarHeader>
-          <img src={Logo} alt="On/me" />
-        </SidebarHeader>
-        <MenuItem>Item 1</MenuItem>
-        <MenuItem>Item 2</MenuItem>
-        <MenuItem>Item 3</MenuItem>
-        {/* Outros itens de menu */}
-      </SidebarContainer>
-    </>
+    <div className="menu-lateral">
+      <div className="logo-container">
+        <img src={Logo} alt="On/me" className="logo" />
+      </div>
+      <ul className="menu-itens">
+        <li><a href="#">Jornada Gamificada</a></li>
+      </ul>
+    </div>
   );
 };
 
-export default Sidebar;
+export default SideMenu;
+

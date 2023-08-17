@@ -1,0 +1,18 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 30px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .nav-icon {
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .Iniciais{
+    max-width: 19px;
+  }
+  
