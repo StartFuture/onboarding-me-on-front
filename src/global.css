@@ -1,101 +1,13 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-button {
-  margin: 0rem;
-  border: #333;
-  cursor: pointer;
-}
-
-.navbar {
-  background-color: #333;
-  color: white;
-  display: flex;
-  justify-content: right;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin-right: 2rem;
-}
-
-.nav-item {
-  margin: 0 15px;
-}
-
-.nav-item a {
-  text-decoration: none;
-  color: white;
-}
-
-.nav-divider {
-  width: 1px;
-  height: 20px;
-  background-color: white;
-  margin: 0 10px;
-}
-
-.sidebar {
-  width: 250px;
-  height: 100rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: white;
-  color: #ce332d;
-}
-
-.logo {
-  margin: 5rem;
-}
-
-.sidebar-list {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar-item {
-  margin: 3rem;
-  padding: 50px;
-}
-
-.sidebar-item a {
-  text-decoration: none;
-  color: #ce332d;
-}
-
-.content-container {
-  display: flex;
-}
-
-.main-content {
-  background-color: whitesmoke;
-  flex: 1;
-  padding: 20px;
-  margin-left: 7rem;
-}
-
-.navigation {
-  background-color: whitesmoke;
-  flex: 1;
-  padding: 10px;
-  text-align: center;
-}
-
-.utilizando {
-  color: #ce332d;
-  border: #ce332d;
 }
