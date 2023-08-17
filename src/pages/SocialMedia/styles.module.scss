@@ -1,0 +1,104 @@
+body {
+  background-color: rgb(238, 238, 238);
+}
+
+.containerThirdSection {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  h5 {
+    font-size: 1.45rem;
+  }
+
+  .thirdSectionContent {
+    width: 100%;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+    .boxFlex {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border: rgb(204, 204, 204) 1px solid;
+      border-radius: 8px;
+      gap: 20px;
+      background-color: #fff;
+
+      .boxFlexIcon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+
+      .boxFlexButtons {
+        display: flex;
+        gap: 10px;
+
+        @media (max-width: 878px) {
+          margin: 0 auto;
+          gap: 25px;
+          
+        
+
+          
+        }
+      }
+
+      img {
+        width: 50px;
+      }
+
+    
+    }
+    
+
+    .buttonBaixar {
+      background-color: #ffffff;
+      color: #c51700;
+      padding: 13px 30px;
+      border: solid #c51700 1px;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      margin: 0 auto;
+
+      &:hover {
+        background-color: darken(#ffffff, 10%);
+      }
+    }
+
+    .buttonVincular{
+      background-color: #c51700;
+      color: #fff;
+      padding: 13px 30px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      margin: 0 auto;
+
+      &:hover {
+        background-color: darken(#c51700, 10%);
+      }
+    }
+
+
+
+    @media (max-width: 878px) {
+      width: 90%;
+
+     
+      
+    }
+  }
+}
+

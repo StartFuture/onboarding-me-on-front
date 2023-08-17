@@ -1,0 +1,35 @@
+.containerThirdSection {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.containerThirdSection h5 {
+  font-size: 1.45rem;
+}
+.containerThirdSection .thirdSectionContent {
+  width: 60%;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+.containerThirdSection .thirdSectionContent button {
+  background-color: #c51700;
+  color: #fff;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 30%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 0 auto;
+}
+.containerThirdSection .thirdSectionContent button:hover {
+  background-color: #921100;
+}
+@media (max-width: 878px) {
+  .containerThirdSection .thirdSectionContent {
+    width: 90%;
+  }
+}/*# sourceMappingURL=styles.module.css.map */

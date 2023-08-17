@@ -1,0 +1,90 @@
+
+.containerThirdSection {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  h5 {
+    font-size: 1.45rem;
+  }
+
+  .thirdSectionContent {
+    width: 100%;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    
+
+    button {
+      background-color: #c51700;
+      color: #fff;
+      padding: 13px 20px;
+      border: none;
+      border-radius: 5px;
+      width: 20%;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: darken(#c51700, 10%);
+      }
+    }
+
+    .buttonAnterior {
+      background-color: #ffffff;
+      color: #c51700;
+      padding: 13px 20px;
+      border: solid #c51700 1px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background-color: darken(#ffffff, 10%);
+      }
+    }
+
+
+    @media (max-width: 878px) {
+      width: 90%;
+
+     
+      
+    }
+  }
+}
+
+.insideFormFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.flexButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+
+  @media (max-width: 878px) {
+    flex-direction: column;
+    button {
+      width: 100% !important;
+    }
+    
+  }
+}
+
+input[type=radio] {
+  border: 0px;
+  width: 2rem;
+  height: 1rem;
+}
+
+
+@media (max-width: 878px) {
+  .containerThirdSection {
+    width: 95%;
+  }
+  
+}
