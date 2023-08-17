@@ -10,14 +10,14 @@ import Discord from "../../assets/svg/Discord.svg";
 
 
 export default function UsersMenu() {
-
   const [showModal, setShowModal] = useState(false);
 
   const handleOpenModal = () => setShowModal(true);
-  ;
-
   const handleCloseModal = () => setShowModal(false);
-  ;
+  const handleSaveModal = () => {
+    alert('Informações salvas!');
+    handleCloseModal();
+  };
 
   return (
     <>
@@ -69,7 +69,8 @@ export default function UsersMenu() {
         </div>
         <div className="ToolsTitle">
           <div className="Subtitle">Ferramentas do dia a dia.</div>
-          <button className="RedButton">adicionar</button>
+          <button className="RedButton" onClick={handleOpenModal}>adicionar</button>
+          <Modal show={showModal} onClose={handleCloseModal} onSave={handleSaveModal} />
         </div>
         <div className="Tools">
           <div className="ToolsEdit">
@@ -80,21 +81,7 @@ export default function UsersMenu() {
                 <p className="Points">10pt</p>
               </div>
             </div>
-            <div className="icons-container" onClick={handleOpenModal}>
-              <img  src={Edicao} alt="Editar" />
-              <img src={Lixeira} alt="Lixeira" />
-            </div>
-            <Modal show={showModal} onClose={handleCloseModal} />
-          </div>
-          <div className="ToolsEdit">
-            <div>
-              <img src={Discord} alt="Discord" />
-              <div>
-                <p>Discord</p>
-                <p className="Points">10pt</p>
-              </div>
-            </div>
-            <div className="icons-container" onClick={handleOpenModal}>
+            <div className="icons-container">
               <img src={Edicao} alt="Editar" />
               <img src={Lixeira} alt="Lixeira" />
             </div>
@@ -107,9 +94,21 @@ export default function UsersMenu() {
                 <p className="Points">10pt</p>
               </div>
             </div>
-            <div className="icons-container" onClick={handleOpenModal}>
+            <div className="icons-container">
               <img src={Edicao} alt="Editar" />
-                <Modal show={showModal} onClose={handleCloseModal} />
+              <img src={Lixeira} alt="Lixeira" />
+            </div>
+          </div>
+          <div className="ToolsEdit">
+            <div>
+              <img src={Discord} alt="Discord" />
+              <div>
+                <p>Discord</p>
+                <p className="Points">10pt</p>
+              </div>
+            </div>
+            <div className="icons-container">
+              <img src={Edicao} alt="Editar" />
               <img src={Lixeira} alt="Lixeira" />
             </div>
           </div>
