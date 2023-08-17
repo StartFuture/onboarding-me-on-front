@@ -1,0 +1,44 @@
+
+.containerThirdSection {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  h5 {
+    font-size: 1.45rem;
+  }
+
+  .thirdSectionContent {
+    width: 60%;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    
+
+    button {
+      background-color: #c51700;
+      color: #fff;
+      padding: 13px 20px;
+      border: none;
+      border-radius: 5px;
+      width: 30%;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      margin: 0 auto;
+
+      &:hover {
+        background-color: darken(#c51700, 10%);
+      }
+    }
+
+
+    @media (max-width: 878px) {
+      width: 90%;
+
+     
+      
+    }
+  }
+}
+
