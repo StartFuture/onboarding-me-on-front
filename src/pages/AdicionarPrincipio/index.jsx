@@ -1,11 +1,14 @@
+import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import styles from "./styles.module.css";
 
 
 export default function AddPrincipio() {
     return(
- 
+          
           <div className={styles.container}>
+          <Navbar/>
+          <Sidebar/>
           <h1>Adicionar Principio</h1>
           <form>
             <div className={styles["form-group"]}>

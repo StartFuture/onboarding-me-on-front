@@ -1,4 +1,6 @@
 import styles from "./styles.module.css";
+import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Sidebar";
 
 function MinigameChose() {
   
@@ -6,7 +8,8 @@ function MinigameChose() {
   return (
         <div className={styles.containerFourthSection}>
           {/* ... your fourth section content ... */}
-
+          <Navbar/>
+          <Sidebar/>
           <h1>
             Olá, Usuário.
             <br />

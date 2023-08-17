@@ -1,10 +1,13 @@
+import Navbar from "../../components/navbar/Navbar";
 import styles from "./styles.module.scss";
+import Sidebar from "../../components/sidebar/Sidebar";
 
 export default function SocialMedia() {
   return (
     <div className={styles.containerThirdSection}>
       {/* ... your third section content ... */}
-
+      <Navbar />
+      <Sidebar />
       <h1>Ferramentas do Dia a Dia</h1>
 
       <h5>

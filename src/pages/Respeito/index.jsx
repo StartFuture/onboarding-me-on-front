@@ -1,10 +1,13 @@
 import styles from "./styles.module.scss";
+import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Sidebar";
 
 export default function Respeito() {
     return (
         <div className={styles.containerThirdSection}>
           {/* ... your third section content ... */}
-
+          <Navbar/>
+          <Sidebar/>
           <h1>
             Respeito
           </h1>

@@ -1,8 +1,12 @@
+import Navbar from "../../components/navbar/Navbar";
 import styles from "./styles.module.css";
+import Sidebar from "../../components/sidebar/Sidebar";
 
 export default function AddCultura() {
     return (
         <div className={styles.container}>
+          <Navbar/>
+          <Sidebar/>
           <h1>Adicionar Cultura</h1>
           <form>
             <div className={styles["form-group"]}>

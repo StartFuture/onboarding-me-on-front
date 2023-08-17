@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./styles.css";
-import Navbar from "../../components/navbar/Navbar";
-import Sidebar from "../../components/sidebar/Sidebar";
 import Modal from "../../components/modal/Modal";
 import Edicao from "../../assets/svg/Edição.svg";
 import Youtube from "../../assets/svg/Youtube.svg";
 import Lixeira from "../../assets/svg/Lixeira.svg";
 import Discord from "../../assets/svg/Discord.svg";
+import NavBarc from "../../components/NavBarc/NavBarc";
+import SideBarc from "../../components/SideBarc/SideBarc";
 
 export default function UsersMenu() {
   const [showModal, setShowModal] = useState(false);
@@ -20,8 +20,8 @@ export default function UsersMenu() {
 
   return (
     <>
-      <Navbar />
-      <Sidebar />
+      <NavBarc />
+      <SideBarc />
       <div className="Maincontent">
         <div className="Title-with-Bar">
           <div className="Bar" />
