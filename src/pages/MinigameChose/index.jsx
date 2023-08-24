@@ -39,7 +39,7 @@ function MinigameChose() {
                     <div className={styles.cardImageLoader}></div>
 
                 </div>
-                <a href="/videoPrincipio">
+                <a href="/video-principio">
                 <button
             type="button"
            
