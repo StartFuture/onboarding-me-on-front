@@ -9,6 +9,7 @@ import MinigameChose from "./pages/MinigameChose";
 import PreChose from "./pages/PreChose";
 import Respeito from "./pages/Respeito";
 import SocialMedia from "./pages/SocialMedia";
+import NovaPaginaTabs from "./pages/NovaPaginaTabs";
 import VideoPrincipios from "./pages/VideoPrincipios";
 
 
@@ -27,6 +28,7 @@ const location = useLocation()
         <Route path="/preChose" element={<PreChose />} />
         <Route path="/respeito" element={<Respeito />} />
         <Route path="/socialmedia" element={<SocialMedia />} />
+        <Route path="/novapaginatabs" element={<NovaPaginaTabs />} />
         <Route path="/video-principio" element={<VideoPrincipios />} />
       </Routes>
 

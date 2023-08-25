@@ -1,10 +1,15 @@
+import Navbar from "../../components/navbar/Navbar";
+import SideMenu from "../../components/sidebar/Sidebar";
 import MinigameChose from "../MinigameChose";
 import styles from "./styles.module.css";
 
 
 export default function PreChose() {
     return (
-        <div className={styles.containerThirdSection}>
+      <>
+      <Navbar />
+      <SideMenu />
+      <div className={styles.containerThirdSection}>
           {/* ... your third section content ... */}
 
           <h1>
@@ -41,6 +46,9 @@ export default function PreChose() {
             </button></a>
           </div>
         </div>
+
+      </>
+        
     )
     
 }
