@@ -43,6 +43,14 @@
         background-color: darken(#ffffff, 10%);
       }
     }
+    .buttonAnterior a{
+      text-decoration: none;
+      color: inherit;
+    }
+    .buttonProximo a{
+      text-decoration: none;
+      color: inherit;
+    }
 
 
     @media (max-width: 878px) {

@@ -42,7 +42,7 @@ p{
     border: none;
     border-radius: 5px;
     color: #FFFFFF ;
-    width: 487px;
+    max-width: 487px;
     height: 40px;
 }
 
@@ -54,6 +54,37 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 800px) {
+    .video-container{
+        padding: 20px 10px;
+    }
+    
+    .video-iframe{
+        height: 300px;
+    }
+    .button{
+        font-size: 16px;
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 530px) {
+  
+    .button{
+        font-size: 16px;
+        width: 350px;
+        height: 40px;
+    }
+}
+@media (max-width: 360px) {
+  
+    .button{
+        font-size: 16px;
+        width: 250px;
+        height: 40px;
+    }
 }
 
 

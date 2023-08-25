@@ -9,6 +9,8 @@ import MinigameChose from "./pages/MinigameChose";
 import PreChose from "./pages/PreChose";
 import Respeito from "./pages/Respeito";
 import SocialMedia from "./pages/SocialMedia";
+import VideoPrincipios from "./pages/VideoPrincipios";
+
 
 const AppRoutes = () => {
 const location = useLocation()
@@ -25,6 +27,7 @@ const location = useLocation()
         <Route path="/preChose" element={<PreChose />} />
         <Route path="/respeito" element={<Respeito />} />
         <Route path="/socialmedia" element={<SocialMedia />} />
+        <Route path="/video-principio" element={<VideoPrincipios />} />
       </Routes>
 
   );

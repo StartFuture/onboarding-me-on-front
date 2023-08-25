@@ -7,7 +7,10 @@ import Edicao from "../../assets/svg/Edição.svg";
 import Youtube from "../../assets/svg/Youtube.svg";
 import Lixeira from "../../assets/svg/Lixeira.svg";
 import Discord from "../../assets/svg/Discord.svg";
+import AddCultura from "../AdicionarCultura";
+import AddPrincipio from "../Adicionar Principio";
 import VideoModal from "../../components/modalVideo/ModalVideo";
+
 
 
 export default function UsersMenu() {
@@ -62,10 +65,10 @@ export default function UsersMenu() {
                 </a>
               </li>
               <li>
-                <a href="#">Cultura</a>
+                <a href="/addcultura">Cultura</a>
               </li>
               <li>
-                <a href="#">Princípios</a>
+                <a href="/addprincipio">Princípios</a>
               </li>
             </ul>
           </div>
