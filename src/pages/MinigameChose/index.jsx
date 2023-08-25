@@ -1,4 +1,8 @@
+
+import VideoPrincipios from "../VideoPrincipios";
 import styles from "./styles.module.css";
+
+
 
 function MinigameChose() {
   
@@ -20,13 +24,14 @@ function MinigameChose() {
                 <div className={styles.imageWrapper}>
                   <div className={styles.cardImageLoader}></div>
                 </div>
+               <a href="/socialmedia">
                 <button
             type="button"
           
         >
             Iniciar
-          </button>
-
+          </button></a>
+          
             </div>
 
             <div className={styles.fourthSectionCard}>
@@ -34,13 +39,14 @@ function MinigameChose() {
                     <div className={styles.cardImageLoader}></div>
 
                 </div>
+                <a href="/video-principio">
                 <button
             type="button"
            
           >
             Iniciar
           </button>
-
+          </a>
             </div>
 
           </div>

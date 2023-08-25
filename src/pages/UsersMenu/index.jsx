@@ -1,74 +1,151 @@
-import {useState} from 'react';
-import Navbar from '../../components/Navbar';
-import Sidebar from '../../components/sidebar/Sidebar';
-import SubTitle from '../../components/subtitle';
-import Edicao from '../../assets/svg/Edição.svg'
-import Youtube from '../../assets/svg/Youtube.svg'
-import Lixeira from '../../assets/svg/Lixeira.svg'
-import Discord from '../../assets/svg/Discord.svg'
-import { AdminMenu,Stick, ContentContainer, MainContent, Navigation, NavigationButton, Ferramentas, RedButton, Alinhar, EdicaoFerramentas } from './styles.ts'
-import Home from '../Minigame';
-import AddCultura from '../AdicionarCultura';
+import { useState } from "react";
+import "./styles.css";
+import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Sidebar";
+import Modal from "../../components/modal/Modal";
+import Edicao from "../../assets/svg/Edição.svg";
+import Youtube from "../../assets/svg/Youtube.svg";
+import Lixeira from "../../assets/svg/Lixeira.svg";
+import Discord from "../../assets/svg/Discord.svg";
+import AddCultura from "../AdicionarCultura";
+import AddPrincipio from "../Adicionar Principio";
+import VideoModal from "../../components/modalVideo/ModalVideo";
 
 
 
 export default function UsersMenu() {
-  const [isActive, setIsActive] = useState(false)
+  const [showModal, setShowModal] = useState(false);
 
-  const handleIsActive = () => {
-    setIsActive(!isActive)
-  } 
+  const handleOpenModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
+  const handleSaveModal = () => {
+    alert('Informações salvas!');
+    handleCloseModal();
+  };
+  const [videoAdded, setVideoAdded] = useState(false);
+  const [showVideoModal, setShowVideoModal] = useState(false);
+  const [videoUrl, setVideoUrl] = useState('');
+
+  const openModal = () => {
+    setShowVideoModal(true);
+  };
+
+  const closeModal = () => {
+    setShowVideoModal(false);
+  };
+  
+
+  const addVideo = (url) => {
+    setVideoAdded(true);
+    setVideoUrl(url); 
+    closeModal();
+  };
 
   return (
-    <AdminMenu>
+    <>
       <Navbar />
       <Sidebar />
-      <ContentContainer>
-        <MainContent>
-          <Stick/>
-          <SubTitle>Olá, Usuário. Configure a Jornada Gamificada dos seus colaboradores.</SubTitle>
-          <Navigation>
-            <NavigationButton onClick={handleIsActive} active={isActive}>    GERAL
-            </NavigationButton> 
-            <NavigationButton onClick={handleIsActive} active={isActive}>
-              CULTURA
-            </NavigationButton> 
-            <NavigationButton onClick={handleIsActive} active={isActive}>
-              PRINCÍPIOS
-            </NavigationButton>
-          </Navigation>
-          <SubTitle>Informe o vídeo de apresentação da empresa. O colaborador irá assistir assim que iniciar o processo..</SubTitle>
-          <Ferramentas>
-            <img src={Youtube} alt="logo youtube"  />
-            <SubTitle>youtube link</SubTitle> 
-            <img src={Edicao} alt="editar" className='' />
-            <img src={Lixeira} alt="remover" />
-          </Ferramentas>
-          <Alinhar>
-            <SubTitle>Ferramentas do dia a dia.</SubTitle>
-            <RedButton>Adicionar Ferramnetas</RedButton>
-          </Alinhar>
-          <EdicaoFerramentas>
-            <FerramentasEdicao>
+      <div className="Maincontent">
+        <div className="Title-with-Bar">
+          <div className="Bar" />
+          <div className="Title">
+            <h3>
+              Olá, Usuário.
+              <br />
+              Configure a Jornada Gamificada dos seus colaboradores.
+            </h3>
+          </div>
+        </div>
+        <div className="Navegation">
+          <div className="Navegation-Button">
+            <ul>
+              <li>
+                <a href="#" className="Geral">
+                  Geral
+                </a>
+              </li>
+              <li>
+                <a href="/addcultura">Cultura</a>
+              </li>
+              <li>
+                <a href="/addprincipio">Princípios</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="Subtitle">
+          <p>Informe o vídeo de apresentação da empresa. O colaborador irá assistir assim que iniciar o processo.</p>
+        </div>
+        {videoAdded ? (
+        <div className="YoutubeEdit">
+          <div>
+            <img src={Youtube} alt="Youtube Logo" />
+            <div>
+              <p>Youtube</p>
+              <p className="UrlYoutube">{videoUrl}</p>
+            </div>
+          </div>
+          <div className="icons-container">
+            <img src={Edicao} alt="Editar" />
+            <img src={Lixeira} alt="Lixeira" />
+          </div>
+        </div>
+      ) : (
+        !videoAdded && (
+          <div className="AddVideoButtonContainer">
+            <button className="RedButton" onClick={openModal}>Adicionar Vídeo</button>
+          </div>
+        )
+      )}
+      <VideoModal show={showVideoModal} onClose={closeModal} onAddVideo={addVideo} />
+      
+        <div className="ToolsTitle">
+          <div className="Subtitle">Ferramentas do dia a dia.</div>
+          <button className="RedButton" onClick={handleOpenModal}>adicionar</button>
+          <Modal show={showModal} onClose={handleCloseModal} onSave={handleSaveModal} />
+        </div>
+        <div className="Tools">
+          <div className="ToolsEdit">
+            <div>
               <img src={Discord} alt="Discord" />
-              <SubTitle>Discord</SubTitle>
-              <img src={Edicao} alt="" />
-              <img src={Lixeira} alt="" />
-            </FerramentasEdicao>
-            <FerramentasEdicao>
+              <div>
+                <p>Discord</p>
+                <p className="Points">10pt</p>
+              </div>
+            </div>
+            <div className="icons-container">
+              <img src={Edicao} alt="Editar" />
+              <img src={Lixeira} alt="Lixeira" />
+            </div>
+          </div>
+          <div className="ToolsEdit">
+            <div>
               <img src={Discord} alt="Discord" />
-              <SubTitle>Discord</SubTitle>
-              <img src={Edicao} alt="" />
-              <img src={Lixeira} alt="" />
-            </FerramentasEdicao> 
-            <FerramentasEdicao>
+              <div>
+                <p>Discord</p>
+                <p className="Points">10pt</p>
+              </div>
+            </div>
+            <div className="icons-container">
+              <img src={Edicao} alt="Editar" />
+              <img src={Lixeira} alt="Lixeira" />
+            </div>
+          </div>
+          <div className="ToolsEdit">
+            <div>
               <img src={Discord} alt="Discord" />
-              <SubTitle>Discord</SubTitle>              <img src={Edicao} alt="" />
-              <img src={Lixeira} alt="" />
-            </FerramentasEdicao>  
-          </EdicaoFerramentas>
-        </MainContent>
-      </ContentContainer>
-    </AdminMenu>
-  );    
-};
+              <div>
+                <p>Discord</p>
+                <p className="Points">10pt</p>
+              </div>
+            </div>
+            <div className="icons-container">
+              <img src={Edicao} alt="Editar" />
+              <img src={Lixeira} alt="Lixeira" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

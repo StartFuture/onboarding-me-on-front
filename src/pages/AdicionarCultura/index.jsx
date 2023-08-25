@@ -90,7 +90,7 @@ export default function AddCultura() {
               <button type="submit" className={styles["cancel-button"]}>
                 Cancelar
               </button>
-
+              
               <button type="submit" className={styles["submit-button"]}>
                 Enviar
               </button>

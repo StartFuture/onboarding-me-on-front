@@ -1,4 +1,6 @@
+import MinigameChose from "../MinigameChose";
 import styles from "./styles.module.css";
+
 
 export default function PreChose() {
     return (
@@ -31,12 +33,12 @@ export default function PreChose() {
       
 
             </p>
-
+            <a href="/minigamechose">
             <button
               type="button"
         >
               Continuar
-            </button>
+            </button></a>
           </div>
         </div>
     )
