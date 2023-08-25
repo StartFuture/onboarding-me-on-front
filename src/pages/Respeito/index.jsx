@@ -1,10 +1,17 @@
+import Navbar from "../../components/navbar/Navbar";
+import SideMenu from "../../components/sidebar/Sidebar";
 import VideoPrincipios from "../VideoPrincipios";
 import styles from "./styles.module.scss";
 
 
 export default function Respeito() {
   return (
-    <div className={styles.containerThirdSection}>
+    <>
+
+    <Navbar />
+    <SideMenu />
+
+<div className={styles.containerThirdSection}>
       {/* ... your third section content ... */}
 
       <h1>
@@ -73,6 +80,9 @@ export default function Respeito() {
 
       </div>
     </div>
+
+    </>
+   
   )
 
 }

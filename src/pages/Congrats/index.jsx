@@ -1,7 +1,15 @@
+import Navbar from "../../components/navbar/Navbar";
+import SideMenu from "../../components/sidebar/Sidebar";
 import styles from "./styles.module.css";
 
 export default function Congrats() {
     return (
+      <> 
+             
+             
+             
+      <Navbar />
+      <SideMenu />
       <div className={styles.containerFifthSection}>
       <div className={styles.fifthSectionFlex}>
         <div className={styles.fifthSectionFlexContent}>
@@ -22,6 +30,8 @@ export default function Congrats() {
 
       </div>
       </div>
+      </>
+      
     )
     
 }
