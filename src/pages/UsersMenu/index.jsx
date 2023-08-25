@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
+import axios from "axios";
 import "./styles.css";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
@@ -10,7 +11,18 @@ import Discord from "../../assets/svg/Discord.svg";
 import VideoModal from "../../components/modalVideo/ModalVideo";
 
 
+
 export default function UsersMenu() {
+  const [videoLink, setVideoLink] = useState({}); 
+  useEffect(() => {
+    axios({method: 'GET', url: 'http://localhost:8000/video/videolink/1'})
+    .then((response) => {
+      setVideoLink(response.data);
+    }).catch((error) => {
+      console.log(error);
+    });
+  }, []);
+
   const [showModal, setShowModal] = useState(false);
 
   const handleOpenModal = () => setShowModal(true);
@@ -37,6 +49,8 @@ export default function UsersMenu() {
     setVideoUrl(url); 
     closeModal();
   };
+
+  
 
   return (
     <>
@@ -73,13 +87,13 @@ export default function UsersMenu() {
         <div className="Subtitle">
           <p>Informe o vídeo de apresentação da empresa. O colaborador irá assistir assim que iniciar o processo.</p>
         </div>
-        {videoAdded ? (
+        {videoLink.welcome_video_link ? ( 
         <div className="YoutubeEdit">
           <div>
             <img src={Youtube} alt="Youtube Logo" />
             <div>
               <p>Youtube</p>
-              <p className="UrlYoutube">{videoUrl}</p>
+              <p className="UrlYoutube">{videoLink.welcome_video_link}</p>
             </div>
           </div>
           <div className="icons-container">
@@ -88,7 +102,7 @@ export default function UsersMenu() {
           </div>
         </div>
       ) : (
-        !videoAdded && (
+        !videoLink.welcome_video_link && (
           <div className="AddVideoButtonContainer">
             <button className="RedButton" onClick={openModal}>Adicionar Vídeo</button>
           </div>

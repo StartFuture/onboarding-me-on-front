@@ -1,5 +1,15 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './ModalVideo.css';
+
+const videolink = (videoUrl) => {
+  axios({method: 'POST', url: 'http/:localhost:8000/video/create', data: {welcome_video_link: videoUrl, company_id: 1}})
+  .then((response) => {
+    console.log(response);
+  }).catch((error) => {
+    console.log(error);
+  });
+}
 
 const VideoModal = ({ show, onClose, onAddVideo }) => {
   const [videoUrl, setVideoUrl] = useState('');
@@ -11,6 +21,7 @@ const VideoModal = ({ show, onClose, onAddVideo }) => {
   const handleAddVideo = () => {
     if (videoUrl.trim() !== '') {
       onAddVideo(videoUrl);
+      videolink(videoUrl);
       onClose();
     }
   };
@@ -32,7 +43,7 @@ const VideoModal = ({ show, onClose, onAddVideo }) => {
         </div>
         <div className="modal-buttons">
           <button onClick={onClose} className="cancel-button">Cancelar</button>
-          <button onClick={handleAddVideo} className="save-button">Adicionar</button>
+          <button onClick={handleAddVideo } className="save-button">Adicionar</button>
         </div>
       </div>
     </div>
