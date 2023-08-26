@@ -8,11 +8,7 @@ import Edicao from "../../assets/svg/Edição.svg";
 import Youtube from "../../assets/svg/Youtube.svg";
 import Lixeira from "../../assets/svg/Lixeira.svg";
 import Discord from "../../assets/svg/Discord.svg";
-import AddCultura from "../AdicionarCultura";
-import AddPrincipio from "../Adicionar Principio";
 import VideoModal from "../../components/modalVideo/ModalVideo";
-import Respeito from "../Respeito";
-import Respect from "../../components/RespectForPrincipio/RespectForPrincipios";
 import RespectForPrincipios from "../../components/RespectForPrincipio/RespectForPrincipios";
 import RespectForCultura from "../../components/RespectForCultura/RespectForCultura";
 
