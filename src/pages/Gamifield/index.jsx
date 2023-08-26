@@ -4,6 +4,8 @@ import axios from "axios";
 import "./assets/css/style.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
+import PreChose from "../PreChose";
+
 
 const Gamifield = () => {
   const [videoLink, setVideoLink] = useState({});

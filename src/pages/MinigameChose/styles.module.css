@@ -4,6 +4,11 @@
   margin: 0 auto;
   padding: 20px;
 }
+.containerThirdSection h5, .containerThirdSection h1,
+.containerFourthSection h5,
+.containerFourthSection h1 {
+  margin-left: 15rem;
+}
 .containerThirdSection .thirdSectionContent,
 .containerFourthSection .thirdSectionContent {
   width: 60%;

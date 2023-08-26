@@ -1,8 +1,13 @@
+import Navbar from "../../components/navbar/Navbar";
+import SideMenu from "../../components/sidebar/Sidebar";
 import styles from "./styles.module.css";
 
 export default function Congrats() {
-  return (
-    <div className={styles.containerFifthSection}>
+    return (
+      <>      
+      <Navbar />
+      <SideMenu />
+      <div className={styles.containerFifthSection}>
       <div className={styles.fifthSectionFlex}>
         <div className={styles.fifthSectionFlexContent}>
           <div className={styles.sectionContentStyling}>
@@ -19,6 +24,9 @@ export default function Congrats() {
           <button>Receber Medalha</button>
         </div>
       </div>
-    </div>
-  );
+      </div>
+      </>
+      
+    )
+    
 }
