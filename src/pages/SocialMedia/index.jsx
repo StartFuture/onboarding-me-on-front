@@ -1,8 +1,16 @@
+import Navbar from "../../components/navbar/Navbar";
+import SideMenu from "../../components/sidebar/Sidebar";
 import styles from "./styles.module.scss";
 
 export default function SocialMedia() {
   return (
-    <div className={styles.containerThirdSection}>
+
+    <>
+
+    <Navbar />
+    <SideMenu />
+
+<div className={styles.containerThirdSection}>
       {/* ... your third section content ... */}
 
       <h1>Ferramentas do Dia a Dia</h1>
@@ -63,5 +71,8 @@ export default function SocialMedia() {
         </div>
       </div>
     </div>
+    
+    </>
+    
   );
 }

@@ -2,11 +2,10 @@ import React from "react";
 import './assets/css/style.css';
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import PreChose from "../PreChose";
+import Respeito from "../Respeito";
 
 
-
-const Gamifield = () => {
+const VideoPrincipios = () => {
  return(
    <>
    <Sidebar/>
@@ -15,11 +14,10 @@ const Gamifield = () => {
       <div className="title-with-bar">
         <div className="bar"></div>
         <h1 className="title">
-          Olá, Usuário. <br/>
-          Boas-vindas à Jornada Gamificada da EmpresaNova.
+          Respeito
         </h1>
          </div>
-         <p>Para iniciar, assista o vídeo que preparamos para você. </p>
+         <p>Assista ao vídeo e fique por dentro sobre as culturas da EmpresaNova.</p>
      
       <iframe
         className="video-iframe"
@@ -29,7 +27,7 @@ const Gamifield = () => {
       ></iframe>
 
      <div className="continue-button">
-      <a href="/preChose">
+      <a href="/respeito">
       <button className="button">Continuar</button></a>
       </div>
       </div>
@@ -37,4 +35,4 @@ const Gamifield = () => {
  ); 
 };
 
-export default Gamifield;
+export default VideoPrincipios;

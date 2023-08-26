@@ -8,8 +8,13 @@ import Edicao from "../../assets/svg/Edição.svg";
 import Youtube from "../../assets/svg/Youtube.svg";
 import Lixeira from "../../assets/svg/Lixeira.svg";
 import Discord from "../../assets/svg/Discord.svg";
+import AddCultura from "../AdicionarCultura";
+import AddPrincipio from "../Adicionar Principio";
 import VideoModal from "../../components/modalVideo/ModalVideo";
-
+import Respeito from "../Respeito";
+import Respect from "../../components/RespectForPrincipio/RespectForPrincipios";
+import RespectForPrincipios from "../../components/RespectForPrincipio/RespectForPrincipios";
+import RespectForCultura from "../../components/RespectForCultura/RespectForCultura";
 
 
 export default function UsersMenu() {
@@ -25,11 +30,16 @@ export default function UsersMenu() {
 
 
   const [showModal, setShowModal] = useState(false);
+  const [activeSection, setActiveSection] = useState("Geral");
+
+  const handleTabClick = (sectionName) => {
+    setActiveSection(sectionName);
+  };
 
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
   const handleSaveModal = () => {
-    alert('Informações salvas!');
+    alert("Informações salvas!");
     handleCloseModal();
   };
   
@@ -42,9 +52,6 @@ export default function UsersMenu() {
   const closeModal = () => {
     setShowVideoModal(false);
   };
-
-
-  
 
   return (
     <>
@@ -65,15 +72,28 @@ export default function UsersMenu() {
           <div className="Navegation-Button">
             <ul>
               <li>
-                <a href="#" className="Geral">
+              <a
+                  href="#"
+                  className={activeSection === "Geral" ? "Geral active" : "Geral"}
+                  onClick={() => handleTabClick("Geral")}
+                >
                   Geral
                 </a>
               </li>
               <li>
-                <a href="#">Cultura</a>
+              <a
+                  className={activeSection === "Cultura" ? "active" : ""}
+                  onClick={() => handleTabClick("Cultura")}
+                >
+                  Cultura
+                  </a>
               </li>
               <li>
-                <a href="#">Princípios</a>
+              <a
+                  className={activeSection === "Principios" ? "active" : ""}
+                  onClick={() => handleTabClick("Principios")}
+                >
+                  Princípios</a>
               </li>
             </ul>
           </div>
@@ -117,40 +137,68 @@ export default function UsersMenu() {
               <div>
                 <p>Discord</p>
                 <p className="Points">10pt</p>
+                    <p className="Points">10pt</p>
+                  </div>
+                </div>
+                <div className="icons-container">
+                  <img src={Edicao} alt="Editar" />
+                  <img src={Lixeira} alt="Lixeira" />
+                </div>
+              </div>
+              <div className="ToolsEdit">
+                <div>
+                  <img src={Discord} alt="Discord" />
+                  <div>
+                    <p>Discord</p>
+                    <p className="Points">10pt</p>
+                  </div>
+                </div>
+                <div className="icons-container">
+                  <img src={Edicao} alt="Editar" />
+                  <img src={Lixeira} alt="Lixeira" />
+                </div>
+              </div>
+              <div className="ToolsEdit">
+                <div>
+                  <img src={Discord} alt="Discord" />
+                  <div>
+                    <p>Discord</p>
+                    <p className="Points">10pt</p>
+                  </div>
+                </div>
+                <div className="icons-container">
+                  <img src={Edicao} alt="Editar" />
+                  <img src={Lixeira} alt="Lixeira" />
+                </div>
               </div>
             </div>
-            <div className="icons-container">
-              <img src={Edicao} alt="Editar" />
-              <img src={Lixeira} alt="Lixeira" />
-            </div>
-          </div>
-          <div className="ToolsEdit">
-            <div>
-              <img src={Discord} alt="Discord" />
-              <div>
-                <p>Discord</p>
-                <p className="Points">10pt</p>
-              </div>
-            </div>
-            <div className="icons-container">
-              <img src={Edicao} alt="Editar" />
-              <img src={Lixeira} alt="Lixeira" />
-            </div>
-          </div>
-          <div className="ToolsEdit">
-            <div>
-              <img src={Discord} alt="Discord" />
-              <div>
-                <p>Discord</p>
-                <p className="Points">10pt</p>
-              </div>
-            </div>
-            <div className="icons-container">
-              <img src={Edicao} alt="Editar" />
-              <img src={Lixeira} alt="Lixeira" />
-            </div>
-          </div>
-        </div>
+          </section>
+          
+        )}
+
+      
+
+         {activeSection === "Cultura" && (
+           <section className="secondSection">
+            <RespectForCultura />
+           </section>
+   
+
+         )}
+
+
+          {activeSection === "Principios" && (
+           <section className="thirdSection">
+            <RespectForPrincipios />
+          
+           </section>
+   
+
+         )}
+       
+       
+        
+
       </div>
     </>
   );
