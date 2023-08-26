@@ -1,5 +1,5 @@
-import React from 'react';
-import './Modal.css';
+import React from "react";
+import "./Modal.css";
 
 const ModalInput = ({ title, placeholder }) => (
   <div className="modal-input">
@@ -16,7 +16,9 @@ const Modal = ({ show, onClose, onSave }) => {
   return (
     <div className="modal-overlay">
       <div className="modal">
-        <button onClick={onClose} className="close-button">X</button>
+        <button onClick={onClose} className="close-button">
+          X
+        </button>
         <div className="modal-content">
           <div className="title">
             <h1>Adicionar Ferramenta</h1>
@@ -28,8 +30,12 @@ const Modal = ({ show, onClose, onSave }) => {
           </div>
         </div>
         <div className="modal-buttons">
-          <button onClick={onClose} className="cancel-button">Cancelar</button>
-          <button onClick={onSave} className="save-button">Salvar</button>
+          <button onClick={onClose} className="cancel-button">
+            Cancelar
+          </button>
+          <button onClick={onSave} className="save-button">
+            Salvar
+          </button>
         </div>
       </div>
     </div>
