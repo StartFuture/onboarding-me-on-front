@@ -7,9 +7,7 @@ export default function SocialMedia() {
 
     <>
 
-    <Navbar />
-    <SideMenu />
-
+  
 <div className={styles.containerThirdSection}>
       {/* ... your third section content ... */}
 

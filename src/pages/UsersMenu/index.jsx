@@ -1,5 +1,4 @@
-import { useState, useEffect} from "react";
-import axios from "axios";
+import { useState } from "react";
 import "./styles.css";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
@@ -16,19 +15,7 @@ import Respect from "../../components/RespectForPrincipio/RespectForPrincipios";
 import RespectForPrincipios from "../../components/RespectForPrincipio/RespectForPrincipios";
 import RespectForCultura from "../../components/RespectForCultura/RespectForCultura";
 
-
 export default function UsersMenu() {
-  const [videoLink, setVideoLink] = useState({}); 
-  useEffect(() => {
-    axios({method: 'GET', url: 'http://localhost:8000/game_journey/get-video/1'})
-    .then((response) => {
-      setVideoLink(response.data);
-    }).catch((error) => {
-      console.log(error);
-    });
-  }, []);
-
-
   const [showModal, setShowModal] = useState(false);
   const [activeSection, setActiveSection] = useState("Geral");
 
@@ -42,8 +29,9 @@ export default function UsersMenu() {
     alert("Informações salvas!");
     handleCloseModal();
   };
-  
+  const [videoAdded, setVideoAdded] = useState(false);
   const [showVideoModal, setShowVideoModal] = useState(false);
+  const [videoUrl, setVideoUrl] = useState("");
 
   const openModal = () => {
     setShowVideoModal(true);
@@ -52,6 +40,14 @@ export default function UsersMenu() {
   const closeModal = () => {
     setShowVideoModal(false);
   };
+
+  const addVideo = (url) => {
+    setVideoAdded(true);
+    setVideoUrl(url);
+    closeModal();
+  };
+
+  
 
   return (
     <>
@@ -98,45 +94,61 @@ export default function UsersMenu() {
             </ul>
           </div>
         </div>
-        <div className="Subtitle">
-          <p>Informe o vídeo de apresentação da empresa. O colaborador irá assistir assim que iniciar o processo.</p>
-        </div>
-        {videoLink.welcome_video_link ? ( 
-        <div className="YoutubeEdit">
-          <div>
-            <img src={Youtube} alt="Youtube Logo" />
-            <div>
-              <p>Youtube</p>
-              <p className="UrlYoutube">{videoLink.welcome_video_link}</p>
+
+        {activeSection == "Geral" && (
+            <section className="firstSection">
+            <div className="Subtitle">
+              <p>
+                Informe o vídeo de apresentação da empresa. O colaborador irá
+                assistir assim que iniciar o processo.
+              </p>
             </div>
-          </div>
-          <div className="icons-container">
-            <img onClick={openModal} src={Edicao} alt="Editar"  />
-            <img src={Lixeira} alt="Lixeira" />
-          </div>
-        </div>
-      ) : (
-        !videoLink.welcome_video_link && (
-          <div className="AddVideoButtonContainer">
-            <button className="RedButton" onClick={openModal}>Adicionar Vídeo</button>
-          </div>
-        )
-      )}
-      <VideoModal isNewVideo={!videoLink.welcome_video_link}
-       videoLink={videoLink.welcome_video_link} show={showVideoModal} onClose={closeModal} />
-      
-        <div className="ToolsTitle">
-          <div className="Subtitle">Ferramentas do dia a dia.</div>
-          <button className="RedButton" onClick={handleOpenModal}>adicionar</button>
-          <Modal show={showModal} onClose={handleCloseModal} onSave={handleSaveModal} />
-        </div>
-        <div className="Tools">
-          <div className="ToolsEdit">
-            <div>
-              <img src={Discord} alt="Discord" />
-              <div>
-                <p>Discord</p>
-                <p className="Points">10pt</p>
+            {videoAdded ? (
+              <div className="YoutubeEdit">
+                <div>
+                  <img src={Youtube} alt="Youtube Logo" />
+                  <div>
+                    <p>Youtube</p>
+                    <p className="UrlYoutube">{videoUrl}</p>
+                  </div>
+                </div>
+                <div className="icons-container">
+                  <img src={Edicao} alt="Editar" />
+                  <img src={Lixeira} alt="Lixeira" />
+                </div>
+              </div>
+            ) : (
+              !videoAdded && (
+                <div className="AddVideoButtonContainer">
+                  <button className="RedButton" onClick={openModal}>
+                    Adicionar Vídeo
+                  </button>
+                </div>
+              )
+            )}
+            <VideoModal
+              show={showVideoModal}
+              onClose={closeModal}
+              onAddVideo={addVideo}
+            />
+  
+            <div className="ToolsTitle">
+              <div className="Subtitle">Ferramentas do dia a dia.</div>
+              <button className="RedButton" onClick={handleOpenModal}>
+                adicionar
+              </button>
+              <Modal
+                show={showModal}
+                onClose={handleCloseModal}
+                onSave={handleSaveModal}
+              />
+            </div>
+            <div className="Tools">
+              <div className="ToolsEdit">
+                <div>
+                  <img src={Discord} alt="Discord" />
+                  <div>
+                    <p>Discord</p>
                     <p className="Points">10pt</p>
                   </div>
                 </div>

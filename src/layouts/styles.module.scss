@@ -1,0 +1,122 @@
+$color_1: #FFF;
+$color_2: #cf4343;
+$color_3: #969696;
+$background-color_1: rgb(36, 36, 36);
+$background-color_2: #f0f0f0;
+$background-color_3: #ffcece;
+
+.LayoutHeader {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 20px;
+	background-color: $background-color_1;
+	padding: 0.5rem 0 0.5rem 0;
+	.BellIconDiv {
+		border-right: 2px grey solid;
+		padding: 1rem;
+		img {
+			width: 2rem;
+		}
+	}
+	p {
+		font-size: 1.2rem;
+		color: $color_1;
+	}
+	.userIcon {
+		width: 4rem;
+	}
+}
+.layoutMainContainer {
+	display: flex;
+	.layoutSidebar {
+		margin-top: -3.5rem;
+		height: 53.96rem;
+		background-color: $background-color_2;
+		box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.26);
+
+        
+		h2 {
+			text-align: center;
+			margin-top: 5rem;
+			margin-bottom: 5rem;
+			color: $color_2;
+		}
+		.layoutSidebarNavlinksNav {
+			a {
+				width: 100%;
+				display: flex;
+                align-items: center;
+				font-weight: 700;
+				color: $color_3;
+				font-size: 1.2rem;
+				padding: 1rem 0;
+				cursor: pointer;
+				text-decoration: none;
+				p {
+					margin-left: 15px;
+				}
+			}
+			a[class=active] {
+				background-color: $background-color_3;
+				border-right: 3px solid #cf4343;
+				color: $color_2;
+
+                @media (max-width: 878px) {
+                   border: none;
+                    
+                }
+
+
+
+                img {
+                    // filtro vermelho
+                    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8)
+                }
+
+			}
+
+
+            .layoutSidebarLinkIcon {
+                display: flex;
+
+                img {
+                    width: 3rem;
+                }
+                 
+                
+            }
+
+
+
+            @media (max-width: 878px) {
+                p {
+                    display: none;
+                }
+
+                a {
+                    border: none;
+                }
+                
+            }
+
+
+            
+		}
+
+
+        @media screen {
+            h2 {
+                font-size: 0.9rem;
+            }
+            
+        }
+	}
+}
+
+p {
+	margin: 0;
+}
+
+

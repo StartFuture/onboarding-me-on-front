@@ -1,7 +1,10 @@
 import {Outlet,NavLink} from "react-router-dom"
 import styles from "./styles.module.css"
 import userIcon from "../assets/userIcon.png"
-import BellIcon from "../assets/notification-bell-svgrepo-com.svg"
+import BellIcon from "../assets/Notifications.png"
+import jornadaIcon from "../assets/icon (2).png"
+import welcomeKitIcon from "../assets/icon (3).png"
+import meuPerfilIcon from "../assets/icon (1).png"
 
 function Layout(){
     return(
@@ -31,8 +34,19 @@ function Layout(){
                         <nav className={styles.layoutSidebarNavlinksNav}>
 
                             {/* elemento importado da biblioteca de rotiamento utilizado para navegar entre rotas */}
-                            <NavLink to="/"><p>Jornada Gamificada</p></NavLink>
-                            <NavLink to="/welcomekit"><p>Welcome Kit</p></NavLink>    
+                    
+                                
+                                <NavLink to="/"><img src={jornadaIcon}alt="" /><p>Jornada Gamificada</p></NavLink>
+                       
+
+                       
+                               
+                                <NavLink to="/welcomekitwrapper"> <img src={welcomeKitIcon} alt="" /><p>Welcome Kit</p></NavLink>   
+
+
+                                <NavLink to="/welcomekit"> <img src={meuPerfilIcon} alt="" /><p>Meu perfil</p></NavLink>    
+                     
+                           
                         </nav>
                         
                     </aside>
