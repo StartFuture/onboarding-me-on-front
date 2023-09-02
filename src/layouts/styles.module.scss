@@ -14,7 +14,7 @@ $background-color_3: #ffcece;
 	background-color: $background-color_1;
 	padding: 0.5rem 0 0.5rem 0;
 	.BellIconDiv {
-		border-right: 2px grey solid;
+		border-right: 2px rgb(255, 255, 255) solid;
 		padding: 1rem;
 		img {
 			width: 2rem;
@@ -22,6 +22,7 @@ $background-color_3: #ffcece;
 	}
 	p {
 		font-size: 1.2rem;
+		font-weight: 300;
 		color: $color_1;
 	}
 	.userIcon {
@@ -31,10 +32,15 @@ $background-color_3: #ffcece;
 .layoutMainContainer {
 	display: flex;
 	.layoutSidebar {
-		margin-top: -3.5rem;
-		height: 53.96rem;
+		margin-top: -5.5rem;
+		height: 100dvh;
 		background-color: $background-color_2;
 		box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.26);
+		width: 20dvw;
+
+		@media (max-width: 876px) {
+			width: 15dvw;
+		}
 
         
 		h2 {
@@ -42,13 +48,20 @@ $background-color_3: #ffcece;
 			margin-top: 5rem;
 			margin-bottom: 5rem;
 			color: $color_2;
+			font-size: 1.7rem !important;
+			font-weight: 400;
+
+			@media (max-width: 878px) {
+				font-size: 1.2rem !important;
+				
+			}
 		}
 		.layoutSidebarNavlinksNav {
 			a {
 				width: 100%;
 				display: flex;
                 align-items: center;
-				font-weight: 700;
+				font-weight: 600;
 				color: $color_3;
 				font-size: 1.2rem;
 				padding: 1rem 0;

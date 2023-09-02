@@ -1,5 +1,5 @@
 import {Outlet,NavLink} from "react-router-dom"
-import styles from "./styles.module.css"
+import styles from "./styles.module.scss"
 import userIcon from "../assets/userIcon.png"
 import BellIcon from "../assets/Notifications.png"
 import jornadaIcon from "../assets/icon (2).png"
@@ -36,7 +36,7 @@ function Layout(){
                             {/* elemento importado da biblioteca de rotiamento utilizado para navegar entre rotas */}
                     
                                 
-                                <NavLink to="/"><img src={jornadaIcon}alt="" /><p>Jornada Gamificada</p></NavLink>
+                                <NavLink to="/jornada"><img src={jornadaIcon}alt="" /><p>Jornada Gamificada</p></NavLink>
                        
 
                        

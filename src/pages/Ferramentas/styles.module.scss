@@ -1,0 +1,174 @@
+.containerThirdSection {
+  margin: 0 2rem;
+  padding: 20px;
+  h5 {
+    font-size: 1.45rem;
+  }
+
+
+  .navLink {
+    position: relative !important;
+    background-color: #CE332D;
+    color: #fff;
+    padding: 18px 8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin: 5rem auto;
+    text-decoration: none;
+
+    &:hover {
+      background-color: darken(#CE332D, 10%);
+    }
+
+    
+    
+  }
+
+  .thirdSectionContent {
+
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+    .boxFlex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border: rgb(204, 204, 204) 1px solid;
+      border-radius: 8px;
+      gap: 20px;
+      background-color: #fff;
+
+      @media (max-width: 878px) {
+        flex-direction: column;
+        
+      
+
+        
+      }
+
+      
+
+      .boxFlexIcon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+
+      .boxFlexButtons {
+        display: flex;
+        gap: 10px;
+
+        @media (max-width: 878px) {
+          flex-direction: column;
+          
+        
+
+          
+        }
+
+        .buttonDivFlex  {
+          display: flex;
+          gap: 20px;
+        }
+
+
+        .figmaBoxPoints {
+          border: 2px #2D94CE solid;
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+          margin: -1.06rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          padding-top: 0.4rem;
+          
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        
+
+          margin-left: 1rem;
+          
+         
+          @media (max-width: 878px) {
+            margin: 0;
+            margin-right: -4.2rem;
+            margin-bottom: -1.1rem;
+            margin-left: -4.2rem;
+
+            border-radius: 8px;
+            
+            
+            
+          
+    
+            
+          }
+
+          p {
+            color: #2D94CE;
+          }
+        
+          
+        }
+      }
+      
+      
+
+      img {
+        width: 2em;
+      }
+    
+    }
+    
+
+    .buttonBaixar {
+      background-color: #ffffff;
+      color: #c51700;
+      padding: 13px 30px;
+      border: solid #c51700 1px;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      margin: 0 auto;
+
+      &:hover {
+        background-color: darken(#ffffff, 10%);
+      }
+    }
+
+    .buttonVincular{
+      background-color: #c51700;
+      color: #fff;
+      padding: 13px 30px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      margin: 0 auto;
+
+      &:hover {
+        background-color: darken(#c51700, 10%);
+      }
+    }
+
+
+
+    @media (max-width: 878px) {
+      width: 90%;
+
+     
+      
+    }
+  }
+}
+

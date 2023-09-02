@@ -10,11 +10,11 @@ export default function NovaPaginaTabs() {
   };
 
   const handlePrevTab = () => {
-    setActiveTab((activeTab - 1 + 3) % 3); // Handles looping
+    setActiveTab((activeTab - 1 + 3) % 3); // looping
   };
 
   const handleNextTab = () => {
-    setActiveTab((activeTab + 1) % 3); // Handles looping
+    setActiveTab((activeTab + 1) % 3); //  looping
   };
 
   return (
