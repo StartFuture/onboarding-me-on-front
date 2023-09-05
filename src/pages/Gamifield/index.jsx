@@ -2,6 +2,8 @@ import React from "react";
 import './assets/css/style.css';
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
+import PreChose from "../PreChose";
+
 
 
 const Gamifield = () => {
@@ -27,7 +29,8 @@ const Gamifield = () => {
       ></iframe>
 
      <div className="continue-button">
-      <button className="button">Continuar</button>
+      <a href="/preChose">
+      <button className="button">Continuar</button></a>
       </div>
       </div>
       </>

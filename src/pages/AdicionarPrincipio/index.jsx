@@ -1,9 +1,21 @@
 import Navbar from "../../components/navbar/Navbar";
+import { useState, useEffect} from "react";
+import axios from "axios";
 import Sidebar from "../../components/sidebar/Sidebar";
 import styles from "./styles.module.css";
 
 
 export default function AddPrincipio() {
+
+  const addCompany = () => {
+    axios({method: 'POST', url: 'http://localhost:8000/company', data: company})
+    .then((response) => {
+      console.log(response);
+    }).catch((error) => {
+      console.log(error);
+    });  
+  }
+
     return(
           
           <div className={styles.container}>
@@ -13,7 +25,8 @@ export default function AddPrincipio() {
           <form>
             <div className={styles["form-group"]}>
               <label htmlFor="name">Nome:</label>
-              <input type="text" id="name" name="name" required />
+              <input defaultValue={company.company_name} type="text" id="name" name="name" required 
+              onChange={(e) => setCompany({...company,nome:e.target.value})}/>
             </div>
             <div className={styles["form-group"]}>
               <div className={styles["form-group-inline"]}>

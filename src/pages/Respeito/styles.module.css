@@ -39,6 +39,14 @@
 .containerThirdSection .thirdSectionContent .buttonAnterior:hover {
   background-color: #e6e6e6;
 }
+.containerThirdSection .thirdSectionContent .buttonAnterior a {
+  text-decoration: none;
+  color: inherit;
+}
+.containerThirdSection .thirdSectionContent .buttonProximo a {
+  text-decoration: none;
+  color: inherit;
+}
 @media (max-width: 878px) {
   .containerThirdSection .thirdSectionContent {
     width: 90%;

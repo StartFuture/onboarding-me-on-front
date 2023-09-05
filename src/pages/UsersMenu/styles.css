@@ -46,6 +46,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .Navegation-Button {
@@ -76,10 +77,6 @@
   display: block;
 }
 
-.Navegation-Button ul li a.Geral {
-  background: #ff0000;
-  color: white;
-}
 
 .Navegation-Button ul li a:hover {
   background-color: #f0f0f0;
@@ -151,7 +148,7 @@
 }
 
 .RedButton {
-  padding: 5px 50px;
+  padding: 20px 50px;
   background: #ff0000;
   text-decoration: none;
   color: white;
@@ -221,4 +218,32 @@
   .ToolsEdit img {
     max-height: 30px;
   }
+}
+
+.Navegation-Button ul li a {
+  padding: 15px 10px;
+  text-decoration: none;
+  color: black;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, cursor 0.3s ease; /* Added cursor transition */
+  display: block;
+  cursor: pointer; /* Add cursor pointer style */
+}
+
+/* Style the active <a> element */
+.Navegation-Button ul li a.active {
+  background: #ff0000;
+  color: white;
+  cursor: default; /* Change cursor style for active tab to default */
+}
+
+.Navegation-Button ul li a:hover {
+  background-color: #f0f0f0;
+  color: #000; /* Change text color on hover */
+  cursor: pointer;
+}
+
+.Navegation-Button ul li a.active:hover {
+  background-color: #d60000;
+  cursor: default; /* Change cursor style for active tab to default on hover */
 }
