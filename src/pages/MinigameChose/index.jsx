@@ -1,4 +1,3 @@
-import Navbar from "../../components/navbar/Navbar";
 import styles from "./styles.module.css";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";

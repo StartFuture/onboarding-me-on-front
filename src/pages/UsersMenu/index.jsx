@@ -6,11 +6,11 @@ import Edicao from "../../assets/svg/Edição.svg";
 import Youtube from "../../assets/svg/Youtube.svg";
 import Lixeira from "../../assets/svg/Lixeira.svg";
 import Discord from "../../assets/svg/Discord.svg";
-import NavBar from "../../components/NavBarc/NavBar";
-import SideBar from "../../components/SideBarc/SideBar";
 import VideoModal from "../../components/modalVideo/ModalVideo";
 import RespectForPrincipios from "../../components/RespectForPrincipio/RespectForPrincipios";
 import RespectForCultura from "../../components/RespectForCultura/RespectForCultura";
+import NavBarc from "../../components/NavBarc/NavBarc";
+import SideBarc from "../../components/SideBarc/SideBarc";
 
 
 export default function UsersMenu() {
@@ -51,8 +51,8 @@ export default function UsersMenu() {
 
   return (
     <>
-      <NavBar />
-      <SideBar />
+      <NavBarc />
+      <SideBarc />
       <div className="Maincontent">
         <div className="Title-with-Bar">
           <div className="Bar" />
