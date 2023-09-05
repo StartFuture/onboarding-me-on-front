@@ -41,10 +41,10 @@ function Layout(){
 
                        
                                
-                                <NavLink to="/welcomekitwrapper"> <img src={welcomeKitIcon} alt="" /><p>Welcome Kit</p></NavLink>   
+                                <NavLink to="/welcomekit"> <img src={welcomeKitIcon} alt="" /><p>Welcome Kit</p></NavLink>   
 
 
-                                <NavLink to="/welcomekit"> <img src={meuPerfilIcon} alt="" /><p>Meu perfil</p></NavLink>    
+                                <NavLink to="/meuperfil"> <img src={meuPerfilIcon} alt="" /><p>Meu perfil</p></NavLink>    
                      
                            
                         </nav>

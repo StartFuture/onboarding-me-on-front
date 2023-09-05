@@ -12,8 +12,7 @@ import SocialMedia from "./pages/Ferramentas";
 import NovaPaginaTabs from "./pages/NovaPaginaTabs";
 import VideoPrincipios from "./pages/VideoPrincipios";
 import Layout from "./layouts/Layout";
-import WelcomeKiat from "./components/WelcomeKitPage1";
-import WelcomeKitWrapper from "./pages/WelcomeKitWrapper";
+
 import JornadaWrapperPage from "./pages/JornadaWrapper";
 import JornadaPage2 from "./components/JornadaPage2";
 import JornadaPage1 from "./components/JornadaPage1";
@@ -21,6 +20,15 @@ import JornadaPage3 from "./components/JornadaPage3";
 import JornadaPage4 from "./components/JornadaPage4";
 import Ferramentas from "./pages/Ferramentas";
 import FerramentasCongratsPage from "./components/FerramentasCongratsPage";
+
+import WelcomeKitWrapper from "./pages/WelcomeKitWrapper";
+import WelcomeKitPage1 from "./components/WelcomeKitPage1";
+import WelcomeKitPage2 from "./components/WelcomeKitPage2";
+import WelcomeKitPage3 from "./components/WelcomeKitPage3";
+import WelcomeKitPage4 from "./components/WelcomeKitPage4";
+import WelcomeKitPage5 from "./components/WelcomeKitPage5";
+
+
 
 
 const AppRoutes = () => {
@@ -42,7 +50,14 @@ const location = useLocation()
          <Route path="/novapaginatabs" element={<NovaPaginaTabs />} />
          <Route path="/video-principio" element={<VideoPrincipios />} />
          <Route path="/tabs" element={<NovaPaginaTabs />} />
-         <Route path="/welcomekitwrapper" element={<WelcomeKitWrapper />} />
+
+         
+         <Route path="/welcomekit" element={<WelcomeKitWrapper />} />
+         <Route path="/welcomekit/page1" element={<WelcomeKitPage1 />} />
+         <Route path="/welcomekit/page2" element={<WelcomeKitPage2 />} />
+         <Route path="/welcomekit/page3" element={<WelcomeKitPage3 />} />
+         <Route path="/welcomekit/page4" element={<WelcomeKitPage4 />} />
+         <Route path="/welcomekit/page5" element={<WelcomeKitPage5 />} />
 
 
 

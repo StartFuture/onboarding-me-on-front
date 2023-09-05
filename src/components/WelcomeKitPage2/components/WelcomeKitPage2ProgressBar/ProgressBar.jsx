@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ThreePointProgressBar.scss';
-import progressBarImg from '../../../../assets/Group 63.png'
+import progressBarImg from '../../../../assets/ProgressBarWK1.png'
 
 export const ThreePointProgressBar = () => {
 
