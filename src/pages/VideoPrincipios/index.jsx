@@ -7,20 +7,20 @@ import Respeito from "../Respeito";
 
 
 const VideoPrincipios = () => {
-  const [videoLink, setVideoLink] = useState({});
+  const [quiz, setQuiz] = useState({});
   useEffect(() => {
     axios({
       method: "GET",
       url: "http://localhost:8000/quiz/next/{employee_id}",
     })
       .then((response) => {
-        setVideoLink(response.data);
+        setQuiz(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
-  
+
  return(
    <>
    <Sidebar/>
@@ -36,7 +36,7 @@ const VideoPrincipios = () => {
      
       <iframe
         className="video-iframe"
-        src={videoLink.welcome_video_link}
+        src={quiz.link_video}
         title="Vídeo do Youtube"
         allowFullScreen
       ></iframe>

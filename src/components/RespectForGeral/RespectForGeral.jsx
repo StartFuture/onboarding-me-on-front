@@ -90,7 +90,11 @@ function RespectForGeral() {
                     onSave={handleSaveModal}
                 />
             </div>
+
+
             <div className="Tools">
+
+                
                 <div className="ToolsEdit">
                     <div>
                         <img src={Discord} alt="Discord" />
