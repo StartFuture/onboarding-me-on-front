@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import Modal from "../../components/modal/Modal";
 import Edicao from "../../assets/svg/Edição.svg";
@@ -7,6 +7,8 @@ import Lixeira from "../../assets/svg/Lixeira.svg";
 import Discord from "../../assets/svg/Discord.svg";
 import VideoModal from "../../components/modalVideo/ModalVideo";
 import '../../pages/UsersMenu/styles.css';
+
+
 
 function RespectForGeral() {
     const [videoLink, setVideoLink] = useState({});
@@ -42,6 +44,24 @@ function RespectForGeral() {
         setShowVideoModal(false);
     };
 
+
+    const handleChange = useCallback((videoUrl) => {
+        setVideoLink({ ...videoLink, welcome_video_link: videoUrl });
+    }, []);
+
+    const handleDeleteVideo = () => {
+        axios({
+            method: "DELETE",
+            url: `http://127.0.0.1:8000/game_journey/delete?company_id=1`,
+        })
+            .then(() => {
+                setVideoLink({});
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+
     return (
         <>
             <div className="Subtitle">
@@ -61,7 +81,9 @@ function RespectForGeral() {
                     </div>
                     <div className="icons-container">
                         <img onClick={openModal} src={Edicao} alt="Editar" />
-                        <img src={Lixeira} alt="Lixeira" />
+                        <img src={Lixeira} alt="Lixeira"
+                            onClick={() => handleDeleteVideo()}
+                        />
                     </div>
                 </div>
             ) : (
@@ -78,6 +100,7 @@ function RespectForGeral() {
                 videoLink={videoLink.welcome_video_link}
                 show={showVideoModal}
                 onClose={closeModal}
+                handleChange={handleChange}
             />
             <div className="ToolsTitle">
                 <div className="Subtitle">Ferramentas do dia a dia.</div>
@@ -94,7 +117,7 @@ function RespectForGeral() {
 
             <div className="Tools">
 
-                
+
                 <div className="ToolsEdit">
                     <div>
                         <img src={Discord} alt="Discord" />
