@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import styles from "./styles.module.scss"; // Your existing SCSS module
-import AddCultura from "../../pages/AdicionarCultura";
+import styles from "./styles.module.scss";
 import axios from "axios";
 import Lixeira from "../../assets/svg/Lixeira.svg";
 import Edicao from "../../assets/svg/Edição.svg";
+import { Link } from "react-router-dom";
 
 function RespectForCultura() {
   const [cultureList, setCultureList] = useState([]);
@@ -12,12 +12,12 @@ function RespectForCultura() {
       method: "GET",
       url: "http://localhost:8000/quiz/?company_id=1",
     })
-      .then((response) => {
-        setCultureList(response.data.filter((q) => q.quiz_type == "culture"))
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    .then((response) => {
+      setCultureList(response.data.filter((q) => q.quiz_type == "culture"))
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   }, []);
 
   const handleDeleteCulture = (quizId, gameId) => {
@@ -47,8 +47,9 @@ function RespectForCultura() {
                 Defina as culturas da empresa. As perguntas aparecerão em forma de
                 quiz para o colaborador
               </h3>
-
-              <button className={styles.addButtonUpper}>Adicionar</button>
+              <Link to='/addcultura'>
+                <button className={styles.addButtonUpper}>Adicionar</button>
+              </Link>
             </div>
 
             {cultureList.map((culture) => (
@@ -80,13 +81,10 @@ function RespectForCultura() {
                 </div>
               </div>
             ))}
-            <button className={styles.addButtonDown}>Adicionar</button>
+            <Link to='/addcultura'>
+              <button className={styles.addButtonDown}>Adicionar</button>
+            </Link>
           </div>
-        </section>
-      )}
-      {activeSection === "AddCultura" && (
-        <section className="AddCultura">
-          <AddCultura />
         </section>
       )}
     </>

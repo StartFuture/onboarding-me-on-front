@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import styles from "./styles.module.scss"; // Your existing SCSS module
 import AddCultura from "../../pages/AdicionarCultura";
-import AddPrincipio from "../../pages/Adicionar Principio";
+import AddPrincipio from "../../pages/AdicionarPrincipio";
 import axios from "axios";
 import Lixeira from "../../assets/svg/Lixeira.svg";
 import Edicao from "../../assets/svg/Edição.svg";
+import { Link } from "react-router-dom";
 
 function RespectForPrincipios() {
   const [principleList, setPrincipleList] = useState([]);
@@ -32,12 +33,12 @@ function RespectForPrincipios() {
       method: "DELETE",
       url: `http://localhost:8000/quiz/delete?quiz_id=${quizId}&game_id=${gameId}&company_id=1`,
     })
-    .then(() => {
-      setPrincipleList(principleList.filter((principle) => principle.id !== quizId));
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+      .then(() => {
+        setPrincipleList(principleList.filter((principle) => principle.id !== quizId));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
 
@@ -51,8 +52,9 @@ function RespectForPrincipios() {
                 Defina as culturas da empresa. As perguntas aparecerão em forma de
                 quiz para o colaborador
               </h3>
-
-              <button className={styles.addButtonUpper}>Adicionar</button>
+              <Link to='/addprincipio'>
+                <button className={styles.addButtonUpper}>Adicionar</button>
+              </Link>
             </div>
 
             {principleList.map((principle) => (
@@ -84,29 +86,12 @@ function RespectForPrincipios() {
                 </div>
               </div>
             ))}
-
-
-
-            <button className={styles.addButtonDown}>Adicionar</button>
-
-
+            <Link to='/addprincipio'>
+              <button className={styles.addButtonDown}>Adicionar</button>
+            </Link>
           </div>
-
-
         </section>
-
       )}
-
-
-      {activeSection === "AddCultura" && (
-        <section className="AddCultura">
-          <AddPrincipio />
-
-        </section>
-
-      )}
-
-
     </>
   )
 }

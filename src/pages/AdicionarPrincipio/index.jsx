@@ -1,22 +1,25 @@
-import styles from "./styles.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Sidebar from "../../components/sidebar/Sidebar";
+import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
 
-export default function AddCultura() {
+export default function AddPrincipio() {
+
   const [quiz, setQuiz] = useState({
     link_video: "",
     score: 0,
     title: "",
     question: "",
-    quiz_type: "culture",
+    quiz_type: "principle",
     game_id: 0,
     alternatives: []
   });
-  const [alternative, setAlternative] = useState({
+
+  let alternative = {
     text: "",
     is_answer: 0
-  })
+  }
   const [alternativeList, setAlternativeList] = useState([alternative, alternative, alternative, alternative])
 
   useEffect(() => {
@@ -32,50 +35,78 @@ export default function AddCultura() {
       });
   }, []);
 
-  const addCompany = () => {
+  const addQuiz = () => {
     axios({
       method: "POST",
       url: "http://localhost:8000/quiz/register",
       data: quiz
     })
       .then((response) => {
-        console.log(response);
+        console.log('Deu certo');
       })
       .catch((error) => {
         console.log(error);
       });
   };
 
-  const addAlternative = (input) => {
-    setAlternative({ ...alternative, text: input });
-    alternativeList.push(alternative)
-  }
-
   const updateAnswerAlternative = (radioSelect) => {
+    for (let index in alternativeList) {
+      let alternative = alternativeList[index]
+      alternative.is_answer = 0
+     setAlternativeList(alternativeList.splice(index, 1, alternative)) 
+      console.log(alternativeList)
+    }
+    console.log(alternativeList)
+    
     switch (radioSelect) {
       case 'a':
+        alternativeList[0].is_answer = 1
         break;
       case 'b':
+        alternativeList[1].is_answer = 1
         break;
       case 'c':
+        alternativeList[2].is_answer = 1
         break;
       case 'd':
+        alternativeList[3].is_answer = 1
         break;
       default:
         break;
     }
+    console.log(alternativeList)
+    setQuiz({ ...quiz, alternatives: alternativeList })
   }
-
+  const updateTextAlternative = (text, id) => {
+    switch (id) {
+      case 'answer-a':
+        alternativeList[0].text = text
+        break;
+      case 'answer-b':
+        alternativeList[1].text = text
+        break;
+      case 'answer-c':
+        alternativeList[2].text = text
+        break;
+      case 'answer-d':
+        alternativeList[3].text = text
+        break;
+      default:
+        break;
+    }
+    setQuiz({ ...quiz, alternatives: alternativeList })
+  }
 
   return (
     <div className={styles.container}>
-      <h1>Adicionar Cultura</h1>
+      <h1>Adicionar Principios</h1>
       <form>
         <div className={styles["form-group"]}>
           <label htmlFor="name">Nome:</label>
           <input type="text" id="name" name="name"
             defaultValue={quiz.title}
-            onChange={(e) => setQuiz({ ...quiz, title: e.target.value })} />
+            onChange={(e) => setQuiz({ ...quiz, title: e.target.value })}
+          />
         </div>
         <div className={styles["form-group"]}>
           <div className={styles["form-group-inline"]}>
@@ -85,9 +116,11 @@ export default function AddCultura() {
                 defaultValue={quiz.link_video}
                 onChange={(e) => setQuiz({ ...quiz, link_video: e.target.value })} />
             </div>
+
             <div className={styles["form-group "]}>
               <label htmlFor="points">Pontos:</label>
-              <input type="number" id="points" name="points" required defaultValue={quiz.score}
+              <input type="number" id="points" name="points"
+                defaultValue={quiz.score}
                 onChange={(e) => setQuiz({ ...quiz, score: e.target.value })} />
             </div>
           </div>
@@ -104,12 +137,13 @@ export default function AddCultura() {
             <div className={styles["form-group-long"]}>
               <label htmlFor="answer-a">Resposta - Alternativa A:</label>
               <input type="text" id="answer-a" name="answer-a"
-                onChange={(e) => addAlternative(e.target.value)} />
+                onChange={(e) => updateTextAlternative(e.target.value, "answer-a")} />
             </div>
             <div className={styles["form-group-label"]}>
-              <label htmlFor="radio-a">Resposta correta:</label>
+              <label htmlFor="radio-a">Resposta correta: </label>
               <input type="radio" id="radio-a" name="answer" value='a'
-                onClick={(e) => updateAnswerAlternative(e.target.value)} />
+                onClick={(e) => updateAnswerAlternative(e.target.value)}
+              />
             </div>
           </div>
         </div>
@@ -119,7 +153,7 @@ export default function AddCultura() {
             <div className={styles["form-group-long"]}>
               <label htmlFor="answer-a">Resposta - Alternativa B:</label>
               <input type="text" id="answer-b" name="answer-b"
-                onChange={(e) => addAlternative(e.target.value)} />
+                onChange={(e) => updateTextAlternative(e.target.value, "answer-b")} />
             </div>
             <div className={styles["form-group-label"]}>
               <label htmlFor="radio-b">Resposta correta:</label>
@@ -134,7 +168,7 @@ export default function AddCultura() {
             <div className={styles["form-group-long"]}>
               <label htmlFor="answer-a">Resposta - Alternativa C:</label>
               <input type="text" id="answer-c" name="answer-c"
-                onChange={(e) => addAlternative(e.target.value)} />
+                onChange={(e) => updateTextAlternative(e.target.value, "answer-c")} />
             </div>
             <div className={styles["form-group-label"]}>
               <label htmlFor="radio-c">Resposta correta:</label>
@@ -149,7 +183,7 @@ export default function AddCultura() {
             <div className={styles["form-group-long"]}>
               <label htmlFor="answer-d">Resposta - Alternativa D:</label>
               <input type="text" id="answer-d" name="answer-d"
-                onChange={(e) => addAlternative(e.target.value)} />
+                onChange={(e) => updateTextAlternative(e.target.value, "answer-d")} />
             </div>
             <div className={styles["form-group-label"]}>
               <label htmlFor="radio-a">Resposta correta:</label>
@@ -164,8 +198,8 @@ export default function AddCultura() {
               Cancelar
             </button>
           </Link>
-
-          <button type="submit" className={styles["submit-button"]}>
+          <button type="submit" className={styles["submit-button"]}
+            onClick={(e) => addQuiz()}>
             Enviar
           </button>
         </div>
