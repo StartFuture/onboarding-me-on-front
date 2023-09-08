@@ -5,7 +5,22 @@ import Navbar from "../../components/navbar/Navbar";
 import Respeito from "../Respeito";
 
 
+
 const VideoPrincipios = () => {
+  const [quiz, setQuiz] = useState({});
+  useEffect(() => {
+    axios({
+      method: "GET",
+      url: "http://localhost:8000/quiz/next/{employee_id}",
+    })
+      .then((response) => {
+        setQuiz(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
  return(
    <>
    <Sidebar/>
@@ -21,7 +36,7 @@ const VideoPrincipios = () => {
      
       <iframe
         className="video-iframe"
-        src="https://www.youtube.com/embed/2VsENIzqWq8"
+        src={quiz.link_video}
         title="Vídeo do Youtube"
         allowFullScreen
       ></iframe>
