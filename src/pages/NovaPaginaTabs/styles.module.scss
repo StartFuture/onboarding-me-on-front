@@ -1,7 +1,7 @@
 /* styles.module.scss */
 
 .containerThirdSection {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   padding: 20px;
 
@@ -25,6 +25,16 @@
   }
 }
 
+.cardFlex {
+  display: flex;
+  gap: 2rem;
+
+  @media (max-width: 878px) {
+    flex-direction: column;
+    
+  }
+}
+
 $tabColor: #a0a0a0;
 $activeTabColor:  #9b1717;
 $activeTabBackground: #fdd8d8;
@@ -39,11 +49,13 @@ $activeTabBackground: #fdd8d8;
 
   @media (max-width: 878px) {
     justify-content: space-between;
+    background-color: #CE332D1A;
     
   }
 
   .mobileArrow {
     background-color: transparent;
+    color: #d81d16c9;
     border: none;
     font-size: 2.5rem;
     cursor: pointer;
@@ -51,6 +63,7 @@ $activeTabBackground: #fdd8d8;
 
     @media (min-width: 879px) {
       display: none; /* Hide arrows on desktop screens */
+      
     }
   }
 }
@@ -84,7 +97,7 @@ $activeTabBackground: #fdd8d8;
 
 .activeTab {
   color: $activeTabColor;
-  background-color: $activeTabBackground;
+  background-color: #CE332D1A;
  
   border-radius: 8px;
 
@@ -125,20 +138,22 @@ $activeTabBackground: #fdd8d8;
   align-items: center;
   border: rgb(204, 204, 204) 1px solid;
   border-radius: 8px;
-  gap: 40px;
   background-color: #fff;
 
+  
   .boxFlexFirstFlex {
     display: flex;
     align-items: center;
-    gap: 3rem;
+  
+    
   
   
 
     @media (max-width: 878px) {
-      flex-direction: column;
+     
       width: 100%;
-      align-items: flex-start;
+      align-items: center;
+    
       
   
       
@@ -153,26 +168,63 @@ $activeTabBackground: #fdd8d8;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 2rem;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border: 1px solid rgb(25, 163, 175);
+    padding: 1.5rem;
     color:  rgb(25, 163, 175);
-    font-size: 1.2rem;
+
+    @media (max-width: 878px) {
+      justify-content: flex-start;
+      padding: 1.5rem 1rem;
+      
+    }
+  
+ 
+
+    img {
+      width: 76px;
+      
+    }
 
     p{
       margin: 0 !important;
     }
 
+
+    
+  }
+
+  .boxFlexIconBordered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 2.2rem;
+    border: 1px solid rgb(25, 163, 175);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    color:  rgb(25, 163, 175);
+    margin-right: 1rem;
+
     @media (max-width: 878px) {
-      width: 100%;
-      padding: 1rem;
+      justify-content: flex-start;
+      padding: 1.5rem 1rem;
       
+    }
+  
+ 
+
+    img {
+      width: 76px;
+      
+    }
+
+    p{
+      margin: 0 !important;
     }
 
 
     
   }
+
 
 
   .boxFlexButtons {
@@ -255,17 +307,6 @@ $activeTabBackground: #fdd8d8;
 
 
 
-@media (max-width: 878px) {
- .boxFlexIconInsideFlex {
-  padding-left: 2rem;
-
-
-
-}
-
-  
-  
-}
 
 
 
@@ -320,6 +361,7 @@ $activeTabBackground: #fdd8d8;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
+  margin-top: 5rem;
 }
 
 .boxFlexIconInsideFlex {

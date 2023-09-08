@@ -1,17 +1,18 @@
 import styles from "./styles.module.scss";
-import png from '../../assets/Frame 116.png'
+import png from '../../assets/JornadaPrincipiosPage6Img.png'
 import { NavLink } from "react-router-dom";
 
 
-export default function WelcomeKitPage1() {
+export default function JornadaPrincipiosPage6() {
 
 
   return (
     <section className={styles.containerSection}>
       <div className={styles.containerSectionFlex}>
         <div className={styles.leftFlex}>
-          <h1>Temos um Welcome Kit <br /> te esperando...</h1>
-          <NavLink to="/welcomekit/page2" className={styles.navLink}>Eu quero</NavLink>
+          <h1>Parabéns!<p>Você ganhou uma medalha de ouro!</p> </h1>
+          
+          <NavLink className={styles.navLink}>Receber Medalha</NavLink>
         </div>
 
         <div>

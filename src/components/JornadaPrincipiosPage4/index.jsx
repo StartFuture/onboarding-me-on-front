@@ -1,8 +1,8 @@
-import VideoPrincipios from "../VideoPrincipios";
+import { NavLink } from "react-router-dom";
 import styles from "./styles.module.scss";
 
 
-export default function Respeito() {
+export default function JornadaPrincipiosPage4() {
   return (
     <>
 
@@ -10,7 +10,7 @@ export default function Respeito() {
       {/* ... your third section content ... */}
 
       <h1>
-        Respeito
+        Inclusão
       </h1>
 
       <h5>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
@@ -28,25 +28,25 @@ export default function Respeito() {
             <div className={styles.insideFormFlex}>
 
               <div>
-                <input type="radio" />
-                <label htmlFor="">A) Lorem Ipsum</label>
+                <input type="radio" name="option" value="a" id="a" />
+                <label htmlFor="a">A) Lorem Ipsum</label>
               </div>
 
 
 
               <div>
-                <input type="radio" />
-                <label htmlFor="">B) Lorem Ipsum</label>
+                <input type="radio" name="option" value="b" id="b" />
+                <label htmlFor="b">B) Lorem Ipsum</label>
               </div>
 
               <div>
-                <input type="radio" />
-                <label htmlFor="">C) Lorem Ipsum</label>
+                <input type="radio" name="option" value="c" id="c" />
+                <label htmlFor="c">C) Lorem Ipsum</label>
               </div>
 
               <div>
-                <input type="radio" />
-                <label htmlFor="">D) Lorem Ipsum</label>
+                <input type="radio" name="option" value="d" id="d" />
+                <label htmlFor="d">D) Lorem Ipsum</label>
               </div>
 
             </div>
@@ -60,15 +60,12 @@ export default function Respeito() {
 
           <button className={styles.buttonAnterior}
             type="button" >
-            <a href="/video-principio">
-              Anterior </a>
+            <NavLink to="/jornada/principios/page1">Anterior</NavLink>
           </button>
 
           <button className={styles.buttonProximo}
             type="button">
-            <a href="#">
-              Próximo
-            </a>
+            <NavLink to="/jornada/principios/page3">Proximo</NavLink>
           </button>
         </div>
 

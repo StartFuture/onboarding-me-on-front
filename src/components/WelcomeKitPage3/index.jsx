@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import png from '../../assets/WKPage3Frame.png'
+import png from '../../assets/WelcomeKitPage3Frame.png'
 import { ThreePointProgressBar } from "./components/WelcomeKitPage2ProgressBar/ProgressBar";
 import { NavLink } from "react-router-dom";
 

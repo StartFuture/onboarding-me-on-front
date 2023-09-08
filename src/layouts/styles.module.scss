@@ -32,15 +32,21 @@ $background-color_3: #ffcece;
 .layoutMainContainer {
 	display: flex;
 	.layoutSidebar {
+		position: relative;
+		z-index: 999;
 		margin-top: -5.5rem;
 		height: 100dvh;
 		background-color: $background-color_2;
 		box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.26);
 		width: 20dvw;
+		transition: transform .3s ease;
 
-		@media (max-width: 876px) {
-			width: 15dvw;
+		@media (max-width: 878px) {
+			width: 1020rem;
+			
 		}
+
+		
 
         
 		h2 {
@@ -51,10 +57,7 @@ $background-color_3: #ffcece;
 			font-size: 1.7rem !important;
 			font-weight: 400;
 
-			@media (max-width: 878px) {
-				font-size: 1.2rem !important;
-				
-			}
+		
 		}
 		.layoutSidebarNavlinksNav {
 			a {
@@ -75,11 +78,6 @@ $background-color_3: #ffcece;
 				background-color: $background-color_3;
 				border-right: 3px solid #cf4343;
 				color: $color_2;
-
-                @media (max-width: 878px) {
-                   border: none;
-                    
-                }
 
 
 
@@ -103,28 +101,10 @@ $background-color_3: #ffcece;
 
 
 
-            @media (max-width: 878px) {
-                p {
-                    display: none;
-                }
-
-                a {
-                    border: none;
-                }
-                
-            }
-
 
             
 		}
-
-
-        @media screen {
-            h2 {
-                font-size: 0.9rem;
-            }
-            
-        }
+		
 	}
 }
 
@@ -132,4 +112,81 @@ p {
 	margin: 0;
 }
 
+
+
+.omeDiv {
+	display: none;
+}
+
+.arrowIcon {
+	display: none;
+}
+
+.hamburgerIcon {
+	display: none; /* Hide the hamburger icon by default */
+	cursor: pointer;
+	/* Add styles for your hamburger icon */
+  }
+  
+  /* Styles for the open sidebar on mobile */
+  .open {
+	transform: translateX(0%) !important;
+  }
+  
+  @media (max-width: 768px) {
+	/* Show the hamburger icon on mobile */
+	.hamburgerIcon {
+	  display: block;
+	  margin-left: 1rem;
+	}
+
+	.pUsuarioLogged {
+		display: none;
+	}
+
+	.omeDiv {
+		display: inherit;
+
+		h2 {
+			color: #cf4343;
+			font-weight: 300;
+		}
+	}
+
+	.BellIconDiv {
+		display: none;
+	  }
+  
+	/* Hide the sidebar by default on mobile */
+	.layoutSidebar {
+	  transform: translateX(-100%);
+
+	  width: 100% !important;
+	  height: 100dvh !important;
+	  position: absolute !important;
+
+	  .body {
+		overflow-y: hidden;
+	  }
+
+
+	 
+
+
+	}
+
+	.LayoutHeader {
+		justify-content: space-between;
+	
+	}
+
+	.arrowIcon {
+		display: block;
+		position: absolute;
+		top: 80px;
+		right: 0;
+		cursor: pointer;
+
+	}
+  }
 

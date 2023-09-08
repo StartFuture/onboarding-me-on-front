@@ -27,6 +27,13 @@ import WelcomeKitPage2 from "./components/WelcomeKitPage2";
 import WelcomeKitPage3 from "./components/WelcomeKitPage3";
 import WelcomeKitPage4 from "./components/WelcomeKitPage4";
 import WelcomeKitPage5 from "./components/WelcomeKitPage5";
+import JornadaPagePrincipios1 from "./components/JornadaPrincipiosPage1";
+import JornadaPrincipiosPage2 from "./components/JornadaPrincipiosPage2";
+import JornadaPrincipiosPage3 from "./components/JornadaPrincipiosPage3";
+import JornadaPrincipiosPage4 from "./components/JornadaPrincipiosPage4";
+import JornadaPrincipiosPage5 from "./components/JornadaPrincipiosPage5";
+import JornadaPrincipiosPage6 from "./components/JornadaPrincipiosPage6";
+import FerramentasCongratsPage2 from "./components/FerramentasCongratsPage2";
 
 
 
@@ -67,11 +74,24 @@ const location = useLocation()
          <Route path="/jornada/page3" element={<JornadaPage3 />} />
          <Route path="/jornada/page4" element={<JornadaPage4 />} />
 
+
+         <Route path="/jornada/admin" element={<NovaPaginaTabs />} />
+
+
+         <Route path="/jornada/principios/page1" element={<JornadaPagePrincipios1 />} />
+         <Route path="/jornada/principios/page2" element={<JornadaPrincipiosPage2 />} />
+         <Route path="/jornada/principios/page3" element={<JornadaPrincipiosPage3 />} />
+         <Route path="/jornada/principios/page4" element={<JornadaPrincipiosPage4 />} />
+         <Route path="/jornada/principios/page5" element={<JornadaPrincipiosPage5 />} />
+         <Route path="/jornada/principios/page6" element={<JornadaPrincipiosPage6 />} />
+         
+
          <Route path="/jornada/ferramentas" element={<Ferramentas />} />
          <Route path="/jornada/ferramentas/congrats" element={<FerramentasCongratsPage />} />
+         <Route path="/jornada/ferramentas/congrats2" element={<FerramentasCongratsPage2 />} />
 
 
-
+         
 
 
        </Route>

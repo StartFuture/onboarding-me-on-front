@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import png from '../../assets/20943392 [Convertido] 1.png'
-import { ThreePointProgressBar } from "./components/WelcomeKitPage2ProgressBar/ProgressBar";
+import { ThreePointProgressBar } from "./components/WelcomeKitPage4ProgressBar/ProgressBar";
 
 
 

@@ -8,26 +8,39 @@
     @media (max-width: 878px) {
       width: 337px;
       height: 337px;
+
+      margin-bottom: 10rem;
       
     }
   }
 
   .containerSectionFlex {
     display: flex;
+    gap: 6rem;
 
     @media (max-width: 992px) {
       flex-direction: column;
       margin-left: 3rem;
+      gap: 1rem;
     }
 
     .leftFlex {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      gap: 3rem;
 
       h1 {
         width: 32rem;
         font-size: 3rem;
+       
+
+        p {
+          margin-top: 1.5rem;
+          font-size: 2rem;
+          font-weight: 300;
+        }
+
         @media (max-width: 992px) {
           font-size: 2rem;
           width: auto;
@@ -54,14 +67,14 @@
 
     @media (max-width: 878px) {
       position: absolute;
-      bottom: 45px;
-      left: 11%;
+      bottom: 80px;
+      left: 10%;
       width: 80%;
     }
 
     @media (max-width: 376px) {
       position: absolute;
-      bottom: 5%;
+      bottom: -100px;
       left: 10%;
       width: 80%;
     }

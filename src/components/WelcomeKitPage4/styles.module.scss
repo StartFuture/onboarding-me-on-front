@@ -113,7 +113,7 @@ img {
       .navLink {
         background-color: #c51700;
         color: #fff;
-        padding: 18px 1.2rem;
+        padding: 18px 10.2rem;
        text-decoration: none;
         border: none;
         border-radius: 5px;
@@ -129,8 +129,9 @@ img {
         @media (max-width: 878px) {
           position: absolute;
           bottom: -40%;
-          left: 18%;
-          width: 80%;
+          left: 20%;
+          padding: 18px 7rem;
+       
           
         
         }

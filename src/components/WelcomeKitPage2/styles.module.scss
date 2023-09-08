@@ -9,7 +9,16 @@ img {
   height: 50dvh;
 
   @media (max-width: 878px) {
-    width: 80dvw;
+    width: 327px;
+    height: 327px;
+
+    
+  }
+
+  @media (max-width: 376px) {
+    width: 200px;
+    height: 200px;
+  
     
   }
 }
@@ -41,6 +50,15 @@ img {
       .sectionContentStyling {
         border-left: solid 3px #c51700;
         padding: 0 20px;
+
+        @media (max-width: 876px) {
+          margin-left: -2rem;
+          margin-top: 6rem;
+          
+          
+        }
+
+        
       }
 
 
@@ -51,8 +69,15 @@ img {
         font-size: 2.5rem;
         letter-spacing: 0.2rem;
 
+        @media (max-width: 876px) {
+          font-size: 1.7rem;
+          
+          
+        }
+
         @media (max-width: 376px) {
-          font-size: 2rem;
+          font-size: 1.5rem;
+        
           
         }
       }
@@ -61,42 +86,7 @@ img {
         font-size: 1.5rem;
       }
       
-      button {
-        background-color: #c51700;
-        color: #fff;
-        padding: 18px 2rem;
-        width: 100%;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-        margin: 0 auto;
-
-        &:hover {
-          background-color: darken(#c51700, 10%);
-        }
-
-        @media (max-width: 878px) {
-          position: absolute;
-          bottom: -10%;
-          left: 10%;
-          width: 80%;
-          
-        
-        }
-
-        @media (max-width: 376px) {
-          position: absolute;
-          bottom: 5%;
-          left: 10%;
-          width: 80%;
-          
-        }
-
-        
-      }
-
-
+  
     
 
     }

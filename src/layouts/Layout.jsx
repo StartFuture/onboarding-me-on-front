@@ -1,3 +1,4 @@
+import { useState } from "react"
 import {Outlet,NavLink} from "react-router-dom"
 import styles from "./styles.module.scss"
 import userIcon from "../assets/userIcon.png"
@@ -5,61 +6,76 @@ import BellIcon from "../assets/Notifications.png"
 import jornadaIcon from "../assets/icon (2).png"
 import welcomeKitIcon from "../assets/icon (3).png"
 import meuPerfilIcon from "../assets/icon (1).png"
+import hamburgerIcon from "../assets/hamburguerIcon.png"
+import arrowIcon from "../assets/Arrow-Stroke.png"
 
-function Layout(){
-    return(
-        <div>
-            {/* essa é a caixa que comporta todo layout */}
-            <div className={styles.LayoutContainer}> 
-                {/* essa é a tag de cabeçario do html e ela é muito importante apara mecanismo de busca (seo)  */}
-                <header className={styles.LayoutHeader}>
-                    <div className={styles.BellIconDiv}>
-                        {/* a tag img precisa do atributo src para inserir a img */}
-                        <img src={BellIcon}/>
-                    </div>
-
-                    <p>Usuário Logado</p>
-
-                    <img src={userIcon} className={styles.userIcon}/>
-                </header>
-
-                {/* tag do html semantica para conteudo principal  */}
-                <main className={styles.layoutMainContainer}>
-
-                    {/* tag do html semantica para conteudo lateral */}
-                    <aside className={styles.layoutSidebar}>
-                        <h2>O/ME</h2>
-
-                        {/* tag do html semantica para links navegaveis */}
-                        <nav className={styles.layoutSidebarNavlinksNav}>
-
-                            {/* elemento importado da biblioteca de rotiamento utilizado para navegar entre rotas */}
-                    
-                                
-                                <NavLink to="/jornada"><img src={jornadaIcon}alt="" /><p>Jornada Gamificada</p></NavLink>
-                       
-
-                       
-                               
-                                <NavLink to="/welcomekit"> <img src={welcomeKitIcon} alt="" /><p>Welcome Kit</p></NavLink>   
-
-
-                                <NavLink to="/meuperfil"> <img src={meuPerfilIcon} alt="" /><p>Meu perfil</p></NavLink>    
-                     
-                           
-                        </nav>
-                        
-                    </aside>
-
-                    {/* esse é o elemento rederizador das rotas que estão dentro desse layout  */}
-                    <Outlet/>
-
-                </main>
+function Layout() {
+    const [isSidebarOpen, setSidebarOpen] = useState(false);
+  
+    const toggleSidebar = () => {
+      setSidebarOpen(!isSidebarOpen);
+    };
+  
+    return (
+      <div>
+        <div className={styles.LayoutContainer}>
+          <header className={styles.LayoutHeader}>
+             {/* Add the hamburger icon for mobile */}
+             <img
+              src={hamburgerIcon}
+              alt="Hamburger Menu"
+              className={styles.hamburgerIcon}
+              onClick={toggleSidebar}
+            />
+            <div className={styles.BellIconDiv}>
+              <img src={BellIcon} />
             </div>
-            
-            
-        </div>
-    )
-}
 
-export default Layout
+            <div className={styles.omeDiv}>
+                <h2>O/ME</h2>
+
+            </div>
+            <p className={styles.pUsuarioLogged}>Usuário Logado</p>
+            <img src={userIcon} className={styles.userIcon} />
+  
+           
+          </header>
+  
+          <main className={styles.layoutMainContainer}>
+            <aside
+              className={`${styles.layoutSidebar} ${
+                isSidebarOpen ? styles.open : ''
+              }`}
+            >
+              <h2>O/ME</h2>
+              <nav className={styles.layoutSidebarNavlinksNav}>
+                <NavLink to="/jornada">
+                  <img src={jornadaIcon} alt="" />
+                  <p>Jornada Gamificada</p>
+                </NavLink>
+                <NavLink to="/welcomekit">
+                  <img src={welcomeKitIcon} alt="" />
+                  <p>Welcome Kit</p>
+                </NavLink>
+                <NavLink to="/meuperfil">
+                  <img src={meuPerfilIcon} alt="" />
+                  <p>Meu perfil</p>
+                </NavLink>
+
+                <img
+              src={arrowIcon}
+              alt="Arrow icon"
+              className={styles.arrowIcon}
+              onClick={toggleSidebar}
+            />
+              </nav>
+            </aside>
+  
+            <Outlet />
+          </main>
+        </div>
+      </div>
+    );
+  }
+  
+  export default Layout;
