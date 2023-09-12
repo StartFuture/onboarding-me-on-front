@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss"; // Your existing SCSS module
 import AddCultura from "../../components/AdicionarCultura";
-import AddPrincipio from "../../components/Adicionar Principio";
+import AddPrincipio from "../../components/AdicionarPrincipio";
 
 
 import ytIcon from '../../assets/YoutubeIcon.png'
