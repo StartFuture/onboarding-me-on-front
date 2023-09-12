@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "./styles.css";
-import Navbar from "../../components/navbar/Navbar";
-import Sidebar from "../../components/sidebar/Sidebar";
 import Modal from "../../components/modal/Modal";
 import Edicao from "../../assets/svg/Edição.svg";
 import Youtube from "../../assets/svg/Youtube.svg";
@@ -10,12 +9,24 @@ import Discord from "../../assets/svg/Discord.svg";
 import AddCultura from "../../components/AdicionarCultura";
 import AddPrincipio from "../../components/Adicionar Principio";
 import VideoModal from "../../components/modalVideo/ModalVideo";
-import Respeito from "../Respeito";
-import Respect from "../../components/RespectForPrincipio/RespectForPrincipios";
 import RespectForPrincipios from "../../components/RespectForPrincipio/RespectForPrincipios";
 import RespectForCultura from "../../components/RespectForCultura/RespectForCultura";
+import NavBarc from "../../components/NavBarc/NavBarc";
+import SideBarc from "../../components/SideBarc/SideBarc";
+
 
 export default function UsersMenu() {
+  const [videoLink, setVideoLink] = useState({});
+  useEffect(() => {
+    axios({ method: 'GET', url: 'http://localhost:8000/game_journey/get-video/1' })
+      .then((response) => {
+        setVideoLink(response.data);
+      }).catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+
   const [showModal, setShowModal] = useState(false);
   const [activeSection, setActiveSection] = useState("Geral");
 
@@ -51,8 +62,8 @@ export default function UsersMenu() {
 
   return (
     <>
-      <Navbar />
-      <Sidebar />
+      <NavBarc />
+      <SideBarc />
       <div className="Maincontent">
         <div className="Title-with-Bar">
           <div className="Bar" />
@@ -68,7 +79,7 @@ export default function UsersMenu() {
           <div className="Navegation-Button">
             <ul>
               <li>
-              <a
+                <a
                   href="#"
                   className={activeSection === "Geral" ? "Geral active" : "Geral"}
                   onClick={() => handleTabClick("Geral")}
@@ -77,15 +88,15 @@ export default function UsersMenu() {
                 </a>
               </li>
               <li>
-              <a
+                <a
                   className={activeSection === "Cultura" ? "active" : ""}
                   onClick={() => handleTabClick("Cultura")}
                 >
                   Cultura
-                  </a>
+                </a>
               </li>
               <li>
-              <a
+                <a
                   className={activeSection === "Principios" ? "active" : ""}
                   onClick={() => handleTabClick("Principios")}
                 >
@@ -190,28 +201,18 @@ export default function UsersMenu() {
 
       
 
-         {activeSection === "Cultura" && (
-           <section className="secondSection">
+        {activeSection === "Cultura" && (
+          <section className="secondSection">
             <RespectForCultura />
-           </section>
-   
+          </section>
+        )}
 
-         )}
-
-
-          {activeSection === "Principios" && (
-           <section className="thirdSection">
+        {activeSection === "Principios" && (
+          <section className="thirdSection">
             <RespectForPrincipios />
-          
-           </section>
-   
-
-         )}
-       
-       
-        
-
-      </div>
+          </section>
+        )}
+      </div >
     </>
   );
 }

@@ -2,8 +2,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import UsersMenu from "./pages/UsersMenu";
 import Gamifield from "./pages/Gamifield";
 import Minigame from "./pages/Minigame";
-import AddCultura from "./components/AdicionarCultura";
-import AddPrincipio from "./components/Adicionar Principio";
+import AddCultura from "./pages/AdicionarCultura";
+import AddPrincipio from "./pages/AdicionarPrincipio";
 import Congrats from "./pages/Congrats";
 import MinigameChose from "./pages/MinigameChose";
 import PreChose from "./pages/PreChose";
@@ -54,7 +54,8 @@ const location = useLocation()
          <Route path="/preChose" element={<PreChose />} />
          <Route path="/respeito" element={<Respeito />} />
          <Route path="/socialmedia" element={<SocialMedia />} />
-         <Route path="/novapaginatabs" element={<NovaPaginaTabs />} />
+         <Route path="/layout" element={<Layout />} />
+        <Route path="/novapaginatabs" element={<NovaPaginaTabs />} />
          <Route path="/video-principio" element={<VideoPrincipios />} />
          <Route path="/tabs" element={<NovaPaginaTabs />} />
 
