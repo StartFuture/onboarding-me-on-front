@@ -1,0 +1,82 @@
+.containerSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 82%;
+
+  img {
+    @media (max-width: 878px) {
+      width: 337px;
+      height: 337px;
+
+      margin-bottom: 10rem;
+      
+    }
+  }
+
+  .containerSectionFlex {
+    display: flex;
+    gap: 6rem;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      margin-left: 3rem;
+      gap: 1rem;
+    }
+
+    .leftFlex {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+
+      h1 {
+        width: 32rem;
+        font-size: 3rem;
+       
+
+        p {
+          margin-top: 1.5rem;
+          font-size: 2rem;
+          font-weight: 300;
+        }
+
+        @media (max-width: 992px) {
+          font-size: 2rem;
+          width: auto;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  .navLink {
+    background-color: #c51700;
+    color: #fff;
+    padding: 18px 0;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken(#c51700, 10%);
+    }
+
+    @media (max-width: 878px) {
+      position: absolute;
+      bottom: 80px;
+      left: 10%;
+      width: 80%;
+    }
+
+    @media (max-width: 376px) {
+      position: absolute;
+      bottom: -100px;
+      left: 10%;
+      width: 80%;
+    }
+  }
+}

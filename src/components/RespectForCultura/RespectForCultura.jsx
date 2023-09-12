@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./styles.module.scss"; // Your existing SCSS module
 import AddCultura from "../../pages/AdicionarCultura";
+import AddPrincipio from "../AdicionarPrincipio";
 
 function RespectForPrincipios() {
   const [activeSection, setActiveSection] = useState("Normal");
