@@ -1,0 +1,24 @@
+.LayoutHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  background-color: rgb(36, 36, 36);
+  padding: 0.5rem 0 0.5rem 0;
+}
+.LayoutHeader .BellIconDiv {
+  border-right: 2px grey solid;
+  padding: 1rem;
+}
+.LayoutHeader .BellIconDiv img {
+  width: 2rem;
+  filter: invert(100%);
+}
+.LayoutHeader p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.LayoutHeader .userIcon {
+  width: 4rem;
+}
