@@ -1,7 +1,9 @@
 import Navbar from "../../components/navbar/Navbar";
 import SideMenu from "../../components/sidebar/Sidebar";
+import SocialMedia from "../SocialMedia";
 import VideoPrincipios from "../VideoPrincipios";
 import styles from "./styles.module.css";
+
 
 function MinigameChose() {
   return (
@@ -25,7 +27,8 @@ function MinigameChose() {
               <div className={styles.cardImageLoader}></div>
             </div>
             <a href="/socialmedia">
-              <button type="button">Iniciar</button>
+              <Link to='/socialmedia'>
+              <button type="button">Iniciar</button></Link>
             </a>
           </div>
 

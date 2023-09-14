@@ -17,7 +17,7 @@ function RespectForCultura() {
     })
     .catch((error) => {
       console.log(error);
-    });
+      });
   }, []);
 
   const handleDeleteCulture = (quizId, gameId) => {

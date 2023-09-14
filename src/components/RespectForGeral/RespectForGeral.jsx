@@ -24,6 +24,19 @@ function RespectForGeral() {
                 console.log(error);
             });
     }, []);
+    const [toolList, setToolList] = useState([]);
+    useEffect(() => {
+      axios({
+        method: "GET",
+        url: "http://127.0.0.1:8000/tool/1",
+      })
+        .then((response) => {
+          setToolList(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }, []);
 
     const [showModal, setShowModal] = useState(false);
 
@@ -61,6 +74,21 @@ function RespectForGeral() {
                 console.error(error);
             });
     };
+
+    const handleDeleteTool = (toolId, gameId) => {
+        console.log(toolId); console.log(gameId);
+        axios({
+          method: "DELETE",
+          url: `http://127.0.0.1:8000/tool/delete?tool_id=${toolId}&game_id=${gameId}`,
+        })
+          .then(() => {
+            setToolList(toolList.filter((tool) => tool.id !== toolId));
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      };
+      
 
     return (
         <>
@@ -100,8 +128,7 @@ function RespectForGeral() {
                 videoLink={videoLink.welcome_video_link}
                 show={showVideoModal}
                 onClose={closeModal}
-                handleChange={handleChange}
-            />
+                handleChange={handleChange}/>
             <div className="ToolsTitle">
                 <div className="Subtitle">Ferramentas do dia a dia.</div>
                 <button className="RedButton" onClick={handleOpenModal}>
@@ -113,54 +140,24 @@ function RespectForGeral() {
                     onSave={handleSaveModal}
                 />
             </div>
-
-
             <div className="Tools">
-
-
-                <div className="ToolsEdit">
+            {toolList.map((tool) => (
+                <div className="ToolsEdit" >
                     <div>
                         <img src={Discord} alt="Discord" />
                         <div>
-                            <p>Discord</p>
-                            <p className="Points">10pt</p>
-                            <p className="Points">10pt</p>
+                            <p>{tool.name}</p>
+                            <p className="Points">{tool.score}pt</p>
                         </div>
                     </div>
                     <div className="icons-container">
                         <img src={Edicao} alt="Editar" />
-                        <img src={Lixeira} alt="Lixeira" />
+                        <img src={Lixeira} alt="Lixeira" 
+                        onClick={() => handleDeleteTool(tool.id_tool, tool.game_id)} />
                     </div>
                 </div>
-                <div className="ToolsEdit">
-                    <div>
-                        <img src={Discord} alt="Discord" />
-                        <div>
-                            <p>Discord</p>
-                            <p className="Points">10pt</p>
-                        </div>
-                    </div>
-                    <div className="icons-container">
-                        <img src={Edicao} alt="Editar" />
-                        <img src={Lixeira} alt="Lixeira" />
-                    </div>
-                </div>
-                <div className="ToolsEdit">
-                    <div>
-                        <img src={Discord} alt="Discord" />
-                        <div>
-                            <p>Discord</p>
-                            <p className="Points">10pt</p>
-                        </div>
-                    </div>
-                    <div className="icons-container">
-                        <img src={Edicao} alt="Editar" />
-                        <img src={Lixeira} alt="Lixeira" />
-                    </div>
-                </div>
+               ))}
             </div>
-
-
         </>
     )
 }

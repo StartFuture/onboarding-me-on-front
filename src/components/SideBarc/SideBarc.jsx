@@ -1,27 +1,18 @@
-import { Outlet, NavLink } from "react-router-dom";
-import styles from "./SideBarc.css";
+import { NavLink } from "react-router-dom"
+import styles from "./style.module.css"
+import Logo from "../../assets/svg/Logo.svg"
 
 export default function SideBarc() {
-  return (
-    <main className="layoutMainContainer">
-      {/* tag do html semantica para conteudo lateral */}
-      <aside className="layoutSidebar">
-        <h2>O/ME</h2>
 
-        {/* tag do html semantica para links navegaveis */}
-        <nav className="layoutSidebarNavlinksNav">
-          {/* elemento importado da biblioteca de rotiamento utilizado para navegar entre rotas */}
-          <NavLink to="/">
-            <p>Jornada Gamificada</p>
-          </NavLink>
-          <NavLink to="/welcomekit">
-            <p>Welcome Kit</p>
-          </NavLink>
-        </nav>
-      </aside>
-
-      {/* esse é o elemento rederizador das rotas que estão dentro desse layout  */}
-      <Outlet />
-    </main>
-  );
+    return (
+        <div className={styles.SidebarContainer}>
+            <div className={styles.logoContainer}>
+                <img src={Logo} alt="O/ME Logo" className={styles.logoImage} />
+            </div>
+            <nav className={styles.SidebarNavLinks}>
+                <NavLink to="/menu"><p>Jornada Gamificada</p></NavLink>
+                <NavLink to="/welcomekit"><p>Welcome Kit</p></NavLink>
+            </nav>
+        </div>
+    )
 }

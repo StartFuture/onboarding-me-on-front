@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./styles.css";
-import Navbar from "../../components/navbar/Navbar";
-import Sidebar from "../../components/sidebar/Sidebar";
 import RespectForPrincipios from "../../components/RespectForPrincipio/RespectForPrincipios";
 import RespectForCultura from "../../components/RespectForCultura/RespectForCultura";
 import RespectForGeral from "../../components/RespectForGeral/RespectForGeral";
+import NavBarc from "../../components/NavBarc/NavBarc";
+import SideBarc from "../../components/SideBarc/SideBarc";
 
 export default function UsersMenu() {
 
@@ -18,8 +18,8 @@ export default function UsersMenu() {
 
   return (
     <>
-      <Navbar />
-      <Sidebar />
+      <NavBarc />
+      <SideBarc />
       <div className="Maincontent">
         <div className="Title-with-Bar">
           <div className="Bar" />

@@ -2,9 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./assets/css/style.css";
-import Sidebar from "../../components/sidebar/Sidebar";
-import Navbar from "../../components/navbar/Navbar";
+import NavBarc from "../../components/NavBarc/NavBarc";
+import SideBarc from "../../components/SideBarc/SideBarc";
 import PreChose from "../PreChose";
+import { Link } from "react-router-dom";
+
+
 
 
 const Gamifield = () => {
@@ -24,8 +27,8 @@ const Gamifield = () => {
 
   return (
     <>
-      <Sidebar />
-      <Navbar />
+      <NavBarc />
+      <SideBarc />
       <div className="video-container">
         <div className="title-with-bar">
           <div className="bar"></div>
@@ -42,10 +45,12 @@ const Gamifield = () => {
           title="Vídeo do Youtube"
           allowFullScreen
         ></iframe>
-
+ 
         <div className="continue-button">
+        <Link to='/preChose'>
           <button className="button">Continuar</button>
-        </div>
+          </Link>
+        </div> 
       </div>
     </>
   );

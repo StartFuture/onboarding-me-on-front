@@ -87,8 +87,9 @@ export default function AddCultura() {
             </div>
             <div className={styles["form-group "]}>
               <label htmlFor="points">Pontos:</label>
-              <input type="number" id="points" name="points" required defaultValue={quiz.score}
-                onChange={(e) => setQuiz({ ...quiz, score: e.target.value })} />
+              <input type="number" id="points" name="points" required 
+              defaultValue={quiz.score}
+              onChange={(e) => setQuiz({ ...quiz, score: e.target.value })} />
             </div>
           </div>
         </div>
@@ -104,7 +105,7 @@ export default function AddCultura() {
             <div className={styles["form-group-long"]}>
               <label htmlFor="answer-a">Resposta - Alternativa A:</label>
               <input type="text" id="answer-a" name="answer-a"
-                onChange={(e) => addAlternative(e.target.value)} />
+                onChange={(e) => updateTextAlternative(e.target.value, "answer-a")}/>
             </div>
             <div className={styles["form-group-label"]}>
               <label htmlFor="radio-a">Resposta correta:</label>
@@ -119,12 +120,12 @@ export default function AddCultura() {
             <div className={styles["form-group-long"]}>
               <label htmlFor="answer-a">Resposta - Alternativa B:</label>
               <input type="text" id="answer-b" name="answer-b"
-                onChange={(e) => addAlternative(e.target.value)} />
+                onChange={(e) => updateTextAlternative(e.target.value, "answer-b")} />
             </div>
             <div className={styles["form-group-label"]}>
               <label htmlFor="radio-b">Resposta correta:</label>
               <input type="radio" id="radio-b" name="answer" value='b'
-                onClick={(e) => updateAnswerAlternative(e.target.value)} />
+                onClick={(e) => updateAnswerAlternative(e.target.value)}/>
             </div>
           </div>
         </div>
@@ -134,12 +135,12 @@ export default function AddCultura() {
             <div className={styles["form-group-long"]}>
               <label htmlFor="answer-a">Resposta - Alternativa C:</label>
               <input type="text" id="answer-c" name="answer-c"
-                onChange={(e) => addAlternative(e.target.value)} />
+                onChange={(e) => updateTextAlternative(e.target.value, "answer-c")}/>
             </div>
             <div className={styles["form-group-label"]}>
               <label htmlFor="radio-c">Resposta correta:</label>
               <input type="radio" id="radio-c" name="answer" value='c'
-                onClick={(e) => updateAnswerAlternative(e.target.value)} />
+                onClick={(e) => updateAnswerAlternative(e.target.value)}  />
             </div>
           </div>
         </div>
@@ -149,7 +150,7 @@ export default function AddCultura() {
             <div className={styles["form-group-long"]}>
               <label htmlFor="answer-d">Resposta - Alternativa D:</label>
               <input type="text" id="answer-d" name="answer-d"
-                onChange={(e) => addAlternative(e.target.value)} />
+                onChange={(e) => updateTextAlternative(e.target.value, "answer-d")} />
             </div>
             <div className={styles["form-group-label"]}>
               <label htmlFor="radio-a">Resposta correta:</label>
@@ -165,7 +166,8 @@ export default function AddCultura() {
             </button>
           </Link>
 
-          <button type="submit" className={styles["submit-button"]}>
+          <button type="submit" className={styles["submit-button"]}
+          onClick={(e) => addQuiz()}>
             Enviar
           </button>
         </div>
