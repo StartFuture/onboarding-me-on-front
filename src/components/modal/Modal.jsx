@@ -36,4 +36,4 @@ const Modal = ({ show, onClose, onSave }) => {
   );
 };
 
-export default ModalInput;
+export default Modal;
