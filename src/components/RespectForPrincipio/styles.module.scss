@@ -11,7 +11,7 @@
 
   .thirdSectionContent {
     width: 90%;
-    margin: 5rem auto;
+    margin: 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,7 +74,7 @@ $activeTabBackground: #fdd8d8;
 
 .centeredTab {
   display: flex;
-  gap: 7rem;
+  gap: 4rem;
   align-items: center; /* Vertically center the selected tab */
   font-weight: 600;
   font-size: 1.3rem;
@@ -320,6 +320,7 @@ $activeTabBackground: #fdd8d8;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
+  align-items: center;
 }
 
 .boxFlexIconInsideFlex {
