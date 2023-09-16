@@ -1,6 +1,5 @@
-import React from 'react';
-import './Sidebar.css';
-import Logo from '../../assets/svg/Logo.svg';
+import "./Sidebar.css";
+import Logo from "../../assets/svg/Logo.svg";
 
 const SideMenu = () => {
   return (
@@ -9,11 +8,12 @@ const SideMenu = () => {
         <img src={Logo} alt="On/me" className="logo" />
       </div>
       <ul className="menu-itens">
-        <li><a href="#">Jornada Gamificada</a></li>
+        <li>
+          <a href="#">Jornada Gamificada</a>
+        </li>
       </ul>
     </div>
   );
 };
 
 export default SideMenu;
-

@@ -1,24 +1,7 @@
-import { useState } from 'react'
-import WelcomeKitPage1 from '../../components/WelcomeKitPage1';
-import WelcomeKitPage2 from '../../components/WelcomeKitPage2';
-import rightArrow from '../../assets/rightredarrowpng.png'
-import styles from './styles.module.css'
-
+import WelcomeKitPage1 from "../../components/WelcomeKitPage1";
 
 function WelcomeKitWrapper() {
-
-  
-  
-
-  return (
-
-
-    <>
-      <WelcomeKitPage1 />
-    </>
-    
-   
-  )
+  return <WelcomeKitPage1 />;
 }
 
-export default WelcomeKitWrapper
+export default WelcomeKitWrapper;

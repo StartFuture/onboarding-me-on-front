@@ -19,18 +19,18 @@ form .form-group label {
   display: block;
   margin-bottom: 5px;
 }
-form .form-group input[type=text],
-form .form-group input[type=email],
-form .form-group input[type=number],
+form .form-group input[type="text"],
+form .form-group input[type="email"],
+form .form-group input[type="number"],
 form .form-group textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-form .form-group input[type=text]:focus,
-form .form-group input[type=email]:focus,
-form .form-group input[type=number]:focus,
+form .form-group input[type="text"]:focus,
+form .form-group input[type="email"]:focus,
+form .form-group input[type="number"]:focus,
 form .form-group textarea:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px #007bff;
@@ -217,26 +217,45 @@ form .form-group-button {
   display: flex;
   gap: 12rem;
 }
-.containerFifthSection .containerFifthSection .fifthSectionFlex .fifthSectionFlexContent {
+.containerFifthSection
+  .containerFifthSection
+  .fifthSectionFlex
+  .fifthSectionFlexContent {
   display: flex;
   flex-direction: column;
   gap: 110px;
 }
-.containerFifthSection .containerFifthSection .fifthSectionFlex .fifthSectionFlexContent div {
+.containerFifthSection
+  .containerFifthSection
+  .fifthSectionFlex
+  .fifthSectionFlexContent
+  div {
   border-left: solid 3px #c51700;
   padding: 0 20px;
 }
-.containerFifthSection .containerFifthSection .fifthSectionFlex .fifthSectionFlexContent h1 {
+.containerFifthSection
+  .containerFifthSection
+  .fifthSectionFlex
+  .fifthSectionFlexContent
+  h1 {
   padding: 0;
   font-weight: bold;
   border: none;
   font-size: 2.3rem;
   letter-spacing: 0.2rem;
 }
-.containerFifthSection .containerFifthSection .fifthSectionFlex .fifthSectionFlexContent p {
+.containerFifthSection
+  .containerFifthSection
+  .fifthSectionFlex
+  .fifthSectionFlexContent
+  p {
   font-size: 1.5rem;
 }
-.containerFifthSection .containerFifthSection .fifthSectionFlex .fifthSectionFlexContent button {
+.containerFifthSection
+  .containerFifthSection
+  .fifthSectionFlex
+  .fifthSectionFlexContent
+  button {
   background-color: #c51700;
   color: #fff;
   padding: 13px 9rem;
@@ -246,13 +265,20 @@ form .form-group-button {
   transition: background-color 0.2s ease;
   margin: 0 auto;
 }
-.containerFifthSection .containerFifthSection .fifthSectionFlex .fifthSectionFlexContent button:hover {
+.containerFifthSection
+  .containerFifthSection
+  .fifthSectionFlex
+  .fifthSectionFlexContent
+  button:hover {
   background-color: #921100;
 }
-.containerFifthSection .containerFifthSection .fifthSectionFlex .fifthSectionFlexImgWrapper {
+.containerFifthSection
+  .containerFifthSection
+  .fifthSectionFlex
+  .fifthSectionFlexImgWrapper {
   width: 23rem;
   height: 23rem;
   border-radius: 9999px;
   background-color: rgb(201, 201, 201);
   margin-bottom: 2rem;
-}/*# sourceMappingURL=styles.module.css.map */
+} /*# sourceMappingURL=styles.module.css.map */

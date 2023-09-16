@@ -18,7 +18,7 @@ function MinigameChose() {
       <div className={styles.fourthSectionFlex}>
         <div className={styles.fourthSectionCard}>
           <div className={styles.imageWrapper}>
-            <div className={styles.cardImageLoader}></div>
+            <div className={styles.cardImageLoader} />
           </div>
           <a href="/socialmedia">
             <button type="button">Iniciar</button>
@@ -27,7 +27,7 @@ function MinigameChose() {
 
         <div className={styles.fourthSectionCard}>
           <div className={styles.imageWrapper}>
-            <div className={styles.cardImageLoader}></div>
+            <div className={styles.cardImageLoader} />
           </div>
           <a href="/video-principio">
             <button type="button">Iniciar</button>

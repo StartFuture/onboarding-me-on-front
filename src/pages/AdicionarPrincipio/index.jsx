@@ -1,23 +1,20 @@
-import Navbar from "../../components/navbar/Navbar";
-import { useState, useEffect } from "react";
 import axios from "axios";
+import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import styles from "./styles.module.css";
 
-
 export default function AddPrincipio() {
-
   const addCompany = () => {
-    axios({ method: 'POST', url: 'http://localhost:8000/company', data: company })
-      .then((response) => {
+    axios({method: "POST", url: "http://localhost:8000/company", data: company})
+      .then(response => {
         console.log(response);
-      }).catch((error) => {
+      })
+      .catch(error => {
         console.log(error);
       });
-  }
+  };
 
   return (
-
     <div className={styles.container}>
       <Navbar />
       <Sidebar />
@@ -25,21 +22,20 @@ export default function AddPrincipio() {
       <form>
         <div className={styles["form-group"]}>
           <label htmlFor="name">Nome:</label>
-          <input defaultValue={company.company_name} type="text" id="name" name="name" required
-            onChange={(e) => setCompany({ ...company, nome: e.target.value })} />
+          <input
+            defaultValue={company.company_name}
+            type="text"
+            id="name"
+            name="name"
+            required
+            onChange={e => setCompany({...company, nome: e.target.value})}
+          />
         </div>
         <div className={styles["form-group"]}>
           <div className={styles["form-group-inline"]}>
             <div className={styles["form-group"]}>
-              <label htmlFor="video-link">
-                Link do vídeo para consulta:
-              </label>
-              <input
-                type="text"
-                id="video-link"
-                name="video-link"
-                required
-              />
+              <label htmlFor="video-link">Link do vídeo para consulta:</label>
+              <input type="text" id="video-link" name="video-link" required />
             </div>
             <div className={styles["form-group "]}>
               <label htmlFor="points">Pontos:</label>
@@ -47,7 +43,7 @@ export default function AddPrincipio() {
             </div>
           </div>
         </div>
-        <div className={styles["form-frame"]}></div>
+        <div className={styles["form-frame"]} />
         <div className={styles["form-group"]}>
           <label htmlFor="question">Pergunta:</label>
           <input type="text" id="question" name="question" required />
@@ -117,6 +113,5 @@ export default function AddPrincipio() {
         {/* Fim do Formulário */}
       </form>
     </div>
-
-  )
+  );
 }

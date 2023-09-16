@@ -33,7 +33,7 @@
   p {
     font-weight: 600;
     font-size: 1.9rem;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
 
     @media (max-width: 600px) {
@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: center;
   width: 455px;
-  background-color: #CE332D;
+  background-color: #ce332d;
   color: #fff;
   padding: 14px 16px;
   border: none;
@@ -60,7 +60,7 @@
   text-decoration: none;
 
   &:hover {
-    background-color: darken(#CE332D, 10%);
+    background-color: darken(#ce332d, 10%);
   }
 
   @media (max-width: 600px) {

@@ -1,14 +1,7 @@
-import React from 'react'
-import JornadaPage1 from '../../components/JornadaPage1'
+import JornadaPage1 from "../../components/JornadaPage1";
 
 function JornadaWrapperPage() {
-  return (
-    <>
-
-    <JornadaPage1 />
-    
-    </>
-  )
+  return <JornadaPage1 />;
 }
 
-export default JornadaWrapperPage
+export default JornadaWrapperPage;

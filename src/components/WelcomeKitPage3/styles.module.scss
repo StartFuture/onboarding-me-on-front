@@ -4,67 +4,61 @@ html {
 
 .containerFifthSection {
   width: 80%;
-margin: 2rem auto;
-display: flex;
-align-items: center;
-
-img {
-  width: 30dvw;
-  height: 50dvh;
-  
-
-  @media (max-width: 878px) {
-    width: 70dvw;
-    margin-left: -1rem;
-    margin-top: 2rem;
-    margin-bottom: 15rem;
-    
-  }
-}
-
-
-.codigoDiv {
+  margin: 2rem auto;
   display: flex;
-  gap: 20px;
-  margin-bottom: 3rem;
+  align-items: center;
 
-  p {
-    font-size: 2rem !important;
-    font-weight: 300;
+  img {
+    width: 30dvw;
+    height: 50dvh;
 
-    @media (max-width:878px) {
-      font-size: 1.5rem !important;
-      
+    @media (max-width: 878px) {
+      width: 70dvw;
+      margin-left: -1rem;
+      margin-top: 2rem;
+      margin-bottom: 15rem;
     }
   }
 
-  .codigoDivNumber {
-    padding: 1.5rem 4rem;
-    border: 2px solid #2D94CE;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+  .codigoDiv {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 3rem;
 
     p {
-      color: #2D94CE;
+      font-size: 2rem !important;
+      font-weight: 300;
+
+      @media (max-width: 878px) {
+        font-size: 1.5rem !important;
+      }
+    }
+
+    .codigoDivNumber {
+      padding: 1.5rem 4rem;
+      border: 2px solid #2d94ce;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+
+      p {
+        color: #2d94ce;
+      }
     }
   }
-}
-
 
   .fifthSectionFlex {
     display: flex;
     justify-content: center;
     gap: 20rem;
     width: 80%;
-   margin: 0 auto;
+    margin: 0 auto;
 
     @media (max-width: 878px) {
       flex-direction: column;
-      
     }
 
     .fifthSectionFlexContent {
-      display: flex;  
+      display: flex;
       align-items: center;
       gap: 100px;
 
@@ -72,24 +66,16 @@ img {
         gap: 40px;
         flex-direction: column;
         margin-left: 4rem;
-        
       }
 
       .sectionContentStyling {
         border-left: solid 3px #c51700;
         padding: 0 20px;
-        
-       
 
         @media (max-width: 878px) {
           margin-top: 12rem;
-          
         }
-
-
-       
       }
-
 
       h1 {
         padding: 0;
@@ -100,26 +86,22 @@ img {
 
         @media (max-width: 376px) {
           font-size: 2rem;
-         
-          
         }
       }
 
       p {
         font-size: 1.5rem;
       }
-      
+
       .navLink {
         background-color: #c51700;
         color: #fff;
         padding: 18px 4.2rem;
-       text-decoration: none;
+        text-decoration: none;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.2s ease;
-        
-       
 
         &:hover {
           background-color: darken(#c51700, 10%);
@@ -130,8 +112,6 @@ img {
           bottom: -40%;
           left: 18%;
           width: 80%;
-          
-        
         }
 
         @media (max-width: 376px) {
@@ -139,18 +119,8 @@ img {
           bottom: 5%;
           left: 10%;
           width: 80%;
-          
         }
-
-        
       }
-
-
-    
-
     }
-
-
   }
 }
-

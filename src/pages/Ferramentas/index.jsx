@@ -1,25 +1,17 @@
-import { useState } from "react";
+import {useState} from "react";
 
-import Navbar from "../../components/navbar/Navbar";
-import SideMenu from "../../components/sidebar/Sidebar";
+import {NavLink} from "react-router-dom";
 import styles from "./styles.module.scss";
-import figmaIcon from '../../assets/FigmaIconFerramentas.png'
-import checkImg from "../../assets/Check.png"
-import { NavLink } from "react-router-dom";
+import figmaIcon from "../../assets/FigmaIconFerramentas.png";
+import checkImg from "../../assets/Check.png";
 
 export default function Ferramentas() {
-
-  const [isFilledFigma, setIsFilledFigma] = useState(true)
-  const [isFilledDiscord, setIsFilledDiscord] = useState(true)
-  const [isFilledSlack, setIsFilledSlack] = useState(true)
-
+  const [isFilledFigma, setIsFilledFigma] = useState(true);
+  const [isFilledDiscord, setIsFilledDiscord] = useState(true);
+  const [isFilledSlack, setIsFilledSlack] = useState(true);
 
   return (
-
-    <>
-
-  
-<div className={styles.containerThirdSection}>
+    <div className={styles.containerThirdSection}>
       {/* ... your third section content ... */}
 
       <h1>Ferramentas do Dia a Dia</h1>
@@ -49,12 +41,10 @@ export default function Ferramentas() {
 
             {isFilledDiscord && (
               <div className={styles.figmaBoxPoints}>
-              <img src={checkImg} alt="" />
-              <p>10pt</p>
-             </div>
+                <img src={checkImg} alt="" />
+                <p>10pt</p>
+              </div>
             )}
-
-            
           </div>
         </div>
 
@@ -75,64 +65,44 @@ export default function Ferramentas() {
 
             {isFilledSlack && (
               <div className={styles.figmaBoxPoints}>
-              <img src={checkImg} alt="" />
-              <p>10pt</p>
-             </div>
+                <img src={checkImg} alt="" />
+                <p>10pt</p>
+              </div>
             )}
-
-            
           </div>
-
-       
         </div>
 
         <p>Design</p>
 
         <div className={styles.boxFlex}>
           <div className={styles.boxFlexIcon}>
-            <img
-              src={figmaIcon}
-              alt=""
-            />
+            <img src={figmaIcon} alt="" />
             <p>Figma</p>
           </div>
 
           <div className={styles.boxFlexButtons}>
-
             <div className={styles.buttonDivFlex}>
               <button className={styles.buttonBaixar}>Baixar</button>
               <button className={styles.buttonVincular}>Vincular</button>
             </div>
-            
 
             {isFilledFigma && (
               <div className={styles.figmaBoxPoints}>
-              <img src={checkImg} alt="" />
-              <p>10pt</p>
-             </div>
+                <img src={checkImg} alt="" />
+                <p>10pt</p>
+              </div>
             )}
-
-             
-
-
           </div>
-
-              
-              
-
-          
         </div>
 
         {isFilledDiscord & isFilledFigma & isFilledSlack ? (
-          <NavLink className={styles.navLink} to='/jornada/ferramentas/congrats'>Finalizar</NavLink>
+          <NavLink
+            className={styles.navLink}
+            to="/jornada/ferramentas/congrats">
+            Finalizar
+          </NavLink>
         ) : null}
-
-        
-
       </div>
     </div>
-    
-    </>
-    
   );
 }

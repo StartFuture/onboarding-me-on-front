@@ -7,7 +7,6 @@
   padding: 2rem 1rem;
 }
 
-
 .logoContainer {
   display: flex;
   justify-content: center;
@@ -16,11 +15,10 @@
 }
 
 .logoImage {
-  width: 70%; 
-  max-width: 100px; 
+  width: 70%;
+  max-width: 100px;
   height: auto;
 }
-
 
 .SidebarNavLinks a {
   width: 100%;

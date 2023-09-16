@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import axios from "axios";
 import "./styles.css";
 import Modal from "../../components/modal/Modal";
@@ -6,31 +6,31 @@ import Edicao from "../../assets/svg/Edição.svg";
 import Youtube from "../../assets/svg/Youtube.svg";
 import Lixeira from "../../assets/svg/Lixeira.svg";
 import Discord from "../../assets/svg/Discord.svg";
-import AddCultura from "../../components/AdicionarCultura";
-import AddPrincipio from "../../components/AdicionarPrincipio";
 import VideoModal from "../../components/modalVideo/ModalVideo";
 import RespectForPrincipios from "../../components/RespectForPrincipio/RespectForPrincipios";
 import RespectForCultura from "../../components/RespectForCultura/RespectForCultura";
 import NavBarc from "../../components/NavBarc/NavBarc";
 import SideBarc from "../../components/SideBarc/SideBarc";
 
-
 export default function UsersMenu() {
   const [videoLink, setVideoLink] = useState({});
   useEffect(() => {
-    axios({ method: 'GET', url: 'http://localhost:8000/game_journey/get-video/1' })
-      .then((response) => {
+    axios({
+      method: "GET",
+      url: "http://localhost:8000/game_journey/get-video/1",
+    })
+      .then(response => {
         setVideoLink(response.data);
-      }).catch((error) => {
+      })
+      .catch(error => {
         console.log(error);
       });
   }, []);
 
-
   const [showModal, setShowModal] = useState(false);
   const [activeSection, setActiveSection] = useState("Geral");
 
-  const handleTabClick = (sectionName) => {
+  const handleTabClick = sectionName => {
     setActiveSection(sectionName);
   };
 
@@ -52,13 +52,11 @@ export default function UsersMenu() {
     setShowVideoModal(false);
   };
 
-  const addVideo = (url) => {
+  const addVideo = url => {
     setVideoAdded(true);
     setVideoUrl(url);
     closeModal();
   };
-
-  
 
   return (
     <>
@@ -81,33 +79,33 @@ export default function UsersMenu() {
               <li>
                 <a
                   href="#"
-                  className={activeSection === "Geral" ? "Geral active" : "Geral"}
-                  onClick={() => handleTabClick("Geral")}
-                >
+                  className={
+                    activeSection === "Geral" ? "Geral active" : "Geral"
+                  }
+                  onClick={() => handleTabClick("Geral")}>
                   Geral
                 </a>
               </li>
               <li>
                 <a
                   className={activeSection === "Cultura" ? "active" : ""}
-                  onClick={() => handleTabClick("Cultura")}
-                >
+                  onClick={() => handleTabClick("Cultura")}>
                   Cultura
                 </a>
               </li>
               <li>
                 <a
                   className={activeSection === "Principios" ? "active" : ""}
-                  onClick={() => handleTabClick("Principios")}
-                >
-                  Princípios</a>
+                  onClick={() => handleTabClick("Principios")}>
+                  Princípios
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {activeSection == "Geral" && (
-            <section className="firstSection">
+        {activeSection === "Geral" && (
+          <section className="firstSection">
             <div className="Subtitle">
               <p>
                 Informe o vídeo de apresentação da empresa. O colaborador irá
@@ -142,7 +140,7 @@ export default function UsersMenu() {
               onClose={closeModal}
               onAddVideo={addVideo}
             />
-  
+
             <div className="ToolsTitle">
               <div className="Subtitle">Ferramentas do dia a dia.</div>
               <button className="RedButton" onClick={handleOpenModal}>
@@ -196,10 +194,7 @@ export default function UsersMenu() {
               </div>
             </div>
           </section>
-          
         )}
-
-      
 
         {activeSection === "Cultura" && (
           <section className="secondSection">
@@ -212,7 +207,7 @@ export default function UsersMenu() {
             <RespectForPrincipios />
           </section>
         )}
-      </div >
+      </div>
     </>
   );
 }

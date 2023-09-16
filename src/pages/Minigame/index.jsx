@@ -1,7 +1,7 @@
+import {useState} from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import styles from "./styles.module.scss";
-import React, { useState } from "react";
 
 function Minigame() {
   const [showFirstForm, setShowFirstForm] = useState(true);
@@ -10,7 +10,7 @@ function Minigame() {
   const [showFourthSection, setShowFourthSection] = useState(false);
   const [showFifthSection, setShowFifthSection] = useState(false);
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = event => {
     event.preventDefault();
     // Check if the form data is valid before switching to the second form
     const formData = new FormData(event.target);
@@ -35,7 +35,7 @@ function Minigame() {
     }
   };
 
-  const handleSecondFormSubmit = (event) => {
+  const handleSecondFormSubmit = event => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
@@ -63,7 +63,6 @@ function Minigame() {
       <Navbar />
       <Sidebar />
       {showFirstForm && (
-    
         <div className={styles.container}>
           <h1>Adicionar Cultura</h1>
           <form onSubmit={handleFormSubmit}>
@@ -90,7 +89,7 @@ function Minigame() {
                 </div>
               </div>
             </div>
-            <div className={styles["form-frame"]}></div>
+            <div className={styles["form-frame"]} />
             <div className={styles["form-group"]}>
               <label htmlFor="question">Pergunta:</label>
               <input type="text" id="question" name="question" required />
@@ -189,7 +188,7 @@ function Minigame() {
                 </div>
               </div>
             </div>
-            <div className={styles["form-frame"]}></div>
+            <div className={styles["form-frame"]} />
             <div className={styles["form-group"]}>
               <label htmlFor="question">Pergunta:</label>
               <input type="text" id="question" name="question" required />
@@ -319,8 +318,7 @@ function Minigame() {
               onClick={() => {
                 setShowThirdSection(false);
                 setShowFourthSection(true);
-              }}
-            >
+              }}>
               Next
             </button>
           </div>
@@ -341,70 +339,58 @@ function Minigame() {
 
           <div className={styles.fourthSectionFlex}>
             <div className={styles.fourthSectionCard}>
-                <div className={styles.imageWrapper}>
-                  <div className={styles.cardImageLoader}></div>
-                </div>
-                <button
-            type="button"
-            onClick={() => {
-              setShowFourthSection(false);
-              setShowFifthSection(true);
-            }}
-          >
-            Next
-          </button>
-
+              <div className={styles.imageWrapper}>
+                <div className={styles.cardImageLoader} />
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  setShowFourthSection(false);
+                  setShowFifthSection(true);
+                }}>
+                Next
+              </button>
             </div>
 
             <div className={styles.fourthSectionCard}>
-                <div className={styles.imageWrapper}>
-                    <div className={styles.cardImageLoader}></div>
-
-                </div>
-                <button
-            type="button"
-            onClick={() => {
-              setShowFourthSection(false);
-              setShowFifthSection(true);
-            }}
-          >
-            Next
-          </button>
-
+              <div className={styles.imageWrapper}>
+                <div className={styles.cardImageLoader} />
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  setShowFourthSection(false);
+                  setShowFifthSection(true);
+                }}>
+                Next
+              </button>
             </div>
-
           </div>
-
-
-
-
-         
         </div>
       )}
 
       {showFifthSection && (
-      <div className={styles.containerFifthSection}>
-      <div className={styles.fifthSectionFlex}>
-        <div className={styles.fifthSectionFlexContent}>
-          <div>
-            <h1>Parabéns! <br /> Game concluído :)</h1>
-            <p>Você ganhou a medalha <br /> Mestre das ferramentas</p>
+        <div className={styles.containerFifthSection}>
+          <div className={styles.fifthSectionFlex}>
+            <div className={styles.fifthSectionFlexContent}>
+              <div>
+                <h1>
+                  Parabéns! <br /> Game concluído :)
+                </h1>
+                <p>
+                  Você ganhou a medalha <br /> Mestre das ferramentas
+                </p>
+              </div>
+
+              <button>Receber Medalha</button>
+            </div>
+
+            <div className={styles.fifthSectionFlexImgWrapper} />
           </div>
-
-          <button>Receber Medalha</button>
-
         </div>
-
-        <div className={styles.fifthSectionFlexImgWrapper}>
-
-        </div>
-
-      </div>
-      </div>
       )}
     </>
   );
 }
 
 export default Minigame;
-

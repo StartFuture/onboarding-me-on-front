@@ -1,90 +1,72 @@
 .sectionContainer {
-     width: 60dvw;
+  width: 60dvw;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
+
+  iframe {
+    width: 1000px;
+    height: 557px;
+    margin: 0 auto;
+
+    @media (max-width: 876px) {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+
+    @media (max-width: 876px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+
+  .navLinkFlex {
     display: flex;
-    flex-direction: column;
-   margin: 0 auto;
-   gap: 2rem;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
 
-    padding-left: 2rem;
-    padding-top: 2rem;
-    
-    iframe {
-        width: 1000px;
-        height: 557px;
-        margin: 0 auto;
+  .navLinkProximo {
+    position: relative !important;
+    background-color: #ce332d;
+    color: #fff;
+    padding: 18px 6rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
 
-        @media (max-width: 876px) {
-            width: 100%;
-        }
+    &:hover {
+      background-color: darken(#ce332d, 10%);
     }
+  }
 
-    h1 {
-        font-size: 2.5rem;
-        font-weight: 300;
+  .navLinkAnterior {
+    position: relative !important;
+    background-color: #fff;
+    color: #ce332d;
+    padding: 18px 6rem;
+    border: 1px solid#ce332d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
 
-        @media (max-width: 876px) {
-
-        font-size: 2.5rem;
-
-        }
+    &:hover {
+      background-color: darken(#ce332d, 10%);
     }
-
-    p {
-        font-weight: 600;
-        font-size: 1.4rem;
-    }
-
-
-    .navLinkFlex {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        margin-bottom: 2rem;
-
-    }
-
-
-
-    .navLinkProximo {
-        position: relative !important;
-        background-color: #CE332D;
-        color: #fff;
-        padding: 18px 6rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-        text-decoration: none;
-
-        &:hover {
-          background-color: darken(#CE332D, 10%);
-        }
-
-        
-        
-      }
-
-      .navLinkAnterior {
-        position: relative !important;
-        background-color: #fff;
-        color: #CE332D;
-        padding: 18px 6rem;
-        border: 1px solid#CE332D;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-        text-decoration: none;
-
-        &:hover {
-          background-color: darken(#CE332D, 10%);
-        }
-
-        
-        
-      }
-    
-
+  }
 }
-
-
-

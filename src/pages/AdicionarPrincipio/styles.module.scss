@@ -49,9 +49,9 @@ form {
         gap: 1rem;
         flex-direction: row-reverse;
         align-items: center;
+
         @media (max-width: 878px) {
           justify-content: flex-end;
-          
         }
 
         label {
@@ -66,18 +66,15 @@ form {
         @media (max-width: 878px) {
           width: 100%;
           padding-right: 0px;
-          
         }
-
-        
       }
 
       .form-group {
         flex: 1;
         margin-right: 10px;
+
         @media (max-width: 878px) {
           margin: 15px 0;
-          
         }
       }
     }
@@ -128,17 +125,13 @@ form {
     @media (max-width: 878px) {
       flex-direction: column-reverse;
       margin-bottom: 60px;
-      
     }
   }
 }
 
- @media (max-width: 878px) {
+@media (max-width: 878px) {
   .form-group-inline {
     display: flex;
     flex-direction: column;
-   
   }
-
-  
- }
+}

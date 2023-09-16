@@ -1,15 +1,13 @@
-
-
 .containerThirdSection,
 .containerFourthSection {
   width: 100%;
   margin: 0 auto;
   padding: 20px;
 
-  h5, h1 {
+  h5,
+  h1 {
     margin-left: 15rem;
   }
-
 
   .thirdSectionContent {
     width: 60%;
@@ -49,7 +47,6 @@
       flex-direction: column;
       align-items: center;
       margin-bottom: 6rem;
-      
     }
   }
 
@@ -94,7 +91,6 @@
 .containerFifthSection {
   margin: 15rem 180px;
 
-
   .fifthSectionFlex {
     display: flex;
     gap: 20rem;
@@ -109,7 +105,6 @@
         padding: 0 20px;
       }
 
-
       h1 {
         padding: 0;
         font-weight: bold;
@@ -121,7 +116,7 @@
       p {
         font-size: 1.5rem;
       }
-      
+
       button {
         background-color: #c51700;
         color: #fff;
@@ -136,30 +131,14 @@
           background-color: darken(#c51700, 10%);
         }
       }
-
-
-      
-
-
-
-
     }
 
-
-
     .fifthSectionFlexImgWrapper {
-
       width: 23rem;
       height: 23rem;
       border-radius: 9999px;
       background-color: rgb(201, 201, 201);
       margin-bottom: 2rem;
     }
-
-
-
   }
 }
-
-
-

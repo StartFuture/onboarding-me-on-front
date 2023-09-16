@@ -2,23 +2,19 @@ import styles from "./styles.module.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 
-
 export default function Respeito() {
-
   return (
     <div className={styles.containerThirdSection}>
       <Navbar />
       <Sidebar />
-      
-      <h1>
-        Respeito
-      </h1>
 
-      <h5>  
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
-        aliquid laudantium ad nam voluptas facere incidunt eius,
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
-        aliquid laudantium ad nam voluptas facere incidunt eius,
+      <h1>Respeito</h1>
+
+      <h5>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, aliquid
+        laudantium ad nam voluptas facere incidunt eius, Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Sit, aliquid laudantium ad nam
+        voluptas facere incidunt eius,
       </h5>
 
       <div className={styles.thirdSectionContent}>
@@ -46,17 +42,12 @@ export default function Respeito() {
         </div>
 
         <div className={styles.flexButtons}>
-          <button className={styles.buttonAnterior}
-            type="button" >
-            <a href="/video-principio">
-              Anterior </a>
+          <button className={styles.buttonAnterior} type="button">
+            <a href="/video-principio">Anterior </a>
           </button>
 
-          <button className={styles.buttonProximo}
-            type="button">
-            <a href="#">
-              Próximo
-            </a>
+          <button className={styles.buttonProximo} type="button">
+            <a href="#">Próximo</a>
           </button>
         </div>
       </div>

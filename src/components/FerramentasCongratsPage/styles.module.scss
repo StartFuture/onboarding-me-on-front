@@ -1,106 +1,86 @@
 .sectionContainer {
-     width: 80dvw;
+  width: 80dvw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding-left: 2rem;
+  padding-top: 2rem;
+
+  .congratulationsText {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    border-bottom: #2d94ce 4px solid;
+  }
+
+  .medalBox {
+    width: 70%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 16px;
 
-    padding-left: 2rem;
-    padding-top: 2rem;
-
-    
-
-    .congratulationsText {
-        width: 70%;
-        margin: 0 auto;
-        padding-bottom: 3rem;
-        border-bottom: #2D94CE 4px solid;
+    @media (max-width: 876px) {
+      width: 95%;
     }
-
-    .medalBox {
-        width: 70%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #fff;
-        border-radius: 16px;
-
-        @media (max-width: 876px) {
-            width: 95%;
-
-
-        }
-        
-
-        p {
-            font-weight: 300;
-            font-size: 2rem;
-        }
-
-        img {
-            width: 3rem;
-        }
-        
-    }
-
-
-    img {
-        width: 334px;
-        margin: 2rem auto;
-    }
-    
-
-    h1 {
-        font-size: 2.5rem;
-        font-weight: 600;
-        border: none;
-
-        padding-left: 0px;
-       
-
-        @media (max-width: 876px) {
-
-        font-size: 2.5rem;
-
-        }
-    }
-
-    h3 {
-        font-weight: 300;
-        font-size: 2rem;
-    }
-
 
     p {
-        width: 70%;
-        margin: 2rem auto;
+      font-weight: 300;
+      font-size: 2rem;
     }
 
+    img {
+      width: 3rem;
+    }
+  }
 
-    .navLink {
-        position: relative !important;
-        background-color: #CE332D;
-        color: #fff;
-        width: 30%;
-        padding: 1.2rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-        text-align: center;
-        text-decoration: none;
-        margin: 0 auto;
-        margin-top: 10rem;
+  img {
+    width: 334px;
+    margin: 2rem auto;
+  }
 
-        &:hover {
-          background-color: darken(#CE332D, 10%);
-        }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    border: none;
 
-        
-        
-      }
+    padding-left: 0px;
 
-    
-    
+    @media (max-width: 876px) {
+      font-size: 2.5rem;
+    }
+  }
 
+  h3 {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+
+  p {
+    width: 70%;
+    margin: 2rem auto;
+  }
+
+  .navLink {
+    position: relative !important;
+    background-color: #ce332d;
+    color: #fff;
+    width: 30%;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-top: 10rem;
+
+    &:hover {
+      background-color: darken(#ce332d, 10%);
+    }
+  }
 }

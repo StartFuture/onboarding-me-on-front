@@ -1,50 +1,43 @@
 .containerFifthSection {
   width: 80%;
-margin: 2rem auto;
-display: flex;
-align-items: center;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
 
-img {
-  width: 30dvw;
-  height: 50dvh;
+  img {
+    width: 30dvw;
+    height: 50dvh;
 
-  @media (max-width: 878px) {
-    width: 327px;
-    height: 327px;
+    @media (max-width: 878px) {
+      width: 327px;
+      height: 327px;
+    }
 
-    
+    @media (max-width: 376px) {
+      width: 200px;
+      height: 200px;
+    }
   }
-
-  @media (max-width: 376px) {
-    width: 200px;
-    height: 200px;
-  
-    
-  }
-}
-
 
   .fifthSectionFlex {
     display: flex;
     justify-content: center;
     gap: 20rem;
     width: 80%;
-   margin: 0 auto;
+    margin: 0 auto;
 
     @media (max-width: 878px) {
       flex-direction: column;
-      
     }
 
     .fifthSectionFlexContent {
-      display: flex;  
+      display: flex;
       align-items: center;
       gap: 110px;
 
       @media (max-width: 878px) {
         gap: 40px;
         flex-direction: column;
-        
       }
 
       .sectionContentStyling {
@@ -54,13 +47,8 @@ img {
         @media (max-width: 876px) {
           margin-left: -2rem;
           margin-top: 6rem;
-          
-          
         }
-
-        
       }
-
 
       h1 {
         padding: 0;
@@ -71,26 +59,16 @@ img {
 
         @media (max-width: 876px) {
           font-size: 1.7rem;
-          
-          
         }
 
         @media (max-width: 376px) {
           font-size: 1.5rem;
-        
-          
         }
       }
 
       p {
         font-size: 1.5rem;
       }
-      
-  
-    
-
     }
-
-
   }
 }

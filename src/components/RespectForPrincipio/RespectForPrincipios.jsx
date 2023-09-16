@@ -1,12 +1,11 @@
-import { useState } from "react";
+import {useState} from "react";
 import styles from "./styles.module.scss"; // Your existing SCSS module
 import AddPrincipio from "../../pages/AdicionarPrincipio";
 
 function RespectForPrincipios() {
-
   const [activeSection, setActiveSection] = useState("Normal");
 
-  const handleTabClick = (sectionName) => {
+  const handleTabClick = sectionName => {
     setActiveSection(sectionName);
   };
 
@@ -17,14 +16,13 @@ function RespectForPrincipios() {
           <div className={styles.insideFlex}>
             <div className={styles.insideFlexTitleAndBtn}>
               <h3>
-                Defina as culturas da empresa. As perguntas aparecerão em forma de
-                quiz para o colaborador
+                Defina as culturas da empresa. As perguntas aparecerão em forma
+                de quiz para o colaborador
               </h3>
 
               <button className={styles.addButtonUpper}>Adicionar</button>
             </div>
 
-
             <div className={styles.boxFlex}>
               <div className={styles.boxFlexFirstFlex}>
                 <div className={styles.boxFlexIcon}>
@@ -76,34 +74,20 @@ function RespectForPrincipios() {
                   alt="trash"
                 />
               </div>
-
-
-
-
-
             </div>
 
             <button className={styles.addButtonDown}>Adicionar</button>
-
-
           </div>
-
         </section>
-
       )}
-
 
       {activeSection === "AddCultura" && (
         <section className="AddCultura">
           <AddPrincipio />
-
         </section>
-
       )}
-
-
     </>
-  )
+  );
 }
 
-export default RespectForPrincipios
+export default RespectForPrincipios;

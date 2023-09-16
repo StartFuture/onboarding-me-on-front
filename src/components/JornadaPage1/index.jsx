@@ -1,17 +1,13 @@
-import { NavLink } from 'react-router-dom';
-import styles from './styles.module.scss';
+import {NavLink} from "react-router-dom";
+import styles from "./styles.module.scss";
 
 function JornadaPage1() {
   return (
     <div className="main-container">
-
       <section className={styles.sectionContainer}>
         <h1>
-          Olá, Eduardo.
-          {' '}
-          <br />
+          Olá, Eduardo. <br />
           Boas-vindas à Jornada Gamificada da EmpresaNova.
-
         </h1>
 
         <p>Para iniciar, assista o vídeo que preparamos para você.</p>
@@ -25,7 +21,9 @@ function JornadaPage1() {
           allowfullscreen
         />
       </section>
-      <NavLink className={styles.navLink} to="/jornada/page2">Continuar</NavLink>
+      <NavLink className={styles.navLink} to="/jornada/page2">
+        Continuar
+      </NavLink>
     </div>
   );
 }

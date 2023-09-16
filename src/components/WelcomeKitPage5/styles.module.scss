@@ -3,75 +3,56 @@
 }
 
 .containerFifthSectionNormal {
-margin-top: 5rem;
-display: flex;
-flex-direction: column;
-margin-left: 14rem;
-gap: 2rem;
-
-h1 {
-  margin-bottom: 6rem;
-}
-
-
-.form {
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  margin-left: 14rem;
+  gap: 2rem;
 
-  .radioDiv {
+  h1 {
+    margin-bottom: 6rem;
+  }
+
+  .form {
     display: flex;
-    gap: 2rem;
-    color: #A0A0A0;
-  }
+    flex-direction: column;
+    gap: 1rem;
 
+    .radioDiv {
+      display: flex;
+      gap: 2rem;
+      color: #a0a0a0;
+    }
 
-    
     textarea {
-    border: 1px solid #D9D9D9;
-    padding: 2.5rem 0.8rem;
-    border-radius: 4px;
-    
- 
+      border: 1px solid #d9d9d9;
+      padding: 2.5rem 0.8rem;
+      border-radius: 4px;
+    }
+
+    .labelComentario {
+      margin-top: 3rem;
+    }
   }
 
-  
+  .navLink {
+    background-color: #c51700;
+    color: #fff;
+    padding: 18px 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+    margin: 5rem auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 
-  .labelComentario {
-    margin-top: 3rem;
+    &:hover {
+      background-color: darken(#c51700, 10%);
+    }
   }
-  
-
-  
 }
-
-.navLink {
-  background-color: #c51700;
-  color: #fff;
-  padding: 18px 1.2rem;
-  text-align: center;
- text-decoration: none;
- width: 50%;
- margin: 5rem auto;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  
- 
-
-  &:hover {
-    background-color: darken(#c51700, 10%);
-  }
-
-
-
-  
-}
-
-
-}
-
 
 @media (max-width: 878px) {
   .containerFifthSectionNormal {
@@ -82,16 +63,14 @@ h1 {
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
-
     gap: 1rem;
 
     .selectForm {
       padding: 1rem;
       border-radius: 4px;
-      border: 1px #D9D9D9 solid;
+      border: 1px #d9d9d9 solid;
       width: 92%;
       color: #8c8c8c;
-     
     }
 
     .comentarioResponsivoLabel {
@@ -101,10 +80,9 @@ h1 {
     .comentarioResponsivoInput {
       padding: 1rem;
       border-radius: 4px;
-      border: 1px #D9D9D9 solid;
+      border: 1px #d9d9d9 solid;
       width: 92%;
       color: #8c8c8c;
-      
     }
 
     h1 {
@@ -119,21 +97,18 @@ h1 {
       background-color: #c51700;
       color: #fff;
       padding: 18px;
-     text-decoration: none;
-     text-align: center;
-     width: 92%;
+      text-decoration: none;
+      text-align: center;
+      width: 92%;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.2s ease;
       margin-top: 4rem;
-      
-     
 
       &:hover {
         background-color: darken(#c51700, 10%);
       }
     }
   }
-  
 }

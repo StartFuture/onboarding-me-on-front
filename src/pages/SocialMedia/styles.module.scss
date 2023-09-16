@@ -36,7 +36,6 @@ body {
         gap: 10px;
       }
 
-
       .boxFlexButtons {
         display: flex;
         gap: 10px;
@@ -44,20 +43,13 @@ body {
         @media (max-width: 878px) {
           margin: 0 auto;
           gap: 25px;
-          
-        
-
-          
         }
       }
 
       img {
         width: 50px;
       }
-
-    
     }
-    
 
     .buttonBaixar {
       background-color: #ffffff;
@@ -75,7 +67,7 @@ body {
       }
     }
 
-    .buttonVincular{
+    .buttonVincular {
       background-color: #c51700;
       color: #fff;
       padding: 13px 30px;
@@ -91,14 +83,8 @@ body {
       }
     }
 
-
-
     @media (max-width: 878px) {
       width: 90%;
-
-     
-      
     }
   }
 }
-

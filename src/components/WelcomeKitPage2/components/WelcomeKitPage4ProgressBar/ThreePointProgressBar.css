@@ -2,16 +2,20 @@
   position: absolute;
   top: 10rem;
 }
+
 .progress-bar img {
   width: 68.25rem;
   height: 4.5625rem;
 }
+
 @media (max-width: 878px) {
   .progress-bar {
     top: 29rem;
   }
+
   .progress-bar img {
     width: 21.328125rem;
     height: 1.42578125rem;
   }
-}/*# sourceMappingURL=ThreePointProgressBar.css.map */
+}
+/*# sourceMappingURL=f:/projects/StartFuture/onboarding-me-on-front/src/components/WelcomeKitPage2/components/WelcomeKitPage4ProgressBar/ThreePointProgressBar.css.map */

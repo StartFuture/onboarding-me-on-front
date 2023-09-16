@@ -1,14 +1,15 @@
-import React from 'react';
-import './Modal.css';
+import "./Modal.css";
 
-const ModalInput = ({ title, placeholder }) => (
-  <div className="modal-input">
-    <h2 className="title-modal">{title}</h2>
-    <input type="text" placeholder={placeholder} />
-  </div>
-);
+function ModalInput({title, placeholder}) {
+  return (
+    <div className="modal-input">
+      <h2 className="title-modal">{title}</h2>
+      <input type="text" placeholder={placeholder} />
+    </div>
+  );
+}
 
-const Modal = ({ show, onClose, onSave }) => {
+function Modal({show, onClose, onSave}) {
   if (!show) {
     return null;
   }
@@ -16,7 +17,9 @@ const Modal = ({ show, onClose, onSave }) => {
   return (
     <div className="modal-overlay">
       <div className="modal">
-        <button onClick={onClose} className="close-button">X</button>
+        <button onClick={onClose} className="close-button">
+          X
+        </button>
         <div className="modal-content">
           <div className="title">
             <h1>Adicionar Ferramenta</h1>
@@ -28,12 +31,16 @@ const Modal = ({ show, onClose, onSave }) => {
           </div>
         </div>
         <div className="modal-buttons">
-          <button onClick={onClose} className="cancel-button">Cancelar</button>
-          <button onClick={onSave} className="save-button">Salvar</button>
+          <button onClick={onClose} className="cancel-button">
+            Cancelar
+          </button>
+          <button onClick={onSave} className="save-button">
+            Salvar
+          </button>
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default ModalInput;
+export default Modal;

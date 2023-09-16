@@ -74,7 +74,7 @@
   }
 }
 
-input[type=radio] {
+input[type="radio"] {
   border: 0px;
   width: 2rem;
   height: 1rem;
@@ -84,4 +84,4 @@ input[type=radio] {
   .containerThirdSection {
     width: 95%;
   }
-}/*# sourceMappingURL=styles.module.css.map */
+} /*# sourceMappingURL=styles.module.css.map */

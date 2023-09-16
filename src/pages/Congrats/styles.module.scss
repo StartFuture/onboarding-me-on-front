@@ -1,19 +1,17 @@
 .containerFifthSection {
-width: 100%;
-margin-top: 2rem;
-display: flex;
-
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
 
   .fifthSectionFlex {
     display: flex;
     justify-content: center;
     gap: 20rem;
     width: 80%;
-   margin: 0 auto;
+    margin: 0 auto;
 
     @media (max-width: 878px) {
       flex-direction: column;
-      
     }
 
     .fifthSectionFlexContent {
@@ -23,14 +21,12 @@ display: flex;
 
       @media (max-width: 878px) {
         gap: 40px;
-        
       }
 
       .sectionContentStyling {
         border-left: solid 3px #c51700;
         padding: 0 20px;
       }
-
 
       h1 {
         padding: 0;
@@ -43,7 +39,7 @@ display: flex;
       p {
         font-size: 1.5rem;
       }
-      
+
       button {
         background-color: #c51700;
         color: #fff;
@@ -59,16 +55,9 @@ display: flex;
           background-color: darken(#c51700, 10%);
         }
       }
-
-
-    
-
     }
 
-
-
     .fifthSectionFlexImgWrapper {
-
       width: 23rem;
       height: 23rem;
       border-radius: 9999px;
@@ -76,16 +65,11 @@ display: flex;
       margin-bottom: 2rem;
       border: 1px rgb(201, 201, 201) solid;
 
-
       @media (max-width: 878px) {
         width: 18rem;
         height: 18rem;
         margin: 0 auto;
-        
       }
     }
-
-
-
   }
 }

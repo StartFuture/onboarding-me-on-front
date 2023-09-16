@@ -1,7 +1,5 @@
-function WelcomeKit(){
-    return(
-        <h1>WelcomeKit</h1>
-    )
+function WelcomeKit() {
+  return <h1>WelcomeKit</h1>;
 }
 
-export default WelcomeKit
+export default WelcomeKit;

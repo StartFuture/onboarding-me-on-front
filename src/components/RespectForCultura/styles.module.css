@@ -4,9 +4,11 @@
   margin: 0 auto;
   padding: 20px;
 }
+
 .containerThirdSection h5 {
   font-size: 1.45rem;
 }
+
 .containerThirdSection .thirdSectionContent {
   width: 90%;
   margin: 5rem auto;
@@ -15,6 +17,7 @@
   justify-content: center;
   gap: 50px;
 }
+
 @media (max-width: 878px) {
   .containerThirdSection .thirdSectionContent {
     width: 90%;
@@ -29,11 +32,13 @@
   padding: 10px;
   border-bottom: 3px solid #da2020;
 }
+
 @media (max-width: 878px) {
   .topBar {
     justify-content: space-between;
   }
 }
+
 .topBar .mobileArrow {
   background-color: transparent;
   border: none;
@@ -41,6 +46,7 @@
   cursor: pointer;
   padding: 0 10px;
 }
+
 @media (min-width: 879px) {
   .topBar .mobileArrow {
     display: none; /* Hide arrows on desktop screens */
@@ -52,11 +58,13 @@
   cursor: pointer;
   color: #a0a0a0;
 }
+
 @media (max-width: 878px) {
   .tab {
     padding: 0;
   }
 }
+
 .tab:hover {
   color: #9b1717;
 }
@@ -74,6 +82,7 @@
   background-color: #fdd8d8;
   border-radius: 8px;
 }
+
 @media (max-width: 878px) {
   .activeTab {
     background-color: #f4f4f4;
@@ -88,10 +97,12 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
   .centeredTab .activeTab {
     visibility: visible;
   }
 }
+
 .insideFlex {
   display: flex;
   flex-direction: column;
@@ -109,11 +120,13 @@
   gap: 40px;
   background-color: #fff;
 }
+
 .boxFlex .boxFlexFirstFlex {
   display: flex;
   align-items: center;
   gap: 3rem;
 }
+
 @media (max-width: 878px) {
   .boxFlex .boxFlexFirstFlex {
     flex-direction: column;
@@ -121,6 +134,7 @@
     align-items: flex-start;
   }
 }
+
 .boxFlex .boxFlexIcon {
   display: flex;
   align-items: center;
@@ -133,32 +147,39 @@
   color: rgb(25, 163, 175);
   font-size: 1.2rem;
 }
+
 .boxFlex .boxFlexIcon p {
   margin: 0 !important;
 }
+
 @media (max-width: 878px) {
   .boxFlex .boxFlexIcon {
     width: 100%;
     padding: 1rem;
   }
 }
+
 .boxFlex .boxFlexButtons {
   display: flex;
   gap: 20px;
   margin-right: 2rem;
 }
+
 .boxFlex .boxFlexButtons img {
   width: 2.4rem;
 }
+
 .boxFlex .boxFlexButtons img:last-child {
   width: 2rem;
 }
+
 @media (max-width: 878px) {
   .boxFlex .boxFlexButtons {
     margin: 0 auto;
     gap: 25px;
   }
 }
+
 @media (max-width: 878px) {
   .boxFlex .boxFlexButtons {
     width: 100% !important;
@@ -168,6 +189,7 @@
     padding-right: 2rem;
   }
 }
+
 .boxFlex img {
   width: 50px;
   cursor: pointer;
@@ -184,6 +206,7 @@
   transition: background-color 0.2s ease;
   margin: 0 auto;
 }
+
 .buttonBaixar:hover {
   background-color: #e6e6e6;
 }
@@ -199,6 +222,7 @@
   transition: background-color 0.2s ease;
   margin: 0 auto;
 }
+
 .buttonVincular:hover {
   background-color: #921100;
 }
@@ -208,6 +232,7 @@
     padding-left: 2rem;
   }
 }
+
 .addButtonUpper {
   background-color: #c51700;
   color: #fff;
@@ -217,9 +242,11 @@
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
+
 .addButtonUpper:hover {
   background-color: #921100;
 }
+
 @media (max-width: 878px) {
   .addButtonUpper {
     display: none;
@@ -235,9 +262,11 @@
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
+
 .addButtonDown:hover {
   background-color: #921100;
 }
+
 @media (min-width: 878px) {
   .addButtonDown {
     display: none;
@@ -257,4 +286,5 @@
 
 .boxFlexIconInsideFlex {
   height: 50px;
-}/*# sourceMappingURL=styles.module.css.map */
+}
+/*# sourceMappingURL=f:/projects/StartFuture/onboarding-me-on-front/src/components/RespectForCultura/styles.module.css.map */

@@ -25,7 +25,10 @@
     gap: 40px;
   }
 }
-.containerFifthSection .fifthSectionFlex .fifthSectionFlexContent .sectionContentStyling {
+.containerFifthSection
+  .fifthSectionFlex
+  .fifthSectionFlexContent
+  .sectionContentStyling {
   border-left: solid 3px #c51700;
   padding: 0 20px;
 }
@@ -67,4 +70,4 @@
     height: 18rem;
     margin: 0 auto;
   }
-}/*# sourceMappingURL=styles.module.css.map */
+} /*# sourceMappingURL=styles.module.css.map */
