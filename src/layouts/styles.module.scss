@@ -35,18 +35,15 @@ $background-color_3: #ffcece;
 		position: relative;
 		z-index: 999;
 		margin-top: -5.5rem;
-		height: 100dvh;
 		background-color: $background-color_2;
 		box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.26);
-		width: 20dvw;
+		min-width: 360px;
+		height: 100vh;
 		transition: transform .3s ease;
 
-		@media (max-width: 878px) {
-			width: 1020rem;
-			
+		@media (max-width: 600px) {
+			min-width: 100%;
 		}
-
-		
 
         
 		h2 {
