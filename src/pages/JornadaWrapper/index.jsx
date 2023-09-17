@@ -1,4 +1,4 @@
-import JornadaPage1 from "../../components/JornadaPage1";
+import JornadaPage1 from "../JornadaPage1";
 
 function JornadaWrapperPage() {
   return <JornadaPage1 />;

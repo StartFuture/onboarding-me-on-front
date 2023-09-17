@@ -13,7 +13,7 @@ function JornadaPage4() {
 
       <img src={imgPoints} alt="" />
 
-      <NavLink className={styles.navLink}>Continuar</NavLink>
+      <NavLink to="/jornada/ferramentas/congrats2" className={styles.navLink}>Continuar</NavLink>
     </section>
   );
 }

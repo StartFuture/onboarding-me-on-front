@@ -12,7 +12,7 @@ function JornadaPrincipiosPage5() {
 
       <img src={imgPoints} alt="" />
 
-      <NavLink className={styles.navLink}>Continuar</NavLink>
+      <NavLink to="/jornada/principios/page6" className={styles.navLink}>Continuar</NavLink>
     </section>
   );
 }

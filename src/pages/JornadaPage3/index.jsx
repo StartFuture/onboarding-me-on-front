@@ -17,7 +17,7 @@ function JornadaPage3() {
         <div className={styles.cardAndBtn}>
           <img src={card1Img} alt="" />
           <img className={styles.progressBar} src={cardProgress} alt="" />
-          <NavLink to="/jornada/page4" className={styles.navLink}>
+          <NavLink to="/jornada/ferramentas" className={styles.navLink}>
             Continuar{" "}
           </NavLink>
         </div>
@@ -25,7 +25,7 @@ function JornadaPage3() {
         <div className={styles.cardAndBtn}>
           <img src={card2Img} alt="" />
           <img className={styles.progressBar} src={cardProgress} alt="" />
-          <NavLink to="/jornada/page4" className={styles.navLink}>
+          <NavLink to="/jornada/principios/page1" className={styles.navLink}>
             Continuar{" "}
           </NavLink>
         </div>

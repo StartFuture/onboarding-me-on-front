@@ -1,3 +1,4 @@
+import React from "react";
 import "./Sidebar.css";
 import Logo from "../../assets/svg/Logo.svg";
 

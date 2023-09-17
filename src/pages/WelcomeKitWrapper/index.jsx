@@ -1,4 +1,4 @@
-import WelcomeKitPage1 from "../../components/WelcomeKitPage1";
+import WelcomeKitPage1 from "../../pages/WelcomeKitPage1";
 
 function WelcomeKitWrapper() {
   return <WelcomeKitPage1 />;
