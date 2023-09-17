@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import SideMenu from "../../components/sidebar/Sidebar";
@@ -47,3 +48,4 @@ export default function PreChose() {
     </>
   );
 }
+

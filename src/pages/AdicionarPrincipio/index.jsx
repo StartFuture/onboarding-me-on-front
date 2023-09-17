@@ -1,7 +1,10 @@
+
+import Navbar from "../../components/navbar/Navbar";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Sidebar from "../../components/sidebar/Sidebar";
 import styles from "./styles.module.css";
+
 import { Link } from "react-router-dom";
 
 export default function AddPrincipio() {
@@ -122,12 +125,14 @@ export default function AddPrincipio() {
               <input type="number" id="points" name="points"
                 defaultValue={quiz.score}
                 onChange={(e) => setQuiz({ ...quiz, score: e.target.value })} />
+
             </div>
           </div>
         </div>
         <div className={styles["form-frame"]}></div>
         <div className={styles["form-group"]}>
           <label htmlFor="question">Pergunta:</label>
+
           <input type="text" id="question" name="question"
             defaultValue={quiz.question}
             onChange={(e) => setQuiz({ ...quiz, question: e.target.value })} />
@@ -144,6 +149,7 @@ export default function AddPrincipio() {
               <input type="radio" id="radio-a" name="answer" value='a'
                 onClick={(e) => updateAnswerAlternative(e.target.value)}
               />
+
             </div>
           </div>
         </div>

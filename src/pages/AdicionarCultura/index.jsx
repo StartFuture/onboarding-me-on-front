@@ -1,3 +1,4 @@
+import Navbar from "../../components/navbar/Navbar";
 import styles from "./styles.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";

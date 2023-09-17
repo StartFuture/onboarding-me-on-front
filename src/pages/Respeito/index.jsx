@@ -1,54 +1,42 @@
-import Navbar from "../../components/navbar/Navbar";
-import SideMenu from "../../components/sidebar/Sidebar";
-import VideoPrincipios from "../VideoPrincipios";
 import styles from "./styles.module.scss";
+import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Sidebar";
 
 
 export default function Respeito() {
+
   return (
-    <>
-
-    <Navbar />
-    <SideMenu />
-
-<div className={styles.containerThirdSection}>
-      {/* ... your third section content ... */}
-
+    <div className={styles.containerThirdSection}>
+      <Navbar />
+      <Sidebar />
+      
       <h1>
         Respeito
       </h1>
 
-      <h5>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
+      <h5>  
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
         aliquid laudantium ad nam voluptas facere incidunt eius,
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
         aliquid laudantium ad nam voluptas facere incidunt eius,
-
       </h5>
 
       <div className={styles.thirdSectionContent}>
-
         <div>
           <form action="">
-
             <div className={styles.insideFormFlex}>
-
               <div>
                 <input type="radio" />
                 <label htmlFor="">A) Lorem Ipsum</label>
               </div>
-
-
-
               <div>
                 <input type="radio" />
                 <label htmlFor="">B) Lorem Ipsum</label>
               </div>
-
               <div>
                 <input type="radio" />
                 <label htmlFor="">C) Lorem Ipsum</label>
               </div>
-
               <div>
                 <input type="radio" />
                 <label htmlFor="">D) Lorem Ipsum</label>
@@ -58,7 +46,6 @@ export default function Respeito() {
         </div>
 
         <div className={styles.flexButtons}>
-
           <button className={styles.buttonAnterior}
             type="button" >
             <a href="/video-principio">
@@ -72,13 +59,8 @@ export default function Respeito() {
             </a>
           </button>
         </div>
-
-
       </div>
     </div>
-
-    </>
-   
-  )
-
+  );
 }
+

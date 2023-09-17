@@ -6,6 +6,7 @@ import axios from "axios";
 import Lixeira from "../../assets/svg/Lixeira.svg";
 import Edicao from "../../assets/svg/Edição.svg";
 import { Link } from "react-router-dom";
+import AddPrincipio from "../../pages/AdicionarPrincipio";
 
 function RespectForPrincipios() {
   const [principleList, setPrincipleList] = useState([]);
@@ -27,7 +28,7 @@ function RespectForPrincipios() {
   const handleTabClick = (sectionName) => {
     setActiveSection(sectionName);
   };
-
+  
   const handleDeletePrinciple = (quizId, gameId) => {
     axios({
       method: "DELETE",
@@ -40,6 +41,7 @@ function RespectForPrincipios() {
         console.error(error);
       });
   };
+
 
 
   return (

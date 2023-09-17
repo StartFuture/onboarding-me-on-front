@@ -1,0 +1,52 @@
+.SidebarContainer {
+  width: 16%;
+  height: calc(100vh - 1rem);
+  position: fixed;
+  background-color: #f0f0f0;
+  box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.26);
+  padding: 2rem 1rem;
+}
+
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+}
+
+.logoImage {
+  width: 70%; 
+  max-width: 100px; 
+  height: auto;
+}
+
+
+.SidebarNavLinks a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: #969696;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.SidebarNavLinks a:hover {
+  background-color: #e5e5e5;
+}
+
+.SidebarNavLinks a[class="active"] {
+  background-color: #ffcece;
+  border-right: 3px solid #cf4343;
+  color: #cf4343;
+}
+
+@media (max-width: 768px) {
+  .SidebarContainer {
+    width: 100%;
+    height: auto;
+  }
+}

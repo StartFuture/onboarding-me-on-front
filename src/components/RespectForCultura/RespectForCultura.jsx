@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import axios from "axios";
@@ -37,6 +38,7 @@ function RespectForCultura() {
   const handleTabClick = (sectionName) => {
     setActiveSection(sectionName);
   };
+  
   return (
     <>
       {activeSection === "Normal" && (

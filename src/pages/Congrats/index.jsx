@@ -1,8 +1,8 @@
 import Navbar from "../../components/navbar/Navbar";
-import SideMenu from "../../components/sidebar/Sidebar";
 import styles from "./styles.module.css";
-
+import Sidebar from "../../components/sidebar/Sidebar";
 export default function Congrats() {
+
     return (
       <>      
       <Navbar />

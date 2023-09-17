@@ -3,14 +3,15 @@ import UsersMenu from "./pages/UsersMenu";
 import Gamifield from "./pages/Gamifield";
 import Minigame from "./pages/Minigame";
 import AddCultura from "./pages/AdicionarCultura";
+import AddPrincipio from "./pages/AdicionarPrincipio";
 import Congrats from "./pages/Congrats";
 import MinigameChose from "./pages/MinigameChose";
 import PreChose from "./pages/PreChose";
 import Respeito from "./pages/Respeito";
 import SocialMedia from "./pages/SocialMedia";
+import Layout from "./layouts/Layout";
 import NovaPaginaTabs from "./pages/NovaPaginaTabs";
 import VideoPrincipios from "./pages/VideoPrincipios";
-import AddPrincipio from "./pages/AdicionarPrincipio";
 
 
 const AppRoutes = () => {
@@ -28,6 +29,7 @@ const location = useLocation()
         <Route path="/preChose" element={<PreChose />} />
         <Route path="/respeito" element={<Respeito />} />
         <Route path="/socialmedia" element={<SocialMedia />} />
+        <Route path="/layout" element={<Layout />} />
         <Route path="/novapaginatabs" element={<NovaPaginaTabs />} />
         <Route path="/video-principio" element={<VideoPrincipios />} />
       </Routes>
