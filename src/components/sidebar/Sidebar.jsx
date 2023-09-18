@@ -1,8 +1,7 @@
-import React from "react";
 import "./Sidebar.css";
 import Logo from "../../assets/svg/Logo.svg";
 
-const SideMenu = () => {
+function SideMenu() {
   return (
     <div className="menu-lateral">
       <div className="logo-container">
@@ -15,6 +14,6 @@ const SideMenu = () => {
       </ul>
     </div>
   );
-};
+}
 
 export default SideMenu;

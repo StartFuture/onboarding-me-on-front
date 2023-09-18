@@ -1,8 +1,7 @@
-import React from "react";
 import "./Navbar.css";
 import Iniciais from "../../assets/svg/UL.svg";
 
-const Navbar = () => {
+function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -11,6 +10,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;
