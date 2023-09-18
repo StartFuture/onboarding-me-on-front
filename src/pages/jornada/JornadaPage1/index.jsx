@@ -1,5 +1,5 @@
-import {NavLink} from "react-router-dom";
 import styles from "./styles.module.scss";
+import ContinueButton from "../../../components/ContinueButton";
 
 function JornadaPage1() {
   return (
@@ -21,9 +21,7 @@ function JornadaPage1() {
           allowfullscreen
         />
       </section>
-      <NavLink className={styles.navLink} to="/jornada/page2">
-        Continuar
-      </NavLink>
+      <ContinueButton path="/jornada/page2" />
     </div>
   );
 }
