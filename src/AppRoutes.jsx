@@ -51,7 +51,7 @@ function AppRoutes() {
         <Route path="/respeito" element={<Respeito />} />
         <Route path="/socialmedia" element={<SocialMedia />} />
         <Route path="/layout" element={<Layout />} />
-        <Route path="/novapaginatabs" element={<NovaPaginaTabs />} />
+        <Route path=" " element={<NovaPaginaTabs />} />
         <Route path="/video-principio" element={<VideoPrincipios />} />
         <Route path="/tabs" element={<NovaPaginaTabs />} />
 
