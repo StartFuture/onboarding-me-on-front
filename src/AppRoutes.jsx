@@ -1,75 +1,52 @@
-import {Routes, Route, useLocation} from "react-router-dom";
-import UsersMenu from "./pages/UsersMenu";
-import Gamifield from "./pages/Gamifield";
-import Minigame from "./pages/Minigame";
+import {Route, Routes, useLocation} from "react-router-dom";
+import FerramentasCongratsPage2 from "./pages/ferramentas/FerramentasCongratsPage2";
+import Ferramentas from "./pages/ferramentas/FerramentasMain";
+import JornadaPage1 from "./pages/jornada/JornadaPage1";
+import JornadaPage2 from "./pages/jornada/JornadaPage2";
+import JornadaPage3 from "./pages/jornada/JornadaPage3";
+import JornadaPage4 from "./pages/jornada/JornadaPage4";
+import JornadaPagePrincipios1 from "./pages/jornada/JornadaPrincipiosPage1";
+import JornadaPrincipiosPage2 from "./pages/jornada/JornadaPrincipiosPage2";
+import JornadaPrincipiosPage3 from "./pages/jornada/JornadaPrincipiosPage3";
+import JornadaPrincipiosPage4 from "./pages/jornada/JornadaPrincipiosPage4";
+import JornadaPrincipiosPage5 from "./pages/jornada/JornadaPrincipiosPage5";
+import JornadaPrincipiosPage6 from "./pages/jornada/JornadaPrincipiosPage6";
+import JornadaAdmin from "./pages/jornada/JornadaAdmin";
+import WelcomeKitPage1 from "./pages/welcomeKit/WelcomeKitPage1";
+import WelcomeKitPage2 from "./pages/welcomeKit/WelcomeKitPage2";
+import WelcomeKitPage3 from "./pages/welcomeKit/WelcomeKitPage3";
+import WelcomeKitPage4 from "./pages/welcomeKit/WelcomeKitPage4";
+import WelcomeKitPage5 from "./pages/welcomeKit/WelcomeKitPage5";
+import WelcomeKitWrapper from "./pages/welcomeKit/WelcomeKitWrapper";
+import FerramentasCongratsPage from "./pages/ferramentas/FerramentasCongratsPage";
+
+import Layout from "./layouts/Layout";
 import AddCultura from "./pages/AdicionarCultura";
 import AddPrincipio from "./pages/AdicionarPrincipio";
+import Minigame from "./pages/Minigame";
 import Congrats from "./pages/Congrats";
-import MinigameChose from "./pages/MinigameChose";
-import PreChose from "./pages/PreChose";
-import Respeito from "./pages/Respeito";
-import SocialMedia from "./pages/SocialMedia";
-import NovaPaginaTabs from "./pages/NovaPaginaTabs";
-import VideoPrincipios from "./pages/VideoPrincipios";
-import Layout from "./layouts/Layout";
 
-import JornadaWrapperPage from "./pages/JornadaWrapper";
-import JornadaPage2 from "./components/JornadaPage2";
-import JornadaPage1 from "./components/JornadaPage1";
-import JornadaPage3 from "./components/JornadaPage3";
-import JornadaPage4 from "./components/JornadaPage4";
-import Ferramentas from "./pages/Ferramentas";
-import FerramentasCongratsPage from "./components/FerramentasCongratsPage";
-
-import WelcomeKitWrapper from "./pages/WelcomeKitWrapper";
-import WelcomeKitPage1 from "./components/WelcomeKitPage1";
-import WelcomeKitPage2 from "./components/WelcomeKitPage2";
-import WelcomeKitPage3 from "./components/WelcomeKitPage3";
-import WelcomeKitPage4 from "./components/WelcomeKitPage4";
-import WelcomeKitPage5 from "./components/WelcomeKitPage5";
-import JornadaPagePrincipios1 from "./components/JornadaPrincipiosPage1";
-import JornadaPrincipiosPage2 from "./components/JornadaPrincipiosPage2";
-import JornadaPrincipiosPage3 from "./components/JornadaPrincipiosPage3";
-import JornadaPrincipiosPage4 from "./components/JornadaPrincipiosPage4";
-import JornadaPrincipiosPage5 from "./components/JornadaPrincipiosPage5";
-import JornadaPrincipiosPage6 from "./components/JornadaPrincipiosPage6";
-import FerramentasCongratsPage2 from "./components/FerramentasCongratsPage2";
+import JornadaWrapperPage from "./pages/jornada/JornadaWrapper";
 
 function AppRoutes() {
   const location = useLocation();
   return (
     <Routes location={location} key={location.pathname}>
       <Route path="/" element={<Layout />}>
-        <Route path="/menu" element={<UsersMenu />} />
-        <Route path="/gamifield" element={<Gamifield />} />
-        <Route path="/minigame" element={<Minigame />} />
-        <Route path="/addcultura" element={<AddCultura />} />
-        <Route path="/addprincipio" element={<AddPrincipio />} />
-        <Route path="/congrats" element={<Congrats />} />
-        <Route path="/minigamechose" element={<MinigameChose />} />
-        <Route path="/preChose" element={<PreChose />} />
-        <Route path="/respeito" element={<Respeito />} />
-        <Route path="/socialmedia" element={<SocialMedia />} />
-        <Route path="/layout" element={<Layout />} />
-        <Route path=" " element={<NovaPaginaTabs />} />
-        <Route path="/video-principio" element={<VideoPrincipios />} />
-        <Route path="/tabs" element={<NovaPaginaTabs />} />
-
-        <Route path="/welcomekit" element={<WelcomeKitWrapper />} />
-        <Route path="/welcomekit/page1" element={<WelcomeKitPage1 />} />
-        <Route path="/welcomekit/page2" element={<WelcomeKitPage2 />} />
-        <Route path="/welcomekit/page3" element={<WelcomeKitPage3 />} />
-        <Route path="/welcomekit/page4" element={<WelcomeKitPage4 />} />
-        <Route path="/welcomekit/page5" element={<WelcomeKitPage5 />} />
-
-        <Route path="/jornada" element={<JornadaWrapperPage />} />
+        <Route path="/jornada/admin" element={<JornadaAdmin />} />
         <Route path="/jornada/page1" element={<JornadaPage1 />} />
         <Route path="/jornada/page2" element={<JornadaPage2 />} />
         <Route path="/jornada/page3" element={<JornadaPage3 />} />
         <Route path="/jornada/page4" element={<JornadaPage4 />} />
-
-        <Route path="/jornada/admin" element={<NovaPaginaTabs />} />
-
+        <Route path="/jornada/ferramentas" element={<Ferramentas />} />
+        <Route
+          path="/jornada/ferramentas/congrats"
+          element={<FerramentasCongratsPage />}
+        />
+        <Route
+          path="/jornada/ferramentas/congrats2"
+          element={<FerramentasCongratsPage2 />}
+        />
         <Route
           path="/jornada/principios/page1"
           element={<JornadaPagePrincipios1 />}
@@ -94,16 +71,20 @@ function AppRoutes() {
           path="/jornada/principios/page6"
           element={<JornadaPrincipiosPage6 />}
         />
+        <Route path="/welcomekit" element={<WelcomeKitWrapper />} />
+        <Route path="/welcomekit/page2" element={<WelcomeKitPage2 />} />
+        <Route path="/welcomekit/page3" element={<WelcomeKitPage3 />} />
+        <Route path="/welcomekit/page4" element={<WelcomeKitPage4 />} />
+        <Route path="/welcomekit/page5" element={<WelcomeKitPage5 />} />
 
-        <Route path="/jornada/ferramentas" element={<Ferramentas />} />
-        <Route
-          path="/jornada/ferramentas/congrats"
-          element={<FerramentasCongratsPage />}
-        />
-        <Route
-          path="/jornada/ferramentas/congrats2"
-          element={<FerramentasCongratsPage2 />}
-        />
+        <Route path="/minigame" element={<Minigame />} />
+        <Route path="/addcultura" element={<AddCultura />} />
+        <Route path="/addprincipio" element={<AddPrincipio />} />
+        <Route path="/congrats" element={<Congrats />} />
+
+        <Route path="/welcomekit/page1" element={<WelcomeKitPage1 />} />
+
+        <Route path="/jornada" element={<JornadaWrapperPage />} />
       </Route>
     </Routes>
   );

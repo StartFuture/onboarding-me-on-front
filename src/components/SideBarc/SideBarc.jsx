@@ -1,5 +1,5 @@
 import {NavLink} from "react-router-dom";
-import styles from "./Sidebar.module.css";
+import styles from "./style.module.css";
 import Logo from "../../assets/svg/Logo.svg";
 
 export default function SideBarc() {
