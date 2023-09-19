@@ -26,7 +26,8 @@
       "no-bitwise": "off",
       "jsx-a11y/anchor-is-valid": "off",
       "no-alert": "off",
-      "no-unused-vars": "warn"
+      "no-unused-vars": "warn",
+      "no-undef": "warn"
   },
   "plugins": ["prettier"]
 }
