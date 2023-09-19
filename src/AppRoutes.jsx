@@ -13,6 +13,7 @@ import Layout from "./layouts/Layout";
 import NovaPaginaTabs from "./pages/NovaPaginaTabs";
 import VideoPrincipios from "./pages/VideoPrincipios";
 
+
 const AppRoutes = () => {
 const location = useLocation()
   return (

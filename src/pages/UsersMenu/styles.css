@@ -175,6 +175,8 @@
   display: flex;
   margin-top: 2%;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .ToolsEdit {

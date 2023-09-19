@@ -1,0 +1,28 @@
+.NavbarContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    background-color: rgb(36, 36, 36);
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.NavbarContainer .BellIconDiv {
+    border-right: 2px grey solid;
+    padding: 1rem;
+}
+
+.NavbarContainer .BellIconDiv img {
+    width: 2rem;
+    filter: invert(100%);
+}
+
+.NavbarContainer p {
+    font-size: 1.2rem;
+    color: #FFF;
+}
+
+.NavbarContainer .userIcon {
+    width: 4rem;
+}

@@ -1,16 +1,19 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./styles.css";
+
+import RespectForPrincipios from "../../components/RespectForPrincipio/RespectForPrincipios";
+import RespectForCultura from "../../components/RespectForCultura/RespectForCultura";
+import RespectForGeral from "../../components/RespectForGeral/RespectForGeral";
+import NavBarc from "../../components/NavBarc/NavBarc";
+import SideBarc from "../../components/SideBarc/SideBarc";
 import Modal from "../../components/modal/Modal";
 import Edicao from "../../assets/svg/Edição.svg";
 import Youtube from "../../assets/svg/Youtube.svg";
 import Lixeira from "../../assets/svg/Lixeira.svg";
 import Discord from "../../assets/svg/Discord.svg";
 import VideoModal from "../../components/modalVideo/ModalVideo";
-import RespectForPrincipios from "../../components/RespectForPrincipio/RespectForPrincipios";
-import RespectForCultura from "../../components/RespectForCultura/RespectForCultura";
-import NavBarc from "../../components/NavBarc/NavBarc";
-import SideBarc from "../../components/SideBarc/SideBarc";
+
 
 
 export default function UsersMenu() {
@@ -24,8 +27,6 @@ export default function UsersMenu() {
       });
   }, []);
 
-
-  const [showModal, setShowModal] = useState(false);
   const [activeSection, setActiveSection] = useState("Geral");
 
   const handleTabClick = (sectionName) => {
@@ -70,7 +71,9 @@ export default function UsersMenu() {
               <li>
                 <a
                   href="#"
-                  className={activeSection === "Geral" ? "Geral active" : "Geral"}
+                  className={
+                    activeSection === "Geral" ? "Geral active" : "Geral"
+                  }
                   onClick={() => handleTabClick("Geral")}
                 >
                   Geral
@@ -89,11 +92,17 @@ export default function UsersMenu() {
                   className={activeSection === "Principios" ? "active" : ""}
                   onClick={() => handleTabClick("Principios")}
                 >
-                  Princípios</a>
+                  Princípios
+                </a>
               </li>
             </ul>
           </div>
         </div>
+
+        {activeSection === "Geral" && (
+            <RespectForGeral />
+        )}
+
         <div className="Subtitle">
           <p>Informe o vídeo de apresentação da empresa. O colaborador irá assistir assim que iniciar o processo.</p>
         </div>
@@ -168,19 +177,16 @@ export default function UsersMenu() {
             </div>
           </div>
         </div>
-
         {activeSection === "Cultura" && (
           <section className="secondSection">
             <RespectForCultura />
           </section>
         )}
-
         {activeSection === "Principios" && (
           <section className="thirdSection">
             <RespectForPrincipios />
           </section>
         )}
-      </div >
     </>
   );
 }

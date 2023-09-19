@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./styles.module.css"
+import styles from "./style.module.css"
 import userIcon from "../../assets/userIcon.png"
 import BellIcon from "../../assets/notification-bell-svgrepo-com.svg"
 

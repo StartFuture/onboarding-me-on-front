@@ -1,6 +1,9 @@
-import styles from "./styles.module.css";
+
 import Navbar from "../../components/navbar/Navbar";
-import Sidebar from "../../components/sidebar/Sidebar";
+import SideMenu from "../../components/sidebar/Sidebar";
+import SocialMedia from "../SocialMedia";
+import VideoPrincipios from "../VideoPrincipios";
+import styles from "./styles.module.css";
 
 function MinigameChose() {
   return (
@@ -15,10 +18,17 @@ function MinigameChose() {
 
       <h5>Selecione qual mini-game deseja jogar:</h5>
 
-      <div className={styles.fourthSectionFlex}>
-        <div className={styles.fourthSectionCard}>
-          <div className={styles.imageWrapper}>
-            <div className={styles.cardImageLoader}></div>
+        <h5>Selecione qual mini-game deseja jogar:</h5>
+
+        <div className={styles.fourthSectionFlex}>
+          <div className={styles.fourthSectionCard}>
+            <div className={styles.imageWrapper}>
+              <div className={styles.cardImageLoader}></div>
+            </div>
+            <a href="/socialmedia">
+              <Link to='/socialmedia'>
+              <button type="button">Iniciar</button></Link>
+            </a>
           </div>
           <a href="/socialmedia">
             <button type="button">Iniciar</button>
