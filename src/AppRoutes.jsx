@@ -19,6 +19,11 @@ import WelcomeKitPage4 from "./pages/welcomeKit/WelcomeKitPage4";
 import WelcomeKitPage5 from "./pages/welcomeKit/WelcomeKitPage5";
 import WelcomeKitWrapper from "./pages/welcomeKit/WelcomeKitWrapper";
 import FerramentasCongratsPage from "./pages/ferramentas/FerramentasCongratsPage";
+import Login from "./pages/Login/Login";
+import EsqueceuSenha from "./pages/EsqueceuSenha/EsqueceuSenha";
+import ConfirmacaoCodigo from "./pages/ConfirmacaoCodigo/ConfirmacaoCodigo";
+import NovaSenha from "./pages/NovaSenha/NovaSenha";
+import AlteracaoSenha from "./pages/AlteracaoSenha/AlteracaoSenha";
 
 import Layout from "./layouts/Layout";
 import AddCultura from "./pages/AdicionarCultura";
@@ -39,6 +44,7 @@ function AppRoutes() {
         <Route path="/jornada/page3" element={<JornadaPage3 />} />
         <Route path="/jornada/page4" element={<JornadaPage4 />} />
         <Route path="/jornada/ferramentas" element={<Ferramentas />} />
+        
         <Route
           path="/jornada/ferramentas/congrats"
           element={<FerramentasCongratsPage />}
@@ -86,6 +92,12 @@ function AppRoutes() {
 
         <Route path="/jornada" element={<JornadaWrapperPage />} />
       </Route>
+      <Route path="/login" element={<Login/>}/>
+        <Route path="/esqueceuSenha" element={<EsqueceuSenha/>}/>
+        <Route path="/confirmacaoCodigo" element={<ConfirmacaoCodigo/>}/>
+        <Route path="/novaSenha" element={<NovaSenha/>}/>
+      <Route path="/alteracaoSenha" element={<AlteracaoSenha/>}/>
+      
     </Routes>
   );
 }
