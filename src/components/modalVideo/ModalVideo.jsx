@@ -1,7 +1,8 @@
 import {useState} from "react";
 import "./ModalVideo.css";
+import axios from "axios";
 
-function VideoModal({show, onClose, onAddVideo}) {
+function VideoModal({show, onClose, isNewVideo, videoLink, handleChange}) {
   const [videoUrl, setVideoUrl] = useState("");
 
   if (!show) {
@@ -10,9 +11,40 @@ function VideoModal({show, onClose, onAddVideo}) {
 
   const handleAddVideo = () => {
     if (videoUrl.trim() !== "") {
-      onAddVideo(videoUrl);
+      if (isNewVideo) {
+        addVideoLink(videoUrl);
+      } else {
+        updateVideoLink(videoUrl);
+      }
       onClose();
     }
+  };
+
+  const addVideoLink = (videoUrl) => {
+    axios({
+      method: "POST",
+      url: "http://localhost:8000/game_journey/create/",
+      data: { welcome_video_link: videoUrl, company_id: 1 },
+    })
+      .then((response) => {
+        handleChange(videoUrl)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  
+  const updateVideoLink = (videoUrl) => {
+    axios({
+      method: "PUT",
+      url: `http://127.0.0.1:8000/game_journey/update?company_id=1&new_link=${videoUrl}`,
+    })
+      .then((response) => {
+        handleChange(videoUrl);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
