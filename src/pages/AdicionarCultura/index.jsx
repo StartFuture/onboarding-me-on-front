@@ -1,12 +1,96 @@
-import Navbar from "../../components/navbar/Navbar";
 import styles from "./styles.module.css";
-import Sidebar from "../../components/sidebar/Sidebar";
 
 export default function AddCultura() {
+  const [quiz, setQuiz] = useState({
+    link_video: "",
+    score: 0,
+    title: "",
+    question: "",
+    quiz_type: "culture",
+    game_id: 0,
+    alternatives: []
+  });
+
+  let alternative = {
+    text: "",
+    is_answer: 0
+  }
+  const [alternativeList, setAlternativeList] = useState([alternative, alternative, alternative, alternative])
+
+  useEffect(() => {
+    axios({
+      method: "GET",
+      url: "http://127.0.0.1:8000/quiz/game_id=?company_id=1",
+    })
+      .then((response) => {
+        setQuiz({ ...quiz, game_id: response.data.id });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  const addQuiz = () => {
+    axios({
+      method: "POST",
+      url: "http://localhost:8000/quiz/register",
+      data: quiz
+    })
+      .then((response) => {
+        console.log('Deu certo');
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const updateAnswerAlternative = (radioSelect) => {
+    for (let index in alternativeList) {
+      alternativeList[index].is_answer = 0
+      setAlternativeList(alternativeList.splice(index, 1, alternative))
+    }
+
+    switch (radioSelect) {
+      case 'a':
+        alternativeList[0].is_answer = 1
+        break;
+      case 'b':
+        alternativeList[1].is_answer = 1
+        break;
+      case 'c':
+        alternativeList[2].is_answer = 1
+        break;
+      case 'd':
+        alternativeList[3].is_answer = 1
+        break;
+      default:
+        break;
+    }
+    console.log(alternativeList)
+    setQuiz({ ...quiz, alternatives: alternativeList })
+  }
+  const updateTextAlternative = (text, id) => {
+    switch (id) {
+      case 'answer-a':
+        alternativeList[0].text = text
+        break;
+      case 'answer-b':
+        alternativeList[1].text = text
+        break;
+      case 'answer-c':
+        alternativeList[2].text = text
+        break;
+      case 'answer-d':
+        alternativeList[3].text = text
+        break;
+      default:
+        break;
+    }
+    setQuiz({ ...quiz, alternatives: alternativeList })
+  }
+
   return (
     <div className={styles.container}>
-      <Navbar />
-      <Sidebar />
       <h1>Adicionar Cultura</h1>
       <form>
         <div className={styles["form-group"]}>
