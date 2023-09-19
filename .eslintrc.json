@@ -9,6 +9,9 @@
       "sourceType": "module"
   },
   "rules": {
+    "prettier/prettier": ["error", {
+        "endOfLine": "auto"
+    }],
       "react/react-in-jsx-scope": "off",
       "react/jsx-uses-react": "off",
       "jsx-a11y/label-has-associated-control": "off",
@@ -19,7 +22,6 @@
       "react/jsx-one-expression-per-line": "off",
       "jsx-a11y/click-events-have-key-events": "off",
       "jsx-a11y/no-noninteractive-element-interactions": "off",
-      "prettier/prettier": "error",
       "jsx-a11y/no-static-element-interactions": "off",
       "no-bitwise": "off",
       "jsx-a11y/anchor-is-valid": "off",
