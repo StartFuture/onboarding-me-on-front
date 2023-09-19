@@ -1,15 +1,9 @@
-// NovaPaginaTabs.tsx
 import {useState} from "react";
-import styles from "./styles.module.scss"; // Your existing SCSS module
-import AddCultura from "../../../components/AdicionarCultura";
-import AddPrincipio from "../../../components/AdicionarPrincipio";
+import styles from "./styles.module.scss";
 
-import ytIcon from "../../../assets/YoutubeIcon.png";
-import editPng from "../../../assets/Edit.png";
-import excluirIcon from "../../../assets/Delete.png";
-import DiscordIcon from "../../../assets/DiscordIcon.png";
-import SlackIcon from "../../../assets/SlackIcon.png";
-import FigmaIcon from "../../../assets/FigmaIconFerramentas.png";
+import CultureOption from "../../../components/CultureOption/CultureOption";
+import PrincipleOption from "../../../components/PrincipleOption/PrincipleOption";
+import GeneralOption from "../../../components/GeneralOption/GeneralOption";
 
 export default function JornadaAdmin() {
   const [activeTab, setActiveTab] = useState(0);
@@ -19,11 +13,11 @@ export default function JornadaAdmin() {
   };
 
   const handlePrevTab = () => {
-    setActiveTab((activeTab - 1 + 3) % 3); // looping
+    setActiveTab((activeTab - 1 + 3) % 3);
   };
 
   const handleNextTab = () => {
-    setActiveTab((activeTab + 1) % 3); //  looping
+    setActiveTab((activeTab + 1) % 3);
   };
 
   return (
@@ -67,209 +61,23 @@ export default function JornadaAdmin() {
       </div>
 
       <div className={styles.thirdSectionContent}>
-        {/* Content for respective tabs */}
         {activeTab === 0 && (
           <div className={styles.insideFlex}>
-            <h3>
-              Informe o vídeo de apresentação da empresa. O colaborador irá
-              assistir assim que iniciar o processo.
-            </h3>
-
-            <div className={styles.boxFlex}>
-              <div className={styles.boxFlexFirstFlex}>
-                <div className={styles.boxFlexIcon}>
-                  <img src={ytIcon} alt="" />
-                </div>
-
-                <div className={styles.boxFlexIconInsideFlex}>
-                  <h3>Respeito</h3>
-                  <p>Lorem ipsum at dor?</p>
-                </div>
-              </div>
-
-              <div className={styles.boxFlexButtons}>
-                <img src={editPng} alt="pencil--v1" />
-              </div>
-            </div>
-            <div className={styles.insideFlexTitleAndBtn}>
-              <h3>Ferramentas do dia a dia.</h3>
-
-              <button className={styles.addButtonUpper}>Adicionar</button>
-            </div>
-
-            <div className={styles.cardFlex}>
-              {/* Primeiro card  */}
-              <div className={styles.boxFlex}>
-                <div className={styles.boxFlexFirstFlex}>
-                  <div className={styles.boxFlexIcon}>
-                    <img src={DiscordIcon} alt="" />
-                  </div>
-
-                  <div className={styles.boxFlexIconInsideFlex}>
-                    <h3>Discord</h3>
-                    <p>10pt</p>
-                  </div>
-                </div>
-
-                <div className={styles.boxFlexButtons}>
-                  <img src={editPng} alt="pencil--v1" />
-                  <img src={excluirIcon} alt="trash" />
-                </div>
-              </div>
-
-              {/* Segundo card */}
-              <div className={styles.boxFlex}>
-                <div className={styles.boxFlexFirstFlex}>
-                  <div className={styles.boxFlexIcon}>
-                    <img src={SlackIcon} alt="" />
-                  </div>
-
-                  <div className={styles.boxFlexIconInsideFlex}>
-                    <h3>Slack</h3>
-                    <p>10pt</p>
-                  </div>
-                </div>
-
-                <div className={styles.boxFlexButtons}>
-                  <img src={editPng} alt="pencil--v1" />
-                  <img
-                    src="https://img.icons8.com/windows/32/trash.png"
-                    alt="trash"
-                  />
-                </div>
-              </div>
-
-              {/* Segundo card */}
-              <div className={styles.boxFlex}>
-                <div className={styles.boxFlexFirstFlex}>
-                  <div className={styles.boxFlexIcon}>
-                    <img src={FigmaIcon} alt="" />
-                  </div>
-
-                  <div className={styles.boxFlexIconInsideFlex}>
-                    <h3>Figma</h3>
-                    <p>10pt</p>
-                  </div>
-                </div>
-
-                <div className={styles.boxFlexButtons}>
-                  <img src={editPng} alt="pencil--v1" />
-                  <img src={excluirIcon} alt="trash" />
-                </div>
-              </div>
-            </div>
-
-            <button className={styles.addButtonDown}>Adicionar</button>
+            <GeneralOption />
           </div>
         )}
         {activeTab === 1 && (
           <div>
             <div className={styles.insideFlex}>
-              <div className={styles.insideFlexTitleAndBtn}>
-                <h3>
-                  Defina as culturas da empresa. As perguntas aparecerão em
-                  forma de quiz para o colaborador
-                </h3>
-
-                <button className={styles.addButtonUpper}>Adicionar</button>
-              </div>
-
-              <div className={styles.boxFlex}>
-                <div className={styles.boxFlexFirstFlex}>
-                  <div className={styles.boxFlexIconBordered}>
-                    <p>10pt</p>
-                  </div>
-
-                  <div className={styles.boxFlexIconInsideFlex}>
-                    <h3>Respeito</h3>
-                    <p>Lorem ipsum at dor?</p>
-                  </div>
-                </div>
-
-                <div className={styles.boxFlexButtons}>
-                  <img
-                    src={editPng}
-                    alt="pencil--v1"
-                    onClick={() => handleTabClick(3)}
-                  />
-                  <img src={excluirIcon} alt="trash" />
-                </div>
-              </div>
-
-              <div className={styles.boxFlex}>
-                <div className={styles.boxFlexFirstFlex}>
-                  <div className={styles.boxFlexIconBordered}>
-                    <p>10pt</p>
-                  </div>
-
-                  <div className={styles.boxFlexIconInsideFlex}>
-                    <h3>Respeito</h3>
-                    <p>Lorem ipsum at dor?</p>
-                  </div>
-                </div>
-
-                <div className={styles.boxFlexButtons}>
-                  <img
-                    src={editPng}
-                    alt="pencil--v1"
-                    onClick={() => handleTabClick(3)}
-                  />
-                  <img src={excluirIcon} alt="trash" />
-                </div>
-              </div>
-
-              <button className={styles.addButtonDown}>Adicionar</button>
+              <CultureOption/>
             </div>
           </div>
         )}
         {activeTab === 2 && (
           <div>
             <div className={styles.insideFlex}>
-              <div className={styles.insideFlexTitleAndBtn}>
-                <h3>
-                  Defina as culturas da empresa. As perguntas aparecerão em
-                  forma de quiz para o colaborador
-                </h3>
-
-                <button className={styles.addButtonUpper}>Adicionar</button>
-              </div>
-
-              <div className={styles.boxFlex}>
-                <div className={styles.boxFlexFirstFlex}>
-                  <div className={styles.boxFlexIconBordered}>
-                    <p>10pt</p>
-                  </div>
-
-                  <div className={styles.boxFlexIconInsideFlex}>
-                    <h3>Inclusão</h3>
-                    <p>Lorem ipsum at dor?</p>
-                  </div>
-                </div>
-
-                <div className={styles.boxFlexButtons}>
-                  <img
-                    src={editPng}
-                    alt="pencil--v1"
-                    onClick={() => handleTabClick(4)}
-                  />
-                  <img src={excluirIcon} alt="trash" />
-                </div>
-              </div>
-
-              <button className={styles.addButtonDown}>Adicionar</button>
+              <PrincipleOption/> 
             </div>
-          </div>
-        )}
-
-        {activeTab === 3 && (
-          <div>
-            <AddCultura />
-          </div>
-        )}
-
-        {activeTab === 4 && (
-          <div>
-            <AddPrincipio />
           </div>
         )}
       </div>

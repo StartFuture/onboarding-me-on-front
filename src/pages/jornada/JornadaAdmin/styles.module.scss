@@ -23,6 +23,30 @@
   }
 }
 
+.RedButton {
+  padding: 20px 50px;
+  background: #ff0000;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
+.RedButton:hover {
+  background: #e60000;
+  transform: scale(1.05);
+}
+
+.RedButton:active {
+  background: #cc0000;
+  transform: scale(1);
+}
+
 .cardFlex {
   display: flex;
   gap: 2rem;
