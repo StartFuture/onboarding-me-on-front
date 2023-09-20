@@ -2,27 +2,26 @@ import React, { useState } from 'react';
 import './style.css'
 import logo from '../../assets/Logo.svg';
 import { Link } from 'react-router-dom';
-import EsqueceuSenha from '../EsqueceuSenha/EsqueceuSenha';
+import api from '../../services/api';
 
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  // const CORRECT_USERNAME = 'usuario123';
-  // const CORRECT_PASSWORD = 'senha123';
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    
+    const params = new URLSearchParams();
+    params.append("username", username);
+    params.append("password", password);
 
-    // if (username === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
-    //   // Lógica de autenticação bem-sucedida, como redirecionamento, armazenamento de token, etc.
-    //   alert('Bem-vindo!');
-    // } else {
-    //   alert('Esse usuário não existe.');
-    // }
+    api.post("auth/login", params)
+      .then((response) => {
+        localStorage.setItem("token", JSON.stringify(response.data));
+        alert('Bem-vindo!');
+      })
+      .catch((error) => alert('Usuário incorreto!'))
   };
 
   return (
