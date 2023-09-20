@@ -31,8 +31,6 @@ import AddPrincipio from "./pages/AdicionarPrincipio";
 import Minigame from "./pages/Minigame";
 import Congrats from "./pages/Congrats";
 
-import JornadaWrapperPage from "./pages/jornada/JornadaWrapper";
-
 function AppRoutes() {
   const location = useLocation();
   return (
@@ -90,7 +88,7 @@ function AppRoutes() {
 
         <Route path="/welcomekit/page1" element={<WelcomeKitPage1 />} />
 
-        <Route path="/jornada" element={<JornadaWrapperPage />} />
+        <Route path="/jornada" element={<JornadaPagePrincipios1 />} />
       </Route>
       <Route path="/login" element={<Login/>}/>
         <Route path="/esqueceuSenha" element={<EsqueceuSenha/>}/>

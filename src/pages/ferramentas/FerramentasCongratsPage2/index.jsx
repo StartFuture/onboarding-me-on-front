@@ -1,24 +1,22 @@
-import {NavLink} from "react-router-dom";
+import RedButton from "../../../components/RedButton";
 import styles from "./styles.module.scss";
-import png from "../../../assets/JornadaPrincipiosPage6Img.png";
+import png from "../../../assets/svg/FerramentasMedal.svg";
 
 export default function FerramentasCongratsPage2() {
   return (
-    <section className={styles.containerSection}>
-      <div className={styles.containerSectionFlex}>
-        <div className={styles.leftFlex}>
-          <h1>
-            Parabéns!
-            <p>Você ganhou uma medalha de ouro!</p>{" "}
-          </h1>
-
-          <NavLink className={styles.navLink}>Receber Medalha</NavLink>
-        </div>
-
-        <div>
+    <div className={styles.mainContainer}>
+      <section className={styles.containerSection}>
+        <div className={styles.containerSectionFlex}>
+          <div className={styles.leftFlex}>
+            <h1>
+              Parabéns!
+              <p>Você ganhou uma medalha Mestre das Ferramentas.</p>{" "}
+            </h1>
+          </div>
           <img src={png} alt="" />
         </div>
-      </div>
-    </section>
+      </section>
+      <RedButton>Receber Medalha</RedButton>
+    </div>
   );
 }

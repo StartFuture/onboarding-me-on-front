@@ -1,17 +1,26 @@
 .sectionContainer {
-  width: 80dvw;
   display: flex;
   flex-direction: column;
   gap: 20px;
-
-  padding-left: 2rem;
+  margin: 0 auto;
+  justify-content: space-around;
   padding-top: 2rem;
-
+  
   .congratulationsText {
-    width: 70%;
-    margin: 0 auto;
-    padding-bottom: 3rem;
-    border-bottom: #2d94ce 4px solid;
+    color: #1E1E1E;
+    font-family: 'Lexend Exa';
+    font-size: 28px;
+    font-weight: 600;
+    padding-left: 2rem;
+
+    h3 {
+      color: #1E1E1E;
+      font-family: Lexend Exa;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
   }
 
   .medalBox {

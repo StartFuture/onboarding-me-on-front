@@ -1,72 +1,122 @@
+.mainContainer {
+  width: 100%;
+}
+
 .sectionContainer {
-  width: 60dvw;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  gap: 2rem;
-  padding-left: 2rem;
+
   padding-top: 2rem;
 
-  iframe {
-    width: 1000px;
-    height: 557px;
-    margin: 0 auto;
-
-    @media (max-width: 876px) {
-      width: 100%;
-    }
+  @media (max-width: 800px) {
+    width: 100%;
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-family: Lexend Exa;
+    font-size: 24px;
+    font-style: normal;
     font-weight: 300;
+    line-height: normal;
+    margin-left: 2rem;
+    text-align: start;
+    padding: 0 0 0 24px;
 
-    @media (max-width: 876px) {
-      font-size: 2.5rem;
+    @media (max-width: 600px) {
+      max-width: 300px;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
     }
   }
 
   p {
+    padding-left: 2rem;
+    color: #1E1E1E;
+    font-family: Open Sans;
+    font-size: 24px;
+    font-style: normal;
     font-weight: 600;
-    font-size: 1.4rem;
-  }
+    line-height: normal;
 
-  .navLinkFlex {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    @media (max-width: 600px) {
+      font-size: 20px;
+      padding: 0 2rem;
+    }
   }
+}
 
-  .navLinkProximo {
-    position: relative !important;
-    background-color: #ce332d;
+.iframeContainer {
+  display: flex;
+
+  iframe { 
+    width: 60vw;
+    height: 557px;
+    margin: 2rem 10rem;
+
+    @media (max-width: 600px) {
+      width: 327px;
+      height: 184px;
+      margin: 2rem auto;
+    }
+  }
+}
+
+.flexButtons {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+
+  @media (max-width: 878px) {
+    flex-direction: column;
+    margin: 4rem auto;
+  }  
+
+  button {
+    background-color: #c51700;
     color: #fff;
-    padding: 18px 6rem;
+    padding: 13px 20px;
     border: none;
     border-radius: 5px;
+    width: 100%;
+    max-width: 350px;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    text-decoration: none;
 
     &:hover {
-      background-color: darken(#ce332d, 10%);
+      background-color: darken(#c51700, 10%);
     }
   }
 
-  .navLinkAnterior {
-    position: relative !important;
-    background-color: #fff;
-    color: #ce332d;
-    padding: 18px 6rem;
-    border: 1px solid#ce332d;
+  .buttonAnterior {
+    background-color: #ffffff;
+    color: #c51700;
+    padding: 13px 20px;
+    border: solid #c51700 1px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    text-decoration: none;
 
     &:hover {
-      background-color: darken(#ce332d, 10%);
+      background-color: darken(#ffffff, 10%);
     }
+  }
+
+  .buttonAnterior a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .buttonProximo a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @media (max-width: 878px) {
+    width: 90%;
   }
 }

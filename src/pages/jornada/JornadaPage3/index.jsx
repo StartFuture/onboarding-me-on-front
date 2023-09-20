@@ -6,31 +6,33 @@ import cardProgress from "../../../assets/JornadaPage3Progress.png";
 
 function JornadaPage3() {
   return (
-    <section className={styles.sectionContainer}>
-      <h1>
-        Olá, Eduardo.
-        <br />
-        Boas-vindas à Jornada Gamificada da EmpresaNova.
-      </h1>
-      <h3>Selecione qual game deseja jogar</h3>
-      <div className={styles.cardContaienr}>
-        <div className={styles.cardAndBtn}>
-          <img src={card1Img} alt="" />
-          <img className={styles.progressBar} src={cardProgress} alt="" />
-          <NavLink to="/jornada/ferramentas" className={styles.navLink}>
-            Continuar{" "}
-          </NavLink>
-        </div>
-
-        <div className={styles.cardAndBtn}>
-          <img src={card2Img} alt="" />
-          <img className={styles.progressBar} src={cardProgress} alt="" />
-          <NavLink to="/jornada/principios/page1" className={styles.navLink}>
-            Continuar{" "}
-          </NavLink>
-        </div>
-      </div>
-    </section>
+    <div>
+      <section className={styles.sectionContainer}>
+        <h1>
+          Olá, Eduardo.
+          <br />
+          Boas-vindas à Jornada Gamificada da EmpresaNova.
+        </h1>
+        <h3>Selecione qual game deseja jogar.</h3>
+      </section>
+          <div className={styles.cardContaienr}>
+          <div className={styles.cardAndBtn}>
+            <img src={card1Img} alt="" />
+            <img className={styles.progressBar} src={cardProgress} alt="" />
+            <NavLink to="/jornada/ferramentas" className={styles.navLink}>
+              Continuar{" "}
+            </NavLink>
+          </div>
+  
+          <div className={styles.cardAndBtn}>
+            <img src={card2Img} alt="" />
+            <img className={styles.progressBar} src={cardProgress} alt="" />
+            <NavLink to="/jornada/principios/page1" className={styles.navLink}>
+              Continuar{" "}
+            </NavLink>
+          </div>
+          </div>
+    </div>
   );
 }
 
