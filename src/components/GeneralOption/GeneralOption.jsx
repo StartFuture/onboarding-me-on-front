@@ -8,6 +8,7 @@ import excluirIcon from "../../assets/Delete.png";
 import VideoModal from "../modalVideo/ModalVideo";
 import Modal from "../modal/Modal";
 import api from "../../services/api";
+import config from "../../services/config";
 
 function GeneralOption() {
     const [videoLink, setVideoLink] = useState({
@@ -17,12 +18,15 @@ function GeneralOption() {
     const [showModal, setShowModal] = useState(false);
     const [showVideoModal, setShowVideoModal] = useState(false);
 
+   
     useEffect(() => {
-        api.get("game_journey/get-video/1")
+        
+        const company = JSON.parse(localStorage.getItem("company"));
+        api.get(`game_journey/get-video/${company.id}`, config)
         .then((response) => setVideoLink(response.data))
         .catch((error) => console.log(error));
 
-        api.get("tool/1")
+        api.get(`tool/${company.id}`, config)
         .then((response) => setToolList(response.data))
         .catch((error) => console.log(error));
     }, []);
