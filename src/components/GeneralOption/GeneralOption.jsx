@@ -22,11 +22,11 @@ function GeneralOption() {
     useEffect(() => {
         
         const company = JSON.parse(localStorage.getItem("company"));
-        api.get(`game_journey/get-video/${company.id}`, config)
+        api.get(`game_journey/get-video/${company?.id}`, config)
         .then((response) => setVideoLink(response.data))
         .catch((error) => console.log(error));
 
-        api.get(`tool/${company.id}`, config)
+        api.get(`tool/${company?.id}`, config)
         .then((response) => setToolList(response.data))
         .catch((error) => console.log(error));
     }, []);

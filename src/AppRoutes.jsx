@@ -37,13 +37,13 @@ function AppRoutes() {
   const location = useLocation();
   return (
     <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/esqueceuSenha" element={<EsqueceuSenha />} />
       <Route path="/confirmacaoCodigo" element={<ConfirmacaoCodigo />} />
       <Route path="/novaSenha" element={<NovaSenha />} />
       <Route path="/alteracaoSenha" element={<AlteracaoSenha />} />
-      
-      <Route path="/jornada/admin" element={<JornadaAdmin />} />
+      <Route path="/" element={<Layout />}>
+    
       <Route path="/jornada/page1" element={<JornadaPage1 />} />
       <Route path="/jornada/page2" element={<JornadaPage2 />} />
       <Route path="/jornada/page3" element={<JornadaPage3 />} />
@@ -96,6 +96,7 @@ function AppRoutes() {
       <Route path="/welcomekit/page1" element={<WelcomeKitPage1 />} />
 
       <Route path="/jornada" element={<JornadaWrapperPage />} />
+      </Route>
     </Routes >
   );
 }
