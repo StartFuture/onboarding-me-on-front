@@ -1,4 +1,4 @@
-import {Route, Routes, useLocation} from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import FerramentasCongratsPage2 from "./pages/ferramentas/FerramentasCongratsPage2";
 import Ferramentas from "./pages/ferramentas/FerramentasMain";
 import JornadaPage1 from "./pages/jornada/JornadaPage1";
@@ -35,68 +35,67 @@ function AppRoutes() {
   const location = useLocation();
   return (
     <Routes location={location} key={location.pathname}>
+      <Route path="/login" element={<Login />} />
+      <Route path="/esqueceuSenha" element={<EsqueceuSenha />} />
+      <Route path="/confirmacaoCodigo" element={<ConfirmacaoCodigo />} />
+      <Route path="/novaSenha" element={<NovaSenha />} />
+      <Route path="/alteracaoSenha" element={<AlteracaoSenha />} />
       <Route path="/" element={<Layout />}>
-        <Route path="/jornada/admin" element={<JornadaAdmin />} />
-        <Route path="/jornada/page1" element={<JornadaPage1 />} />
-        <Route path="/jornada/page2" element={<JornadaPage2 />} />
-        <Route path="/jornada/page3" element={<JornadaPage3 />} />
-        <Route path="/jornada/page4" element={<JornadaPage4 />} />
-        <Route path="/jornada/ferramentas" element={<Ferramentas />} />
-        
-        <Route
-          path="/jornada/ferramentas/congrats"
-          element={<FerramentasCongratsPage />}
-        />
-        <Route
-          path="/jornada/ferramentas/congrats2"
-          element={<FerramentasCongratsPage2 />}
-        />
-        <Route
-          path="/jornada/principios/page1"
-          element={<JornadaPagePrincipios1 />}
-        />
-        <Route
-          path="/jornada/principios/page2"
-          element={<JornadaPrincipiosPage2 />}
-        />
-        <Route
-          path="/jornada/principios/page3"
-          element={<JornadaPrincipiosPage3 />}
-        />
-        <Route
-          path="/jornada/principios/page4"
-          element={<JornadaPrincipiosPage4 />}
-        />
-        <Route
-          path="/jornada/principios/page5"
-          element={<JornadaPrincipiosPage5 />}
-        />
-        <Route
-          path="/jornada/principios/page6"
-          element={<JornadaPrincipiosPage6 />}
-        />
-        <Route path="/welcomekit" element={<WelcomeKitWrapper />} />
-        <Route path="/welcomekit/page2" element={<WelcomeKitPage2 />} />
-        <Route path="/welcomekit/page3" element={<WelcomeKitPage3 />} />
-        <Route path="/welcomekit/page4" element={<WelcomeKitPage4 />} />
-        <Route path="/welcomekit/page5" element={<WelcomeKitPage5 />} />
+    
+      <Route path="/jornada/page1" element={<JornadaPage1 />} />
+      <Route path="/jornada/page2" element={<JornadaPage2 />} />
+      <Route path="/jornada/page3" element={<JornadaPage3 />} />
+      <Route path="/jornada/page4" element={<JornadaPage4 />} />
+      <Route path="/jornada/ferramentas" element={<Ferramentas />} />
 
-        <Route path="/minigame" element={<Minigame />} />
-        <Route path="/addcultura" element={<AddCultura />} />
-        <Route path="/addprincipio" element={<AddPrincipio />} />
-        <Route path="/congrats" element={<Congrats />} />
+      <Route
+        path="/jornada/ferramentas/congrats"
+        element={<FerramentasCongratsPage />}
+      />
+      <Route
+        path="/jornada/ferramentas/congrats2"
+        element={<FerramentasCongratsPage2 />}
+      />
+      <Route
+        path="/jornada/principios/page1"
+        element={<JornadaPagePrincipios1 />}
+      />
+      <Route
+        path="/jornada/principios/page2"
+        element={<JornadaPrincipiosPage2 />}
+      />
+      <Route
+        path="/jornada/principios/page3"
+        element={<JornadaPrincipiosPage3 />}
+      />
+      <Route
+        path="/jornada/principios/page4"
+        element={<JornadaPrincipiosPage4 />}
+      />
+      <Route
+        path="/jornada/principios/page5"
+        element={<JornadaPrincipiosPage5 />}
+      />
+      <Route
+        path="/jornada/principios/page6"
+        element={<JornadaPrincipiosPage6 />}
+      />
+      <Route path="/welcomekit" element={<WelcomeKitWrapper />} />
+      <Route path="/welcomekit/page2" element={<WelcomeKitPage2 />} />
+      <Route path="/welcomekit/page3" element={<WelcomeKitPage3 />} />
+      <Route path="/welcomekit/page4" element={<WelcomeKitPage4 />} />
+      <Route path="/welcomekit/page5" element={<WelcomeKitPage5 />} />
 
-        <Route path="/welcomekit/page1" element={<WelcomeKitPage1 />} />
+      <Route path="/minigame" element={<Minigame />} />
+      <Route path="/addcultura" element={<AddCultura />} />
+      <Route path="/addprincipio" element={<AddPrincipio />} />
+      <Route path="/congrats" element={<Congrats />} />
 
-        <Route path="/jornada" element={<JornadaPagePrincipios1 />} />
+      <Route path="/welcomekit/page1" element={<WelcomeKitPage1 />} />
+
+      <Route path="/jornada" element={<JornadaPagePrincipios1 />} />
       </Route>
-      <Route path="/login" element={<Login/>}/>
-        <Route path="/esqueceuSenha" element={<EsqueceuSenha/>}/>
-        <Route path="/confirmacaoCodigo" element={<ConfirmacaoCodigo/>}/>
-        <Route path="/novaSenha" element={<NovaSenha/>}/>
-      <Route path="/alteracaoSenha" element={<AlteracaoSenha/>}/>
-      
-    </Routes>
+    </Routes >
   );
 }
 

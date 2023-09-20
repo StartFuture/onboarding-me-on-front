@@ -5,9 +5,10 @@ import DiscordIcon from "../../assets/DiscordIcon.png";
 import ytIcon from "../../assets/YoutubeIcon.png";
 import editPng from "../../assets/Edit.png";
 import excluirIcon from "../../assets/Delete.png";
-import axios from "axios";
 import VideoModal from "../modalVideo/ModalVideo";
 import Modal from "../modal/Modal";
+import api from "../../services/api";
+import config from "../../services/config";
 
 function GeneralOption() {
     const [videoLink, setVideoLink] = useState({
@@ -17,30 +18,17 @@ function GeneralOption() {
     const [showModal, setShowModal] = useState(false);
     const [showVideoModal, setShowVideoModal] = useState(false);
 
+   
     useEffect(() => {
-        axios({
-            method: "GET",
-            url: "http://localhost:8000/game_journey/get-video/1",
-        })
-            .then((response) => {
-                setVideoLink(response.data);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    }, []);
+        
+        const company = JSON.parse(localStorage.getItem("company"));
+        api.get(`game_journey/get-video/${company?.id}`, config)
+        .then((response) => setVideoLink(response.data))
+        .catch((error) => console.log(error));
 
-    useEffect(() => {
-        axios({
-            method: "GET",
-            url: "http://127.0.0.1:8000/tool/1",
-        })
-            .then((response) => {
-                setToolList(response.data);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+        api.get(`tool/${company?.id}`, config)
+        .then((response) => setToolList(response.data))
+        .catch((error) => console.log(error));
     }, []);
 
     const handleOpenModal = () => setShowModal(true);
@@ -63,30 +51,15 @@ function GeneralOption() {
     }, []);
 
     const handleDeleteVideo = () => {
-        axios({
-            method: "DELETE",
-            url: `http://127.0.0.1:8000/game_journey/delete?company_id=1`,
-        })
-            .then(() => {
-                setVideoLink({});
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+        api.delete(`game_journey/delete?company_id=1`)
+        .then(() => setVideoLink({}))
+        .catch((error) => console.error(error));
     };
 
     const handleDeleteTool = (toolId, gameId) => {
-        console.log(toolId); console.log(gameId);
-        axios({
-            method: "DELETE",
-            url: `http://127.0.0.1:8000/tool/delete?tool_id=${toolId}&game_id=${gameId}`,
-        })
-            .then(() => {
-                setToolList(toolList.filter((tool) => tool.id !== toolId));
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+        api.delete(`tool/delete?tool_id=${toolId}&game_id=${gameId}`)
+        .then(() => setToolList(toolList.filter((tool) => tool.id !== toolId)))
+        .catch((error) => console.error(error));
     };
 
     return (
