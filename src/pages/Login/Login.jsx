@@ -9,18 +9,20 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const CORRECT_USERNAME = 'usuario123';
-  const CORRECT_PASSWORD = 'senha123';
+  // const CORRECT_USERNAME = 'usuario123';
+  // const CORRECT_PASSWORD = 'senha123';
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (username === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
-      // Lógica de autenticação bem-sucedida, como redirecionamento, armazenamento de token, etc.
-      alert('Bem-vindo!');
-    } else {
-      alert('Esse usuário não existe.');
-    }
+    
+
+    // if (username === CORRECT_USERNAME && password === CORRECT_PASSWORD) {
+    //   // Lógica de autenticação bem-sucedida, como redirecionamento, armazenamento de token, etc.
+    //   alert('Bem-vindo!');
+    // } else {
+    //   alert('Esse usuário não existe.');
+    // }
   };
 
   return (
