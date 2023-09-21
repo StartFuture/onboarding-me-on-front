@@ -1,0 +1,180 @@
+.containerThirdSection {
+  display: flex;
+  flex-direction: column;
+  
+  padding-top: 2rem;
+
+  @media (max-width: 800px) {
+    width: 65vw;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+    
+  h1 {
+    font-family: Lexend Exa;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-left: 2rem;
+    text-align: start;
+    padding: 0 0 0 24px;
+
+    @media (max-width: 600px) {
+      max-width: 300px;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  
+  h5 {
+    font-family: 'Open Sans';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    margin-left: 2rem;
+
+    @media (max-width: 600px) {
+      margin: 1rem 1rem;
+    }
+  }
+
+
+  .navLink {
+    position: relative !important;
+    background-color: #ce332d;
+    color: #fff;
+    padding: 18px 8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin: 5rem auto;
+    text-decoration: none;
+
+    &:hover {
+      background-color: darken(#ce332d, 10%);
+    }
+  }
+
+  .thirdSectionContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    margin: 5rem auto;
+    padding-left: 3rem;
+    width: 70vw;
+
+    @media (max-width: 600px) {
+      padding-left: 0;
+    }
+
+    .boxFlex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border: rgb(204, 204, 204) 1px solid;
+      border-radius: 8px;
+      gap: 20px;
+      background-color: #fff;
+
+      @media (max-width: 878px) {
+        flex-direction: column;
+      }
+
+      .boxFlexIcon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .boxFlexButtons {
+        display: flex;
+        gap: 10px;
+
+        @media (max-width: 878px) {
+          flex-direction: column;
+        }
+
+        .buttonDivFlex {
+          display: flex;
+          gap: 20px;
+        }
+
+        .figmaBoxPoints {
+          border: 2px #2d94ce solid;
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+          margin: -1.06rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          padding-top: 0.4rem;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          margin-left: 1rem;
+
+          @media (max-width: 878px) {
+            padding: 2rem 0;
+            border: none;
+          }
+          
+          p {
+            color: #2d94ce;
+          }
+        }
+      }
+
+      img {
+        width: 2em;
+      }
+    }
+
+    .buttonBaixar {
+      background-color: #ffffff;
+      color: #c51700;
+      padding: 13px 30px;
+      border: solid #c51700 1px;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      margin: 0 auto;
+
+      &:hover {
+        background-color: darken(#ffffff, 10%);
+      }
+    }
+
+    .buttonVincular {
+      background-color: #c51700;
+      color: #fff;
+      padding: 13px 30px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      margin: 0 auto;
+
+      &:hover {
+        background-color: darken(#c51700, 10%);
+      }
+    }
+
+    @media (max-width: 878px) {
+      width: 90%;
+    }
+  }
+}

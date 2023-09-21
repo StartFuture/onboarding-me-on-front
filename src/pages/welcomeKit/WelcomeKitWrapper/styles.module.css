@@ -1,0 +1,11 @@
+.arrowButton {
+  position: absolute;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  bottom: 50px;
+}
+.arrowButton img {
+  width: 3.5rem;
+} /*# sourceMappingURL=styles.module.css.map */

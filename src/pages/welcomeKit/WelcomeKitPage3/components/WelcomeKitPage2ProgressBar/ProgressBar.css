@@ -1,0 +1,20 @@
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.progress-bar .point {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.progress-bar .point.active {
+  background-color: #007bff;
+  color: #fff;
+}
+/*# sourceMappingURL=f:/projects/StartFuture/onboarding-me-on-front/src/components/WelcomeKitPage3/components/WelcomeKitPage2ProgressBar/ProgressBar.css.map */

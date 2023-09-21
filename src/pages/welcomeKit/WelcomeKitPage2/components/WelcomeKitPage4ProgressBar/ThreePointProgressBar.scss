@@ -1,0 +1,28 @@
+.progress-bar {
+  position: absolute;
+  top: 10rem;
+
+  .normal {
+    width: 68.25rem;
+    height: 4.5625rem;
+  }
+
+  .responsive {
+    display: none;
+  }
+
+  @media (max-width: 878px) {
+    .normal {
+      display: none;
+    }
+
+    .responsive {
+      display: block;
+      position: absolute;
+      width: 20rem;
+      height: 4rem;
+      left: -150px !important;
+      top: -40px !important;
+    }
+  }
+}

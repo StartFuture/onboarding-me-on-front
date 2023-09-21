@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300&family=Outfit:wght@200;300&family=Poppins:wght@200;400&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eeeeee;
+}
+
+.nova-senha-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.nova-senha-header{
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 4px 4px;
+    text-align: center;
+    width: 100%;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.nova-senha-content {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 40px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    padding: 0;
+    color: #CE332D;
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-left: #ffffff;
+}
+
+p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.botao-prosseguir {
+    background-color: #ce332d;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.botao-voltar{
+    background-color: #ffffff;
+    color: #ce332d;
+    padding: 10px 20px;
+    border: 2px solid #ce332d;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+.botao-voltar:hover{
+    background-color: #fdf1f1;
+}
+.botao-prosseguir:hover {
+    background-color: #722826;
+}
+
+@media (max-width: 480px) {
+    body {
+      background-color: #ffffff;
+    }
+  
+    .nova-senha-content {
+      box-shadow: none;
+    }
+  }

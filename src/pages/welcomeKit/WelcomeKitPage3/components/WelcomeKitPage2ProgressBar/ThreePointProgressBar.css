@@ -1,0 +1,21 @@
+.progress-bar {
+  position: absolute;
+  top: 10rem;
+}
+
+.progress-bar img {
+  width: 68.25rem;
+  height: 4.5625rem;
+}
+
+@media (max-width: 878px) {
+  .progress-bar {
+    top: 29rem;
+  }
+
+  .progress-bar img {
+    width: 21.328125rem;
+    height: 1.42578125rem;
+  }
+}
+/*# sourceMappingURL=f:/projects/StartFuture/onboarding-me-on-front/src/components/WelcomeKitPage3/components/WelcomeKitPage2ProgressBar/ThreePointProgressBar.css.map */

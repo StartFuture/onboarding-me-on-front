@@ -1,0 +1,122 @@
+.mainContainer {
+  width: 100%;
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 2rem;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+
+  h1 {
+    font-family: Lexend Exa;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-left: 2rem;
+    text-align: start;
+    padding: 0 0 0 24px;
+
+    @media (max-width: 600px) {
+      max-width: 300px;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  p {
+    padding-left: 2rem;
+    color: #1E1E1E;
+    font-family: Open Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    @media (max-width: 600px) {
+      font-size: 20px;
+      padding: 0 2rem;
+    }
+  }
+}
+
+.iframeContainer {
+  display: flex;
+
+  iframe { 
+    width: 60vw;
+    height: 557px;
+    margin: 2rem 10rem;
+
+    @media (max-width: 600px) {
+      width: 327px;
+      height: 184px;
+      margin: 2rem auto;
+    }
+  }
+}
+
+.flexButtons {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+
+  @media (max-width: 878px) {
+    flex-direction: column;
+    margin: 4rem auto;
+  }  
+
+  button {
+    background-color: #c51700;
+    color: #fff;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 350px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken(#c51700, 10%);
+    }
+  }
+
+  .buttonAnterior {
+    background-color: #ffffff;
+    color: #c51700;
+    padding: 13px 20px;
+    border: solid #c51700 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken(#ffffff, 10%);
+    }
+  }
+
+  .buttonAnterior a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .buttonProximo a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @media (max-width: 878px) {
+    width: 90%;
+  }
+}

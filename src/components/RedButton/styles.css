@@ -1,0 +1,23 @@
+.navLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 455px;
+  background-color: #ce332d;
+  color: #fff;
+  padding: 14px 16px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  &:hover {
+    background-color: darken(#ce332d, 10%);
+  }
+
+  @media (max-width: 600px) {
+    width: 85%;
+    position: relative;
+  }
+}

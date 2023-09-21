@@ -1,0 +1,95 @@
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  justify-content: space-around;
+  padding-top: 2rem;
+  
+  .congratulationsText {
+    color: #1E1E1E;
+    font-family: 'Lexend Exa';
+    font-size: 28px;
+    font-weight: 600;
+    padding: 0 2rem;
+
+    h3 {
+      color: #1E1E1E;
+      font-family: Lexend Exa;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+  }
+
+  .medalBox {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 16px;
+
+    @media (max-width: 876px) {
+      width: 95%;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 2rem;
+    }
+
+    img {
+      width: 3rem;
+    }
+  }
+
+  img {
+    width: 334px;
+    margin: 2rem auto;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    border: none;
+
+    padding-left: 0px;
+
+    @media (max-width: 876px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  h3 {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+
+  p {
+    width: 70%;
+    margin: 2rem auto;
+  }
+
+  .navLink {
+    position: relative !important;
+    background-color: #ce332d;
+    color: #fff;
+    width: 30%;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-top: 10rem;
+
+    &:hover {
+      background-color: darken(#ce332d, 10%);
+    }
+  }
+}
