@@ -13,7 +13,7 @@ function JornadaPagePrincipios1() {
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/QXd1JwThTFQ?si=2K5iUrwTZCNVDDso"
+        src="https://www.youtube.com/embed/YIqvFoIDcLo"
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

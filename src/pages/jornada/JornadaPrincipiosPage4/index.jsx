@@ -10,10 +10,7 @@ export default function JornadaPrincipiosPage4() {
 
       <h5>
         {" "}
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, aliquid
-        laudantium ad nam voluptas facere incidunt eius, Lorem ipsum dolor sit
-        amet, consectetur adipisicing elit. Sit, aliquid laudantium ad nam
-        voluptas facere incidunt eius,
+        A Importância da Inclusão Social
       </h5>
 
       <div className={styles.thirdSectionContent}>
@@ -22,22 +19,22 @@ export default function JornadaPrincipiosPage4() {
             <div className={styles.insideFormFlex}>
               <div>
                 <input type="radio" name="option" value="a" id="a" />
-                <label htmlFor="a">A) Lorem Ipsum</label>
+                <label htmlFor="a">A)  A inclusão social é fundamental para garantir que todas as pessoas tenham igualdade de oportunidades, independentemente de sua origem, raça, gênero, habilidades ou outras características.</label>
               </div>
 
               <div>
                 <input type="radio" name="option" value="b" id="b" />
-                <label htmlFor="b">B) Lorem Ipsum</label>
+                <label htmlFor="b">B) A inclusão social promove a diversidade e o respeito às diferenças, criando uma sociedade mais justa e equitativa.</label>
               </div>
 
               <div>
                 <input type="radio" name="option" value="c" id="c" />
-                <label htmlFor="c">C) Lorem Ipsum</label>
+                <label htmlFor="c">C) Através da inclusão, as pessoas com deficiência podem participar plenamente da vida em comunidade, contribuindo com suas habilidades e talentos.</label>
               </div>
 
               <div>
                 <input type="radio" name="option" value="d" id="d" />
-                <label htmlFor="d">D) Lorem Ipsum</label>
+                <label htmlFor="d">D) A inclusão é crucial no ambiente de trabalho, pois permite que todos os funcionários, independentemente de suas características, contribuam para o sucesso da empresa.</label>
               </div>
             </div>
           </form>

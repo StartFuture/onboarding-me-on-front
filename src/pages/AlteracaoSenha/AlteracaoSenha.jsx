@@ -19,8 +19,8 @@ const AlteracaoSenha = () => {
                     <div className="formulario">
                         <h1>Sua senha foi alterada com sucesso</h1>
                     </div>                
-                        <Link to='/login'>
-                            <button className="botao-login">Ir para o login</button>
+                        <Link to='/jornada/page1'>
+                            <button className="botao-login">Entrar</button>
                     </Link>
                 </form>
             </div>

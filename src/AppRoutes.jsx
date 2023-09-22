@@ -41,7 +41,7 @@ function AppRoutes() {
       <Route path="/novaSenha" element={<NovaSenha />} />
       <Route path="/alteracaoSenha" element={<AlteracaoSenha />} />
       <Route path="/" element={<Layout />}>
-    
+      <Route path="/jornada/admin" element={<JornadaAdmin />} />
       <Route path="/jornada/page1" element={<JornadaPage1 />} />
       <Route path="/jornada/page2" element={<JornadaPage2 />} />
       <Route path="/jornada/page3" element={<JornadaPage3 />} />

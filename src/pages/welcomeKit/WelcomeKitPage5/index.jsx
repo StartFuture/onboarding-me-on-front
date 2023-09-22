@@ -53,7 +53,7 @@ export default function WelcomeKitPage5() {
             id="comentario"
           />
         </form>
-        <NavLink className={styles.navLink} to="/welcomekit/page5">
+        <NavLink className={styles.navLink} to="/welcomekit/page4">
           Enviar
         </NavLink>
       </div>
@@ -90,7 +90,7 @@ export default function WelcomeKitPage5() {
           type="text"
           placeholder="Digite aqui"
         />
-        <NavLink className={styles.navLink} to="/welcomekit/page5">
+        <NavLink className={styles.navLink} to="/welcomekit/page4">
           Enviar
         </NavLink>
       </div>
