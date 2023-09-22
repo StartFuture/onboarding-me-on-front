@@ -1,4 +1,9 @@
+import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
+import axios from "axios";
+import { Link } from "react-router-dom";
+
+
 
 export default function AddCultura() {
   const [quiz, setQuiz] = useState({
@@ -168,10 +173,11 @@ export default function AddCultura() {
         {/* Repita o bloco acima mais 3 vezes para as demais alternativas (B, C, D, etc.) */}
         {/* Botão de Envio */}
         <div className={styles["form-group-button"]}>
+
           <button type="submit" className={styles["cancel-button"]}>
             Cancelar
           </button>
-
+          
           <button type="submit" className={styles["submit-button"]}>
             Enviar
           </button>

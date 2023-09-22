@@ -1,6 +1,8 @@
 import RedButton from "../../../components/RedButton";
 import styles from "./styles.module.scss";
 import png from "../../../assets/svg/FerramentasMedal.svg";
+import { Link } from "react-router-dom";
+
 
 export default function FerramentasCongratsPage2() {
   return (
@@ -16,7 +18,12 @@ export default function FerramentasCongratsPage2() {
           <img src={png} alt="" />
         </div>
       </section>
-      <RedButton>Receber Medalha</RedButton>
+
+      <RedButton path='/jornada/page3'>
+          Receber Medalha
+      </RedButton>
+
     </div>
+
   );
 }

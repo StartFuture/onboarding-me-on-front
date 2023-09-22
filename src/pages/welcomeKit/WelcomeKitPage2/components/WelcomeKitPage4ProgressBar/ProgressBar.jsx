@@ -5,7 +5,7 @@ import progressBarImgResponsive from "../../../../../assets/ProgressBarWK1Respon
 export default function ThreePointProgressBar() {
   return (
     <div className="progress-bar">
-      <img className="normal" src={progressBarImg} alt="" />
+      <img className="normal" src={progressBarImg} alt=""/>
       <img className="responsive" src={progressBarImgResponsive} alt="" />
     </div>
   );

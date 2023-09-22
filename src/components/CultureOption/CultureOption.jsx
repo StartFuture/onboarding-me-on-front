@@ -11,8 +11,9 @@ function CultureOption() {
           Defina as culturas da empresa. As perguntas aparecerão em
           forma de quiz para o colaborador
         </h3>
-
+      <Link to='/addcultura'>
         <button className={styles.addButtonUpper}>Adicionar</button>
+        </Link>
       </div>
 
       <div className={styles.boxFlex}>

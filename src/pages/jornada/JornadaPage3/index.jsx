@@ -11,7 +11,7 @@ function JornadaPage3() {
         <h1>
           Olá, Eduardo.
           <br />
-          Boas-vindas à Jornada Gamificada da EmpresaNova.
+          Boas-vindas à Jornada Gamificada da Onboarding-me.
         </h1>
         <h3>Selecione qual game deseja jogar.</h3>
       </section>

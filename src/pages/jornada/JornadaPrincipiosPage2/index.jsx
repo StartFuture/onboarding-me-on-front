@@ -10,10 +10,7 @@ export default function JornadaPrincipiosPage2() {
 
       <h5>
         {" "}
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, aliquid
-        laudantium ad nam voluptas facere incidunt eius, Lorem ipsum dolor sit
-        amet, consectetur adipisicing elit. Sit, aliquid laudantium ad nam
-        voluptas facere incidunt eius,
+        A Importância do Respeito nas Relações Humanas
       </h5>
 
       <div className={styles.thirdSectionContent}>
@@ -22,22 +19,22 @@ export default function JornadaPrincipiosPage2() {
             <div className={styles.insideFormFlex}>
               <div>
                 <input type="radio" name="option" value="a" id="a" />
-                <label htmlFor="a">A) Lorem Ipsum</label>
+                <label htmlFor="a">A) O respeito é fundamental nas relações humanas, pois promove a empatia e a compreensão mútua entre as pessoas.</label>
               </div>
 
               <div>
                 <input type="radio" name="option" value="b" id="b" />
-                <label htmlFor="b">B) Lorem Ipsum</label>
+                <label htmlFor="b">B) Quando praticamos o respeito, criamos um ambiente de confiança e cooperação, o que facilita a resolução de conflitos de maneira pacífica.</label>
               </div>
 
               <div>
                 <input type="radio" name="option" value="c" id="c" />
-                <label htmlFor="c">C) Lorem Ipsum</label>
+                <label htmlFor="c">C) O respeito implica aceitar as diferenças e valorizar a diversidade cultural, étnica, religiosa e de gênero, promovendo a inclusão e a igualdade.</label>
               </div>
 
               <div>
                 <input type="radio" name="option" value="d" id="d" />
-                <label htmlFor="d">D) Lorem Ipsum</label>
+                <label htmlFor="d">D) Respeitar os direitos individuais e a privacidade dos outros é uma parte importante do respeito, contribuindo para a preservação da dignidade humana.</label>
               </div>
             </div>
           </form>

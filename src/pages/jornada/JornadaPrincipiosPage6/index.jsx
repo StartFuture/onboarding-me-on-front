@@ -18,7 +18,7 @@ export default function JornadaPrincipiosPage6() {
           </div>
         </div>
       </section>
-      <RedButton>Receber Medalha</RedButton>
+      <RedButton path='/jornada/page3'>Receber Medalha</RedButton>
     </div>
   );
 }
