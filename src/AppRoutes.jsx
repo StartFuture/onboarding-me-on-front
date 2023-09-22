@@ -24,12 +24,12 @@ import EsqueceuSenha from "./pages/EsqueceuSenha/EsqueceuSenha";
 import ConfirmacaoCodigo from "./pages/ConfirmacaoCodigo/ConfirmacaoCodigo";
 import NovaSenha from "./pages/NovaSenha/NovaSenha";
 import AlteracaoSenha from "./pages/AlteracaoSenha/AlteracaoSenha";
-
 import Layout from "./layouts/Layout";
 import AddCultura from "./pages/AdicionarCultura";
 import AddPrincipio from "./pages/AdicionarPrincipio";
 import Minigame from "./pages/Minigame";
 import Congrats from "./pages/Congrats";
+import Perfil from "./pages/Perfil/Perfil";
 
 function AppRoutes() {
   const location = useLocation();
@@ -41,6 +41,7 @@ function AppRoutes() {
       <Route path="/novaSenha" element={<NovaSenha />} />
       <Route path="/alteracaoSenha" element={<AlteracaoSenha />} />
       <Route path="/" element={<Layout />}>
+      <Route path="/meuperfil" element={<Perfil />} />
       <Route path="/jornada/admin" element={<JornadaAdmin />} />
       <Route path="/jornada/page1" element={<JornadaPage1 />} />
       <Route path="/jornada/page2" element={<JornadaPage2 />} />
