@@ -1,4 +1,4 @@
-import {NavLink} from "react-router-dom";
+import RedButton from "../../../components/RedButton";
 import styles from "./styles.module.scss";
 
 import imgPoints from "../../../assets/FerramentasCongratsFrame.png";
@@ -13,9 +13,7 @@ function JornadaPage4() {
 
       <img src={imgPoints} alt="" />
 
-      <NavLink to="/jornada/ferramentas/congrats2" className={styles.navLink}>
-        Continuar
-      </NavLink>
+      <RedButton path="/jornada/ferramentas/congrats2">Continuar</RedButton>
     </section>
   );
 }

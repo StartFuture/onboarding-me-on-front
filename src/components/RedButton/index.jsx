@@ -1,10 +1,10 @@
 import {NavLink} from "react-router-dom";
 import "./styles.css";
 
-export default function ContinueButton({path}) {
+export default function RedButton({path, children}) {
   return (
     <NavLink className="navLink" to={path}>
-      Continuar
+      {children}
     </NavLink>
   );
 }

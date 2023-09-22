@@ -45,7 +45,7 @@ function Layout() {
             }`}>
             <h2>O/ME</h2>
             <nav className={styles.layoutSidebarNavlinksNav}>
-              <NavLink to="/jornada">
+              <NavLink to="/jornada/page1">
                 <img src={jornadaIcon} alt="" />
                 <p>Jornada Gamificada</p>
               </NavLink>

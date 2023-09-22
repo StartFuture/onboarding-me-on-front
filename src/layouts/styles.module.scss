@@ -46,7 +46,7 @@ $background-color_3: #ffcece;
     min-width: 360px;
     min-height: 100vh;
     transition: transform 0.3s ease;
-
+    overflow-y: hidden;
     @media (max-width: 600px) {
       min-width: 100%;
     }

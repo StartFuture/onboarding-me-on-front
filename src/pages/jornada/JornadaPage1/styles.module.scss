@@ -1,28 +1,29 @@
+.mainContainer {
+  width: 100%;
+}
+
 .sectionContainer {
-  width: 80dvw;
   display: flex;
   flex-direction: column;
 
-  padding-left: 2rem;
   padding-top: 2rem;
 
-  iframe {
-    width: 1000px;
-    height: 557px;
-    margin: 20px auto;
-
-    @media (max-width: 600px) {
-      width: 327px;
-      height: 184px;
-    }
+  @media (max-width: 800px) {
+    width: 100%;
   }
 
   h1 {
-    max-width: 355px;
-    font-size: 2.5rem;
+    font-family: Lexend Exa;
+    font-size: 24px;
+    font-style: normal;
     font-weight: 300;
+    line-height: normal;
+    margin-left: 2rem;
+    text-align: start;
+    padding: 0 0 0 24px;
 
     @media (max-width: 600px) {
+      max-width: 300px;
       font-size: 24px;
       font-style: normal;
       font-weight: 400;
@@ -31,16 +32,32 @@
   }
 
   p {
-    font-weight: 600;
-    font-size: 1.9rem;
-    font-family: "Open Sans";
+    padding-left: 2rem;
+    color: #1E1E1E;
+    font-family: Open Sans;
+    font-size: 24px;
     font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 
     @media (max-width: 600px) {
       font-size: 20px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
+    }
+  }
+}
+
+.iframeContainer {
+  display: flex;
+
+  iframe { 
+    width: 60vw;
+    height: 557px;
+    margin: 2rem 10rem;
+
+    @media (max-width: 600px) {
+      width: 327px;
+      height: 184px;
+      margin: 2rem auto;
     }
   }
 }

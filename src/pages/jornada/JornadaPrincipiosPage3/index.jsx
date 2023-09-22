@@ -1,38 +1,38 @@
 import {NavLink} from "react-router-dom";
 import styles from "./styles.module.scss";
 
-function JornadaPrincipiosPage3() {
+function JornadaPagePrincipios1() {
   return (
-    <section className={styles.sectionContainer}>
+    <div>
+      <section className={styles.sectionContainer}>
       <h1>Inclusão</h1>
 
       <p>
-        Assista ao vídeo e fique por dentro sobre as culturas da EmpresaNova.{" "}
+        Assista ao vídeo e fique por dentro sobre os princípios da EmpresaNova.{" "}
       </p>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/QXd1JwThTFQ?si=2K5iUrwTZCNVDDso"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      />
-
-      <div className={styles.navLinkFlex}>
-        <NavLink
-          className={styles.navLinkAnterior}
-          to="/jornada/principios/page2">
-          Anterior
-        </NavLink>
-        <NavLink
-          className={styles.navLinkProximo}
-          to="/jornada/principios/page4">
-          Proximo
-        </NavLink>
+      <div className={styles.iframeContainer}>
+       <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/uhNsX7xVXX4"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        />
       </div>
     </section>
+    <div className={styles.flexButtons}>
+        <button className={styles.buttonAnterior} type="button">
+          <NavLink to="/jornada/principios/page2">Anterior</NavLink>
+        </button>
+
+        <button className={styles.buttonProximo} type="button">
+          <NavLink to="/jornada/principios/page4">Proximo</NavLink>
+        </button>
+      </div>
+    </div>
   );
 }
 
-export default JornadaPrincipiosPage3;
+export default JornadaPagePrincipios1;
