@@ -32,6 +32,7 @@ import Minigame from "./pages/Minigame";
 import Congrats from "./pages/Congrats";
 
 import JornadaWrapperPage from "./pages/jornada/JornadaWrapper";
+import Perfil from "./pages/Perfil/Perfil";
 
 function AppRoutes() {
   const location = useLocation();
@@ -43,7 +44,7 @@ function AppRoutes() {
       <Route path="/novaSenha" element={<NovaSenha />} />
       <Route path="/alteracaoSenha" element={<AlteracaoSenha />} />
       <Route path="/" element={<Layout />}>
-    
+      <Route path="/meuperfil" element={<Perfil />} />
       <Route path="/jornada/page1" element={<JornadaPage1 />} />
       <Route path="/jornada/page2" element={<JornadaPage2 />} />
       <Route path="/jornada/page3" element={<JornadaPage3 />} />
