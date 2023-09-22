@@ -11,10 +11,11 @@ function PrincipleOption() {
           Defina as culturas da empresa. As perguntas aparecerão em
           forma de quiz para o colaborador
         </h3>
-
+        <Link to="/addprincipio">
         <button className={styles.addButtonUpper}>Adicionar</button>
+        </Link>
       </div>
-
+     
       <div className={styles.boxFlex}>
         <div className={styles.boxFlexFirstFlex}>
           <div className={styles.boxFlexIconBordered}>
@@ -23,7 +24,7 @@ function PrincipleOption() {
 
           <div className={styles.boxFlexIconInsideFlex}>
             <h3>Inclusão</h3>
-            <p>Lorem ipsum at dor?</p>
+            <p>A Importância da Inclusão Social</p>
           </div>
         </div>
 

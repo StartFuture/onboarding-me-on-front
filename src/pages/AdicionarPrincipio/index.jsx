@@ -192,7 +192,8 @@ export default function AddPrincipio() {
             <button type="submit" className={styles["cancel-button"]}>
               Cancelar
             </button>
-
+            </Link>
+            <Link to='/jornada/admin'>
             <button type="submit" className={styles["submit-button"]} onClick={(e) => addQuiz()}>
               Enviar
             </button>

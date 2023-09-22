@@ -100,34 +100,34 @@ export default function AddCultura() {
       <form>
         <div className={styles["form-group"]}>
           <label htmlFor="name">Nome:</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name"  />
         </div>
         <div className={styles["form-group"]}>
           <div className={styles["form-group-inline"]}>
             <div className={styles["form-group"]}>
               <label htmlFor="video-link">Link do vídeo para consulta:</label>
-              <input type="text" id="video-link" name="video-link" required />
+              <input type="text" id="video-link" name="video-link"  />
             </div>
             <div className={styles["form-group "]}>
               <label htmlFor="points">Pontos:</label>
-              <input type="number" id="points" name="points" required />
+              <input type="number" id="points" name="points"  />
             </div>
           </div>
         </div>
         <div className={styles["form-frame"]} />
         <div className={styles["form-group"]}>
           <label htmlFor="question">Pergunta:</label>
-          <input type="text" id="question" name="question" required />
+          <input type="text" id="question" name="question"  />
         </div>
         <div className={styles["form-group"]}>
           <div className={styles["form-group-inline"]}>
             <div className={styles["form-group-long"]}>
               <label htmlFor="answer-a">Resposta - Alternativa A:</label>
-              <input type="text" id="answer-a" name="answer-a" required />
+              <input type="text" id="answer-a" name="answer-a"  />
             </div>
             <div className={styles["form-group-label"]}>
               <label htmlFor="radio-a">Resposta correta:</label>
-              <input type="radio" id="radio-a" name="answer" required />
+              <input type="radio" id="radio-a" name="answer"  />
             </div>
           </div>
         </div>
@@ -136,11 +136,11 @@ export default function AddCultura() {
           <div className={styles["form-group-inline"]}>
             <div className={styles["form-group-long"]}>
               <label htmlFor="answer-a">Resposta - Alternativa B:</label>
-              <input type="text" id="answer-b" name="answer-b" required />
+              <input type="text" id="answer-b" name="answer-b"  />
             </div>
             <div className={styles["form-group-label"]}>
               <label htmlFor="radio-b">Resposta correta:</label>
-              <input type="radio" id="radio-b" name="answer" required />
+              <input type="radio" id="radio-b" name="answer"  />
             </div>
           </div>
         </div>
@@ -149,11 +149,11 @@ export default function AddCultura() {
           <div className={styles["form-group-inline"]}>
             <div className={styles["form-group-long"]}>
               <label htmlFor="answer-a">Resposta - Alternativa C:</label>
-              <input type="text" id="answer-c" name="answer-c" required />
+              <input type="text" id="answer-c" name="answer-c"  />
             </div>
             <div className={styles["form-group-label"]}>
               <label htmlFor="radio-c">Resposta correta:</label>
-              <input type="radio" id="radio-c" name="answer" required />
+              <input type="radio" id="radio-c" name="answer"  />
             </div>
           </div>
         </div>
@@ -162,25 +162,27 @@ export default function AddCultura() {
           <div className={styles["form-group-inline"]}>
             <div className={styles["form-group-long"]}>
               <label htmlFor="answer-d">Resposta - Alternativa D:</label>
-              <input type="text" id="answer-d" name="answer-d" required />
+              <input type="text" id="answer-d" name="answer-d"  />
             </div>
             <div className={styles["form-group-label"]}>
               <label htmlFor="radio-a">Resposta correta:</label>
-              <input type="radio" id="radio-d" name="answer" required />
+              <input type="radio" id="radio-d" name="answer"  />
             </div>
           </div>
         </div>
         {/* Repita o bloco acima mais 3 vezes para as demais alternativas (B, C, D, etc.) */}
         {/* Botão de Envio */}
         <div className={styles["form-group-button"]}>
-
+        <Link to='/jornada/admin'>
           <button type="submit" className={styles["cancel-button"]}>
             Cancelar
           </button>
-          
+        </Link>
+          <Link to='/jornada/admin'>
           <button type="submit" className={styles["submit-button"]}>
             Enviar
           </button>
+          </Link>
         </div>
         {/* Fim do Formulário */}
       </form>
