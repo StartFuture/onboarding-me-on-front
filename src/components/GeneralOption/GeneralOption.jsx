@@ -19,12 +19,12 @@ function GeneralOption() {
     const [showVideoModal, setShowVideoModal] = useState(false);
    
     useEffect(() => {
-        const company = JSON.parse(localStorage.getItem("company"));
-        api.get(`game_journey/get-video/${company?.id}`, config)
+        
+        api.get('game_journey/get-video/', config)
         .then((response) => setVideoLink(response.data))
         .catch((error) => console.log(error));
 
-        api.get(`tool/${company?.id}`, config)
+        api.get('tool/', config)
         .then((response) => setToolList(response.data))
         .catch((error) => console.log(error));
     }, []);
@@ -49,7 +49,7 @@ function GeneralOption() {
     }, []);
 
     const handleDeleteVideo = () => {
-        api.delete(`game_journey/delete?company_id=1`, config)
+        api.delete('game_journey/delete', config)
         .then(() => setVideoLink({}))
         .catch((error) => console.error(error));
     };

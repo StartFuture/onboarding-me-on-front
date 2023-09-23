@@ -22,7 +22,7 @@ function VideoModal({ show, onClose, isNewVideo, videoLink, handleChange }) {
   };
 
   const addVideoLink = (videoUrl) => {
-    api.post('game_journey/create', { welcome_video_link: videoUrl, company_id: 1 }, config)
+    api.post('game_journey/create', { welcome_video_link: videoUrl}, config)
       .then((response) => {
         handleChange(videoUrl)
       })
@@ -33,7 +33,7 @@ function VideoModal({ show, onClose, isNewVideo, videoLink, handleChange }) {
 
   const updateVideoLink = (videoUrl) => {
     const company = JSON.parse(localStorage.getItem("company"));
-    api.put(`game_journey/update?company_id=${company?.id}&new_link=${videoUrl}`, {}, config)
+    api.put(`game_journey/update?new_link=${videoUrl}`, {}, config)
       .then((response) => {
         handleChange(videoUrl)
       })
