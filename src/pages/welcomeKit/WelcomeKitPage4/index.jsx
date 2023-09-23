@@ -4,6 +4,9 @@ import png from "../../../assets/WKPage3Frame.png";
 import ThreePointProgressBar from "./components/WelcomeKitPage4ProgressBar/ProgressBar";
 
 export default function WelcomeKitPage4() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const sendToFeedback = urlParams.get('f');
+
   return (
     <div className={styles.containerFifthSection}>
       <div className={styles.fifthSectionFlex}>
@@ -16,7 +19,7 @@ export default function WelcomeKitPage4() {
                 Você já está com o kit <br /> em mãos :)
               </p>
             </div>
-            <NavLink className={styles.navLink} to="/welcomekit/page5">
+            <NavLink className={styles.navLink} to="/welcomekit/page5" style={{display: sendToFeedback === 'true' ? 'block' : 'none'}}>
               Continuar
             </NavLink>
           </div>

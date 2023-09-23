@@ -1,8 +1,9 @@
-import {useState} from "react";
+import { useState } from "react";
 import "./ModalVideo.css";
-import axios from "axios";
+import api from "../../services/api";
+import config from "../../services/config";
 
-function VideoModal({show, onClose, isNewVideo, videoLink, handleChange}) {
+function VideoModal({ show, onClose, isNewVideo, videoLink, handleChange }) {
   const [videoUrl, setVideoUrl] = useState("");
 
   if (!show) {
@@ -21,11 +22,7 @@ function VideoModal({show, onClose, isNewVideo, videoLink, handleChange}) {
   };
 
   const addVideoLink = (videoUrl) => {
-    axios({
-      method: "POST",
-      url: "http://localhost:8000/game_journey/create/",
-      data: { welcome_video_link: videoUrl, company_id: 1 },
-    })
+    api.post('game_journey/create', { welcome_video_link: videoUrl, company_id: 1 }, config)
       .then((response) => {
         handleChange(videoUrl)
       })
@@ -33,14 +30,12 @@ function VideoModal({show, onClose, isNewVideo, videoLink, handleChange}) {
         console.log(error);
       });
   };
-  
+
   const updateVideoLink = (videoUrl) => {
-    axios({
-      method: "PUT",
-      url: `http://127.0.0.1:8000/game_journey/update?company_id=1&new_link=${videoUrl}`,
-    })
+    const company = JSON.parse(localStorage.getItem("company"));
+    api.put(`game_journey/update?company_id=${company?.id}&new_link=${videoUrl}`, {}, config)
       .then((response) => {
-        handleChange(videoUrl);
+        handleChange(videoUrl)
       })
       .catch((error) => {
         console.log(error);

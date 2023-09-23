@@ -1,17 +1,12 @@
-import {NavLink} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./styles.module.scss";
 
 export default function JornadaPrincipiosPage4() {
   return (
     <div className={styles.containerThirdSection}>
-      {/* ... your third section content ... */}
-
       <h1>Inclusão</h1>
 
-      <h5>
-        {" "}
-        A Importância da Inclusão Social
-      </h5>
+      <h5>A Importância da Inclusão Social</h5>
 
       <div className={styles.thirdSectionContent}>
         <div>
@@ -41,13 +36,17 @@ export default function JornadaPrincipiosPage4() {
         </div>
 
         <div className={styles.flexButtons}>
-          <button className={styles.buttonAnterior} type="button">
-            <NavLink to="/jornada/principios/page3">Anterior</NavLink>
-          </button>
+          <Link to="/jornada/principios/page3">
+            <button className={styles.buttonAnterior} type="button">
+              Anterior
+            </button>
+          </Link>
 
-          <button className={styles.buttonProximo} type="button">
-            <NavLink to="/jornada/principios/page5">Proximo</NavLink>
-          </button>
+          <Link to="/jornada/principios/page5">
+            <button className={styles.buttonProximo} type="button">
+              Próximo
+            </button>
+          </Link>
         </div>
       </div>
     </div>

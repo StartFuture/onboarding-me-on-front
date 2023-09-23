@@ -23,7 +23,7 @@ export default function WelcomeKitPage3() {
                 <p>1234</p>
               </div>
             </div>
-            <NavLink className={styles.navLink} to="/welcomekit/page4">
+            <NavLink className={styles.navLink} to="/welcomekit/page4?f=true">
               Clique aqui quando o Kit chegar
             </NavLink>
           </div>
