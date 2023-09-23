@@ -5,6 +5,7 @@ import Medalha1 from '../../assets/JornadaPage4Medalha1.png';
 import Medalha2 from '../../assets/JornadaPage4Medalha2.png';
 import { useNavigate } from 'react-router-dom';
 import config from '../../services/config';
+import api from '../../services/api';
 
 const Profile = () => {
 

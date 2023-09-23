@@ -10,9 +10,10 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const validationToken = () => {
-    const token = JSON.parse(localStorage.getItem("token"));
-    if (token) {
+  const validationToken = (currentToken) => {
+    console.log(currentToken)
+    const token = currentToken ? currentToken : JSON.parse(localStorage.getItem("token"));
+    if (token) { 
       const config = {
         headers: { Authorization: `Bearer ${token}` },
       };
@@ -38,7 +39,7 @@ const Login = () => {
         });
     }
   };
-  
+
   useEffect(() => {
     validationToken();
   }, []);
@@ -53,11 +54,10 @@ const Login = () => {
     api
       .post("auth/login", params)
       .then((response) => {
-        localStorage.setItem("token", JSON.stringify(response.data));
-        alert("Bem-vindo!");
+        localStorage.setItem("token", JSON.stringify(response.data.access_token));
+        validationToken(response.data.acces_token)
       })
       .catch((error) => alert("Usuário incorreto!"));
-    validationToken();
   };
 
   return (
@@ -96,7 +96,11 @@ const Login = () => {
                 <a href="#">Esqueceu a senha?</a>
               </Link>
             </div>
-            <button type="submit" className="button">
+            <button
+              type="submit"
+              className="button"
+              onClick={(e) => handleSubmit(e)}
+            >
               Entrar
             </button>
           </form>
