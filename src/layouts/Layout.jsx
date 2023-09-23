@@ -20,7 +20,6 @@ function Layout() {
     <div>
       <div className={styles.LayoutContainer}>
         <header className={styles.LayoutHeader}>
-          {/* Add the hamburger icon for mobile */}
           <img
             src={hamburgerIcon}
             alt="Hamburger Menu"

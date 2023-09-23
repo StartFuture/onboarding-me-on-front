@@ -17,10 +17,8 @@ function GeneralOption() {
     const [toolList, setToolList] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [showVideoModal, setShowVideoModal] = useState(false);
-
    
     useEffect(() => {
-        
         const company = JSON.parse(localStorage.getItem("company"));
         api.get(`game_journey/get-video/${company?.id}`, config)
         .then((response) => setVideoLink(response.data))
@@ -51,13 +49,13 @@ function GeneralOption() {
     }, []);
 
     const handleDeleteVideo = () => {
-        api.delete(`game_journey/delete?company_id=1`)
+        api.delete(`game_journey/delete?company_id=1`, config)
         .then(() => setVideoLink({}))
         .catch((error) => console.error(error));
     };
 
     const handleDeleteTool = (toolId, gameId) => {
-        api.delete(`tool/delete?tool_id=${toolId}&game_id=${gameId}`)
+        api.delete(`tool/delete?tool_id=${toolId}&game_id=${gameId}`, config)
         .then(() => setToolList(toolList.filter((tool) => tool.id !== toolId)))
         .catch((error) => console.error(error));
     };
