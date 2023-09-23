@@ -88,3 +88,57 @@
 .left-card img {
   height: 100px;
 }
+
+@media (max-width: 1200px) {
+  .left-card {
+    width: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .profile-left,
+  .profile-right {
+    flex: none;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .left-card {
+    width: 80%;
+  }
+
+  .username {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-card,
+  .card {
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+  }
+
+  .username,
+  .card h2 {
+    font-size: 24px;
+  }
+
+  .button {
+    padding: 10px 20px;
+  }
+
+  .left-card img {
+    height: 80px;
+  }
+
+  .profile-left, 
+  .profile-right{
+    min-height: auto;
+  }
+}
