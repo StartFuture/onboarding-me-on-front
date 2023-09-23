@@ -1,7 +1,14 @@
+.contentContainer {
+  margin-left: 10%;
+
+  @media (max-width: 800px) {
+    margin-left: 0px;
+  }
+}
+
 .sectionContainer {
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column;  
   padding-top: 2rem;
 
   @media (max-width: 800px) {

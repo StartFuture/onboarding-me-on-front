@@ -79,11 +79,9 @@
   button {
     background-color: #c51700;
     color: #fff;
-    padding: 13px 20px;
+    padding: 13px 200px;
     border: none;
     border-radius: 5px;
-    width: 100%;
-    max-width: 350px;
     cursor: pointer;
     transition: background-color 0.2s ease;
 
@@ -95,7 +93,7 @@
   .buttonAnterior {
     background-color: #ffffff;
     color: #c51700;
-    padding: 13px 20px;
+    padding: 13px 100px;
     border: solid #c51700 1px;
     border-radius: 5px;
     cursor: pointer;
