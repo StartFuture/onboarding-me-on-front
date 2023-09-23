@@ -24,7 +24,7 @@ function CultureOption() {
 
           <div className={styles.boxFlexIconInsideFlex}>
             <h3>Respeito</h3>
-            <p>Lorem ipsum at dor?</p>
+            <p>A Importância do Respeito nas Relações Humanas</p>
           </div>
         </div>
 
@@ -33,25 +33,6 @@ function CultureOption() {
           <img src={excluirIcon} alt="trash" />
         </div>
       </div>
-
-      <div className={styles.boxFlex}>
-        <div className={styles.boxFlexFirstFlex}>
-          <div className={styles.boxFlexIconBordered}>
-            <p>10pt</p>
-          </div>
-
-          <div className={styles.boxFlexIconInsideFlex}>
-            <h3>Respeito</h3>
-            <p>Lorem ipsum at dor?</p>
-          </div>
-        </div>
-
-        <div className={styles.boxFlexButtons}>
-          <img src={editPng} alt="pencil--v1"/>
-          <img src={excluirIcon} alt="trash" />
-        </div>
-      </div>
-
       <Link to="/addcultura">
         <button className={styles.addButtonDown}>Adicionar</button>
       </Link>
